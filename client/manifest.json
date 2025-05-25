@@ -1,0 +1,80 @@
+{
+  "short_name": "React App",
+  "name": "joseddeveloper",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "abstract-structure.mp4",
+      "type": "video/mp4",
+      "sizes": "1920x1080"
+    },
+    {
+      "src": "Background.jpg",
+      "type": "image/jpeg",
+      "sizes": "1170x780"
+    },
+    {
+      "src": "day-planner.jpg",
+      "type": "image/jpeg",
+      "sizes": "1170x780"
+    },
+    {
+      "src": "digital-fireworks.mp4",
+      "type": "video/mp4",
+      "sizes": "1920x1080"
+    },
+    {
+      "src": "Flick-Tracker.jpg",
+      "type": "image/jpeg",
+      "sizes": "406x228"
+    },
+    {
+      "src": "Journeez.jpg",
+      "type": "image/jpeg",
+      "sizes": "800x632"
+    },
+    {
+      "src": "manifesto.jpg",
+      "type": "image/jpeg",
+      "sizes": "1352x876"
+    },
+    {
+      "src": "Me.jpg",
+      "type": "image/jpeg",
+      "sizes": "720x960"
+    },
+    {
+      "src": "notepad.jpg",
+      "type": "image/jpeg",
+      "sizes": "500x333"
+    },
+    {
+      "src": "rotating-planet.mp4",
+      "type": "video/mp4",
+      "sizes": ""
+    },
+    {
+      "src": "SEO.jpg",
+      "type": "image/jpeg",
+      "sizes": "1170x780"
+    },
+    {
+      "src": "weather-forecast.jpg",
+      "type": "image/jpeg",
+      "sizes": "500x333"
+    },
+    {
+      "src": "Winery.jpg",
+      "type": "image/jpeg",
+      "sizes": "1170x780"
+    }
+  ],
+"start_url": ".",
+"display": "standalone",
+"theme_color": "#000000",
+"background_color": "#ffffff"
+}

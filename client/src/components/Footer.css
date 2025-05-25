@@ -1,0 +1,50 @@
+/* Footer.css */
+.footer-container {
+  height: auto; /* Adjust the height as needed */
+  width: 100%;
+  line-height: 60px;
+  /* background-color: black; */
+  position: absolute;
+  /* margin-top: 12rem; */
+  /* margin-bottom: 0; */
+  margin-right: 2rem;
+  /* border-top: 2px solid gray; */
+  /* border-bottom: 5px solid #6b6b6b; */
+  color: #FDF8F5;
+  text-align: center;
+  padding-left: 1rem; /* Add padding on the left */
+  padding-right: 1rem; /* Add padding on the right */
+  font-size: 1.5rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  margin-right: 1.8rem;
+  /* background-color: black; */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Add margin as needed */
+  margin-bottom: 12rem;
+  overflow-x: auto;
+  
+}
+
+.icon {
+  margin-right: 1rem; /* Adjust margin between the icons as needed */
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+.icon-spacing {
+  width: 10px; /* Add spacing between the icons as needed */
+  height: auto;
+}
+
+.contact-info a {
+  margin-top: 1rem;
+  color:whitesmoke;
+}

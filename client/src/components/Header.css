@@ -1,0 +1,57 @@
+/*Header*/
+
+/* .header-container {
+    position: relative;
+    text-align: center;
+    z-index: 100;
+    width: 100.4%;
+    height: auto;
+    line-height: 50px;
+    color: whitesmoke;
+    background-color: none;
+    text-decoration: none;
+    }
+
+.header-container .about-me {
+    text-decoration: none;
+  }
+
+.header-container .projects {
+  text-decoration: none;
+}
+
+.header-container .contact {
+  text-decoration: none;
+}
+
+.header-container .resume {
+  text-decoration: none;
+}
+
+  
+.header-container .logo-relative {
+        position: relative;
+        color: whitesmoke;
+        font-size: 1.4rem;
+        text-decoration: none;
+      } */
+      
+/* .header-container .logo-relative::before,
+      .logo-relative::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+      
+.header-container .logo-relative::before {
+     
+        animation: glitch-1 2s infinite;
+      } */
+      
+
+
+
