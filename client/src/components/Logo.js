@@ -15,7 +15,7 @@ const Logo = () => {
         {/* <span>A</span>uri<span>z</span>on */}
       </div>
       <Link className="no-underline flex items-center" to="/">
-        <span className="logo-span bg-aqua text-black bold px-1">A</span>URIZON
+        <span className="logo-span bg-aqua text-black bold px-1">M</span>OSAIC
       </Link>
     </div>
   );

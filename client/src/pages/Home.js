@@ -118,7 +118,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <video src={DigiEarth} autoPlay loop muted className="background-video"></video>
-      <h1 className={showSlogan ? 'fade-in' : ''}>"Ambitious. Bold. Innovative. Teamwork."</h1>
+      <h1 className={showSlogan ? 'fade-in' : ''}>"Engineering Digital Experiences. Creating Real Impact."</h1>
       <h2>
         <span id="typing-text"></span>
       </h2>

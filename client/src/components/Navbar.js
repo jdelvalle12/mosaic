@@ -74,7 +74,7 @@ const Navbar = () => {
                   <li><Link className='sub-nav-link' to="/technologies#api-development">API Development</Link></li>
                   <li><Link className='sub-nav-link' to="/technologies#mobile-development">Mobile Development</Link></li>
                   <li><Link className='sub-nav-link' to="/technologies#business-solutions">Business Solutions</Link></li>
-                  <li><Link className='sub-nav-link' to="/technologies#network-services">Network Services</Link></li>
+                  {/* <li><Link className='sub-nav-link' to="/technologies#network-services">Network Services</Link></li> */}
                   <li><Link className='sub-nav-link' to="/technologies#security-solutions">Security Solutions</Link></li>
                 <h3>Products</h3>
                   <li><Link
@@ -86,7 +86,7 @@ const Navbar = () => {
                   <h3>Work Tools</h3>
                   <li>
                 <Link 
-                // to="/technologies/accorplan" 
+                // to="/technologies/aurizon" 
                 className='sub-nav-link'>In development</Link>
               </li>
               </ul>
@@ -94,7 +94,7 @@ const Navbar = () => {
           </li>
           <li><Link to="/portfolio" className="nav-link">Portfolio</Link></li>
           <li><Link to="/careers" className="nav-link">Careers</Link></li>
-          <li><Link to="/insider" className="nav-link">Insider</Link></li>
+          <li><Link to="/news" className="nav-link">News</Link></li>
           <li><Link to="/contact" className="nav-link">Contact</Link></li>
           <li><Link to="/signin" className="nav-link">Sign In</Link></li>
         </ul>
