@@ -5,14 +5,14 @@ import Background from '../images/abstract-image.jpg';
 import '../index.css';
 import '../App.css';
 
-const technologies = () => {
+const services = () => {
 
     return (
-       <div className='technologies-container'>
+       <div className='services-container'>
 
            <img src={Background} alt="background" className="background-design" />
        </div> 
     )
 }
 
-export default technologies;
+export default services;

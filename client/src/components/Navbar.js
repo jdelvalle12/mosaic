@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import 'tailwindcss/tailwind.css';
 import '../index.css';
-import '../App.css';
+// import '../App.css';
+import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,18 +65,18 @@ const Navbar = () => {
                onClick={toggleDropdown}
           >
           <Link to="#" className="nav-link">
-            Technologies
+            Services
             <span className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}>&#9662;</span></Link>
           <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
               {/* Dropdown menu content */}
               <ul>
                 <h3>Solutions</h3>
-                  <li><Link className='sub-nav-link' to="/technologies#web-development">Web Development</Link></li>
-                  <li><Link className='sub-nav-link' to="/technologies#api-development">API Development</Link></li>
-                  <li><Link className='sub-nav-link' to="/technologies#mobile-development">Mobile Development</Link></li>
-                  <li><Link className='sub-nav-link' to="/technologies#business-solutions">Business Solutions</Link></li>
-                  {/* <li><Link className='sub-nav-link' to="/technologies#network-services">Network Services</Link></li> */}
-                  <li><Link className='sub-nav-link' to="/technologies#security-solutions">Security Solutions</Link></li>
+                  <li><Link className='sub-nav-link' to="/services#web-development">Web Development</Link></li>
+                  <li><Link className='sub-nav-link' to="/services#api-development">API Development</Link></li>
+                  <li><Link className='sub-nav-link' to="/services#mobile-development">Mobile Development</Link></li>
+                  <li><Link className='sub-nav-link' to="/services#business-solutions">Business Solutions</Link></li>
+                  {/* <li><Link className='sub-nav-link' to="/services#network-services">Network Services</Link></li> */}
+                  <li><Link className='sub-nav-link' to="/services#security-solutions">Security Solutions</Link></li>
                 <h3>Products</h3>
                   <li><Link
                     // to="https://www.journeeztrip.com"
@@ -83,10 +84,10 @@ const Navbar = () => {
                   >
                     In development
                   </Link></li>
-                  <h3>Work Tools</h3>
+                  <h3></h3>
                   <li>
                 <Link 
-                // to="/technologies/aurizon" 
+                // to="/services/aurizon" 
                 className='sub-nav-link'>In development</Link>
               </li>
               </ul>
