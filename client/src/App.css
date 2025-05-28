@@ -1,8 +1,8 @@
 body {
   position: relative;
-  font-family: "Source Code Pro", "Space Grotesk", sans-serif;
-  /* font-size: 2rem; */
-  background: black;
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  background-color: #f5f7fa; /* Light, clean background */
+  color: #1a1a1a; /* Dark text for readability */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +10,6 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  color: aliceblue;
 }
 
 /* Media Query for Mobile Devices */
@@ -64,63 +63,6 @@ body {
     font-size: 1rem;
   }
 }
-
-/*Logo*/
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Add any additional styling for the logo container */
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  /* Add any additional styling for the logo text */
-}
-
-.arc {
-  width: 50px;
-  height: 30px;
-  /* margin: 0 10px; */
-  /* Add any additional styling for the SVG arc */
-}
-
-.logo-span {
-  font-weight: bold;
-  background-color: aqua;
-  color: black;
-  font-size: 3rem;
-  line-height: 0.8; 
-  padding-top: 0.3rem; 
-  padding-bottom: 0.1rem; 
-  border-radius: 25px;
-  /* transition: font-size 0.8s ease; */
-}
-
-/* .logo-span:hover {
-  font-size: 3.8rem;
-  transition: font-size 0.8s ease;
-} */
-
-.no-underline {
-  position: relative;
-  font-size: 2rem;
-  /* z-index: 100; */
-  color: aliceblue;
-  text-decoration: none;
-  /* justify-content: center;
-  width: 23rem; */
-  /* transition: font-size 0.8s ease; */
-  margin-right: 4.5rem;
- 
-}
-
-/* .no-underline:hover {
-  font-size: 2.8rem;
-  transition: font-size 0.8s ease;
-} */
 
 /*Home*/
 
