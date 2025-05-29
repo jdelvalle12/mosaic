@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MarketTeam from '../images/digital-marketing-team.mp4';
-import Digital from '../images/digital-motion.mp4';
+import Puzzles from '../images/tech-process-3.jpg';
 import WebDev from '../images/web-development-icon.png';
 import BizSol from '../images/business-solution-icon.png';
 import WebMan from '../images/web-management-icon.png';
@@ -135,13 +135,13 @@ const Home = () => {
       </div>
       <div className="home-about-container">
         <div className="glass-box">
-          <h3 className='who-we-are'>Who We Are</h3>
+          <h3 className='who-we-are'>What We Are About</h3>
             <p className='home-about-para'>At Aurizon, we are passionate about pushing boundaries and 
             exploring new horizons in the tech industry. We are committed to empowering businesses and 
             individuals with cutting-edge technologies that drive growth.</p>
             <Link to="/about" className="about-link">Learn More<span className="arrow">&rarr;</span></Link>
         </div>
-      <video src={Digital} autoPlay loop muted className="motion-video"></video>
+      <img src={Puzzles} autoPlay loop muted className="puzzle-picture"></img>
       </div>
       <div className='what-we-do-container'>
         <h3 className='what-we-do'>What We Do</h3>
