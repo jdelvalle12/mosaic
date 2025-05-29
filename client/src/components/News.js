@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom for the Insider link
 import '../index.css';
-import '../App.css';
+// import '../App.css';
+import './News.css';
 
 const News = () => {
     // News settings here

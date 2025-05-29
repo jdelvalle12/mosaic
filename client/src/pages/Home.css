@@ -1,0 +1,971 @@
+/*Home*/
+
+.home-container {
+  /* position: relative; */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* color: black; */
+  width: 100%;
+  /* height: 100%; */
+}
+
+.home-container .background-video {
+  position: absolute;
+  width: 100%;
+  margin-top: -7.3rem;
+  /* height: 13%; */
+}
+
+/* Apply the animation to the slogan */
+.home-container h1 {
+  position: relative;
+  font-size: 2.5rem;
+  font-family: 'Source Code Pro', 'Space Grotesk', sans-serif; /* Change the font family to your preferred italic font */
+  font-style: italic; /* Apply italic to the font */
+  color: aliceblue;
+  margin-top: 7rem;
+  /* margin-left: 3rem; */
+  /* width: 80%; */
+  height: auto;
+  opacity: 0;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-container h1.fade-in {
+  opacity: 1;
+}
+
+.home-container h2  {
+  display: flex;
+  /* width: 93%; */
+  font-size: 2.9rem;
+  color: teal;
+  margin-top: 7.5rem; 
+  justify-content: center;
+  align-content: center;
+  text-align: center; 
+  /* margin-left: 4rem; */
+}
+
+.mission {
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center; 
+  color: aliceblue;
+  /* padding-top: 2.5rem; */
+  max-width: 80%; 
+  margin: 0 auto;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  animation: slideFromLeft 1s ease forwards; /* Adjust animation duration as needed */
+  width: 100%;
+}
+
+/* Center-align the content on larger screens */
+@media (max-width: 768px) {
+  .background-video {
+    width: 100%;
+    object-fit: cover;
+  }
+  .content-container {
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+  }
+
+  .home-container h1 {
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin-left: 1rem;
+  }
+
+  .home-container h2 {
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    margin-left: 3rem;
+  }
+
+  .mission {
+    align-items: center;
+    text-align: center;
+    width: 65%;
+    margin-left: 4rem;
+  }
+
+  .contact-button {
+    margin-right: 2rem;
+  }
+}
+
+/* Style the button to match the design */
+.contact-button {
+  display: flex;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color:coral;
+  color: black; /* Set the text color to contrast with the background */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* .contact-button:hover {
+  background-color: rgba(0, 128, 255, 0.9); 
+} */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem; /* Add margin between the <p> and button */
+}
+
+.home-container p {
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center; 
+  color: #007bff;
+  padding-top: 1.5rem;
+  max-width: 70%; 
+  margin: 0 auto
+}
+
+/* CSS for sliding animation */
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the sliding animation to the slide-in class */
+.slide-in {
+  animation: slideFromLeft 1s ease forwards; /* Adjust animation duration as needed */
+}
+
+.home-about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17rem;
+}
+
+@media (max-width: 768px) {
+  .home-about-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: flex-start; /* Adjust alignment for vertical stacking */
+    padding: 1rem; /* Add padding for spacing on small screens */
+  }
+
+  .glass-box {
+    width: 65%;
+    margin-right: 1rem;
+  }
+
+  .who-we-are {
+    width: 100%;
+    color: aliceblue;
+  }
+
+  .motion-video {
+    margin-top: 6rem;
+    margin-right: 1rem;
+    width: 90%;
+  }
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  max-width: 90%;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 12rem;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.motion-video {
+  padding: 2rem;
+  margin-top: 12rem;
+}
+
+.who-we-are {
+  font-size: 2.5rem;
+  margin-top: 0;
+  text-align: center; /* Center text in the glass box */
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+
+.what-we-do-container{
+  background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228));
+  /* margin-top: 5rem; */
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
+}
+
+.what-we-do  {
+  display: flex;
+  /* width: 80%; */
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  color: black;
+  margin-top: 5.5rem; 
+  padding-top: 4.5rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center; 
+  /* margin-left: 2rem; */
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns */
+  gap: 2rem;
+  margin: 5rem auto; /* Center the container horizontally */
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  /* width: 75%; */
+  max-width: 95%; /* Add a maximum width to prevent it from stretching too wide */
+}
+
+@media (max-width: 768px) {
+  .what-we-do-container {
+    align-items: center;
+    text-align: center;    
+  }
+
+  .what-we-do-container h3 {
+    text-align: center;
+    margin-right: 2.5rem;
+  }
+
+  .what-we-do-container p {
+    margin-left: 5.5rem;
+    width: 50%;
+  }
+
+  .service-container {
+    grid-template-columns: 1fr; /* Change to single column layout */
+    width: 40%; /* Full width on smaller screens */
+    /* padding: 1rem; */
+    margin-right: 12rem;
+  }
+
+  .service-containter h4 {
+    width: 80%;
+  }
+
+  .service-container p {
+    width: 100%;
+    margin-left: 2rem;
+  }
+
+  .service-container .service-icon {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 3rem;
+  }
+
+  .service-box {
+    width: 50%;
+  }
+}
+
+.service-box {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(50px); /* Apply a blur effect */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* margin-left: 0.5rem; */
+  padding: 1.3rem;
+}
+
+.service-box:hover {
+  background-color: black; /* Darkened on hover for a clearer frosted effect */
+  color: aqua;
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.service-icon {
+  width: 20%; 
+  height: 15%;
+  margin-left: 8rem; 
+  margin-right: 10px; 
+  margin-bottom: 1rem;
+  /* padding: 0.5rem; */
+  align-items: center;
+  justify-content: center;
+}
+
+.in-depth {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for the text */
+  display: inline-flex; /* Display as a flex container */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between text and arrow */
+  padding: 5px 10px; /* Add padding to create a button-like appearance */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* Add hover effect */
+.in-depth:hover {
+  background-color: black; /* Darkened on hover for a clearer frosted effect */
+  color: aqua;
+}
+
+.explore-our-work {
+  font-size: 2.5rem;
+  padding-top: 0.5rem;
+}
+
+/* Define a grid with 3 columns for all screen sizes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; /* Adjust the gap size as needed */
+  padding: 1rem;
+  width: 100%;
+  /* height: 80%; */
+}
+
+
+/* Style for each industry card */
+.industry-card {
+  perspective: 1000px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflow for child elements */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  height: 90%;
+  margin-top: 5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  /* Remove margin here */
+  max-width: 350px;
+}
+
+/* Style for the card image container */
+.industry-image-container {
+  width: 100%;
+  height: 50%; /* Set the height to cover the top half of the card */
+  overflow: hidden; /* Hide any overflowing image content */
+}
+
+.industry-image {
+  position: relative;
+  object-fit: cover; /* Maintain aspect ratio */
+  width: 100%;
+  height: 100%; /* Set the height to cover the top half of the card */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .explore-our-work {
+    width: 73%;
+    margin-left: 2rem;
+  }
+
+  .home-portfolio-container p {
+    width: 60%;
+    margin-left: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Switch to a single column layout on smaller screens */
+  }
+  
+  .industry-card {
+    max-width: 70%; /* Allow cards to occupy full width on mobile */
+    height: auto; /* Allow cards to expand based on content */
+    margin-left: 2.5rem;
+  }
+
+  .industry-image {
+    width: 100%;
+    height: 60%; /* Adjust the image height as needed for mobile view */
+  }
+
+  .portfolio-link {
+    margin-right: 2rem;
+  }
+}
+
+.industry-content {
+  flex: 1; /* Take up remaining space */
+  position: relative;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 1rem; */
+  background-color: aqua;
+  box-sizing: border-box;
+  transform-style: preserve-3d; /* Preserve 3D space for correct flips */
+  width: 100%;
+  height: 100%;
+  /* z-index: 1; Add z-index */
+}
+
+.industry-icon {
+  /* position: relative; */
+  margin: 2rem;
+}
+
+.industry-name {
+  margin: 2rem;
+}
+
+.industry-front {
+  /* width: 100%;
+  height: 100%; */
+  position: relative;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(0deg);
+  z-index: 2; /* Add z-index */
+}
+
+/* Style for the back side of the card */
+.industry-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  z-index: 1; /* Add z-index to place it below the front */
+  opacity: 0; /* Initially, hide the back side */
+  pointer-events: none; /* Disable interaction with the back side */
+}
+
+/* When hovering over the card, show the back side */
+.industry-card:hover .industry-back {
+  opacity: 1; /* Show the back side on hover */
+  pointer-events: auto; /* Enable interaction with the back side on hover */
+}
+
+.industry-card:hover .industry-content {
+  transform: rotateY(180deg);
+}
+
+.portfolio-link {
+  display: inline-flex;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: #007bff; /* Set your desired text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.portfolio-link:hover {
+  background-color: black; /* Set a different color on hover if desired */
+  color: aqua;
+}
+
+/*Testimonial Section*/
+
+.testimonials-section {
+  width: 100%;
+  /* height: 100%; */
+  background: linear-gradient(to bottom, #000000, #003468);
+  padding: 2rem;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  color: aqua;
+  margin-top: 1rem;
+}
+
+/* .testimonial-section {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.2); /* Frosted glass background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-photo img {
+  max-width: 100px; /* Set a maximum width for the photo */
+  border-radius: 50%; /* Round the photo */
+  margin-right: 1rem;
+}
+
+.testimonial-container {
+  width: 20%;
+  max-width: 300px; 
+  /* height: 100%; */
+  margin: 0 auto; /* Center the container */
+  margin-top: 1rem;
+  padding: 20px;
+  text-align: center;
+  /* background-color: aliceblue; */
+}
+
+/* .testimonial-content {
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 50%; 
+} */
+
+.testimonial-company {
+  font-weight: bold;
+  color: aqua;
+  height: auto;
+  font-size: 2rem;
+}
+
+.testimonial-text{
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  color:#007bff;
+}
+
+.testimonial-author {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Styles for the carousel dots */
+.slick-dots {
+  text-align: center;
+  margin-top: 20px;
+  color:azure;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.slick-dots li button {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: azure;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .testimonial-content {
+      width: 90%; /* Reduce the width for smaller screens */
+      padding: 10px; /* Adjust padding for spacing */
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+  }
+
+  .testimonial-card {
+    width: 70%;
+    margin-left: 2rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .testimonial-company {
+    font-size: 1.5rem; /* Decrease font size for company name */
+  }
+
+  .testimonial-right .testimonial-text {
+    font-size: 1.1rem; /* Decrease font size for testimonial text */
+    width: 90%;
+    margin-left: 2rem;
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+  }
+  
+  .testimonial-right .testimonial-author {
+    font-size: 18px; /* Decrease font size for author name */
+    color: aliceblue;
+  }
+}
+
+
+/*News Section*/
+
+.news-section {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #fff; 
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.news-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 1.5rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 20px; /* Gap between grid items */
+}
+
+.news-section .news-card {
+  padding: 20px;
+  text-align: left;
+  background: rgba(0, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  justify-content: center;  
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.news-photo {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.news-section p{
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff; /* Date text color */
+}
+
+.news-section h3{
+  font-size: 26px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.news-content {
+  font-size: 16px; /* Content font size */
+  margin-bottom: 20px;
+}
+
+.insider-link {
+  display: inline-flex;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: #007bff; /* Set your desired text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.insider-link:hover {
+  background-color: black; /* Change the background color on hover */
+  color: aqua;
+}
+
+
+/* Styles for the arrow (you can use a suitable arrow icon) */
+.arrow {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .news-card {
+    width: 100%; /* Make each news card wider on mobile */
+    height: 100%;
+    margin: 10px auto; /* Center the news card */
+    padding: 10px; /* Reduce padding */
+  }
+  
+  .news-title {
+    font-size: 18px; /* Decrease font size for the title */
+  }
+  
+  .news-content {
+    font-size: 16px; /* Decrease font size for the content */
+  }
+
+  .insider-link {
+    margin-right: 2rem;
+  }
+}
+
+/*Subscribe Section*/
+
+.subscribe-section {
+  background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228), aqua); /* Add aqua color to the gradient */
+  /* margin-top: 5rem; */
+  padding: 2rem; /* Add padding to increase the width */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.subscribe-section p {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.subscribe-form {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Use a percentage to take full width within the padding */
+  max-width: 500px; /* Set a maximum width to control the width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+  margin-top: 5rem;
+  padding: 2rem; /* Add padding for spacing inside the form */
+  text-decoration: underline;
+  margin-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input {
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  background-color: #007bff; /* Set the background color of the button */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 10px 20px; /* Add padding to the button */
+  margin-top: 1rem;
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  font-size: 1rem; /* Set the font size */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Add a smooth background color transition */
+}
+
+.subscribe-button:hover {
+  background-color: black; /* Change the background color on hover */
+}
+
+@media (max-width: 768px) {
+  .subscribe-form {
+    width: 80%; /* Make the form wider on mobile */
+    margin: 10px 15px auto; /* Center the form */
+    padding: 10px; /* Reduce padding */
+  }
+  
+  input[type="email"],
+  button {
+    width: 100%; /* Expand input and button to full width */
+  }
+  
+  input[type="email"] {
+    font-size: 16px; /* Decrease font size for the input */
+  }
+
+  button {
+    font-size: 18px; /* Decrease font size for the button */
+  }
+}
+
+/* Careers Section */
+
+.careers-section {
+  margin-bottom: 5rem;
+}
+
+.career-section h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.careers-section h3 {
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: black;
+  margin-top: 2rem;
+}
+
+.careers-section p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.careers-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.careers-link:hover {
+  background-color: black;
+  color: aqua;
+}
+
+@media (max-width: 768px) {
+  .career-section h3 {
+    width: 85%;
+    margin-left: 1rem;
+  }
+
+  .careers-link {
+    margin-right: 2rem;
+  }
+}

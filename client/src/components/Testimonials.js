@@ -5,6 +5,7 @@ import React from 'react';
 import '../index.css';
 import '../App.css';
 
+
 const Testimonial = () => {
     // Define your testimonial data and settings here
     const testimonialData = [

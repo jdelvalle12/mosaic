@@ -60,15 +60,19 @@ const Navbar = () => {
             </Link>
             <div className={`mobile-dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
               <ul>
-                <h3>Solutions</h3>
-                <li><Link className='sub-nav-link' to="/services#web-development">Web Development</Link></li>
-                <li><Link className='sub-nav-link' to="/services#api-development">API Development</Link></li>
-                <li><Link className='sub-nav-link' to="/services#mobile-development">Mobile Development</Link></li>
-                <li><Link className='sub-nav-link' to="/services#business-solutions">Business Solutions</Link></li>
-                <li><Link className='sub-nav-link' to="/services#security-solutions">Security Solutions</Link></li>
-                <h3>Products</h3>
+                {/* <h3>Solutions</h3> */}
+                <li><Link className='sub-nav-link' to="/services/web-development">Web Development</Link></li>
+                <li><Link className='sub-nav-link' to="/services/api-development">API Development</Link></li>
+                <li><Link className='sub-nav-link' to="/services/mobile-development">Mobile Development</Link></li>
+                <li><Link className='sub-nav-link' to="/services/business-solutions">Business Solutions</Link></li>
+                <li><Link className='sub-nav-link' to="/services/security-solutions">Security Solutions</Link></li>
+                <li><Link className='sub-nav-link' to="/services/marketing-support">Marketing Support</Link></li>
+                <li><Link className='sub-nav-link' to="/services/hosting">Hosting</Link></li>
+                <li><Link className='sub-nav-link' to="/services/uiux-design">UI/UX Design</Link></li>
+                <li><Link className='sub-nav-link' to="/services/tech-strategy">Tech Strategy</Link></li>
+                {/* <h3>Products</h3>
                 <li><Link className='sub-nav-link'>In development</Link></li>
-                <li><Link className='sub-nav-link'>In development</Link></li>
+                <li><Link className='sub-nav-link'>In development</Link></li> */}
               </ul>
             </div>
           </li>

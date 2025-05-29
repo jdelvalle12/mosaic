@@ -2,10 +2,10 @@ import React, {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Logo from './Logo';
-import '../components/Header.css';
+// import '../components/Header.css';
 import '../index.css';
 // import '../App.css';
-import './Navbar.css';
+import './Header.css';
 
 const Header = () => {
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
@@ -79,7 +79,7 @@ const handleMouseLeave = () => {
                 <Link to="/services/marketing-support" className="flex px-4 py-2 hover:bg-gray-100">Marketing Support</Link>
               </li>
               <li>
-                <Link to="/services/hosting" className="flex px-4 py-2 hover:bg-gray-100">Hosting & Development</Link>
+                <Link to="/services/hosting" className="flex px-4 py-2 hover:bg-gray-100">Hosting</Link>
               </li>
               <li>
                 <Link to="/services/uiux-design" className="flex px-4 py-2 hover:bg-gray-100">UI/UX Design</Link>

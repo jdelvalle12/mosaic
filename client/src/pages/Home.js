@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import DigiEarth from '../images/rotating-digital-planet.mp4';
+import MarketTeam from '../images/digital-marketing-team.mp4';
 import Digital from '../images/digital-motion.mp4';
 import WebDev from '../images/web-development-icon.png';
 import BizSol from '../images/business-solution-icon.png';
@@ -29,7 +29,8 @@ import News from '../components/News.js';
 import Careers from '../components/Careers.js';
 
 import '../index.css';
-import '../App.css';
+// import '../App.css';
+import './Home.css';
 
 const ServiceBox = ({ title, description, icon }) => {
   return (
@@ -117,16 +118,17 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <video src={DigiEarth} autoPlay loop muted className="background-video"></video>
+      <video src={MarketTeam} autoPlay loop muted className="background-video"></video>
       <h1 className={showSlogan ? 'fade-in' : ''}>"Engineering Digital Experiences. Creating Real Impact."</h1>
       <h2>
         <span id="typing-text"></span>
       </h2>
         <span className={`mission ${showSlogan ? 'fade-in' : ''}`}>
-        Embarking on an innovation journey, we lead with purpose,
-        guiding progress towards a brighter future. Committed to 
-        pioneering technology, we empower businesses and individuals 
-        through cutting-edge solutions.
+        We blend innovation, marketing, and technology to empower brands 
+        in the digital age. Our mission is to craft data-driven strategies 
+        and impactful digital experiences that connect, convert, and grow. 
+        We lead with creativity, guided by insight — turning bold ideas into 
+        measurable success.
         </span>
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
         <Link to="/contact" className={`contact-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
@@ -191,7 +193,7 @@ const Home = () => {
             to life on smartphones and tablets, delivering unique user experiences.
             </p>
           </div> */}
-          <Link to="/technologies" className="in-depth">
+          <Link to="/services" className="in-depth">
             In Depth Look<span className='arrow'>&rarr;</span>
           </Link>
         </div>
