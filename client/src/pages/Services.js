@@ -1,18 +1,21 @@
 import React from 'react';
 
-import Background from '../images/abstract-image.jpg';
+const Services = () => {
+  return (
+    <div style={styles.container}>
+      <h1>Coming Soon</h1>
+      <p>Stay tuned for the latest updates from Mosaic Digital Creations.</p>
+    </div>
+  );
+};
 
-import '../index.css';
-import '../App.css';
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '50px 20px',
+    fontFamily: 'Arial, sans-serif',
+    color: '#333',
+  }
+};
 
-const services = () => {
-
-    return (
-       <div className='services-container'>
-
-           <img src={Background} alt="background" className="background-design" />
-       </div> 
-    )
-}
-
-export default services;
+export default Services;
