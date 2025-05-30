@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import MarketTeam from '../images/digital-marketing-team.mp4';
 import Puzzles from '../images/tech-process-3.jpg';
@@ -95,59 +95,66 @@ const industries = [
 
 const Home = () => {
   const [showSlogan, setShowSlogan] = useState(false);
+  const typingRef = useRef(null); // this replaces document.getElementById
 
   useEffect(() => {
     setShowSlogan(true);
 
     const typingText = 'Your gateway to extraordinary solutions';
     const typingSpeed = 50; // Speed in milliseconds between each character
-
-    const typingContainer = document.getElementById('typing-text');
     let charIndex = 0;
 
     function typeText() {
-      if (charIndex < typingText.length) {
-        typingContainer.textContent += typingText.charAt(charIndex);
+      if (charIndex < typingText.length && typingRef.current) {
+        typingRef.current.textContent += typingText.charAt(charIndex);
         charIndex++;
         setTimeout(typeText, typingSpeed);
       }
     }
 
+    // Clear previous incase of remounts
+    if (typingRef.current) typingRef.current.textContent = '';
     typeText();
   }, []);
 
   return (
     <div className="home-container">
-      <video src={MarketTeam} autoPlay loop muted className="background-video"></video>
-      <h1 className={showSlogan ? 'fade-in' : ''}>"Engineering Digital Experiences. Creating Real Impact."</h1>
+      <video src={MarketTeam} autoPlay loop muted className="background-video" />
+      <h1 className={showSlogan ? 'fade-in' : ''}>
+        Engineering Digital Experiences. Creating Real Impact.
+      </h1>
       <h2>
-        <span id="typing-text"></span>
+        <span id="typing-text" ref={typingRef}></span>
       </h2>
-        <span className={`mission ${showSlogan ? 'fade-in' : ''}`}>
-        We blend innovation, marketing, and technology to empower brands 
-        in the digital age. Our mission is to craft data-driven strategies 
-        and impactful digital experiences that connect, convert, and grow. 
-        We lead with creativity, guided by insight — turning bold ideas into 
-        measurable success.
-        </span>
+        <p className={`mission ${showSlogan ? 'fade-in' : ''}`}>
+          We blend innovation, marketing, and technology to empower brands 
+          in the digital age. Our mission is to craft data-driven strategies 
+          and impactful digital experiences that connect, convert, and grow. 
+          We lead with creativity, guided by insight — turning bold ideas into 
+          measurable success.
+        </p>
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
         <Link to="/contact" className={`contact-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
       </div>
       <div className="home-about-container">
         <div className="glass-box">
-          <h3 className='who-we-are'>What We Are About</h3>
-            <p className='home-about-para'>At Aurizon, we are passionate about pushing boundaries and 
-            exploring new horizons in the tech industry. We are committed to empowering businesses and 
-            individuals with cutting-edge technologies that drive growth.</p>
+          <h3 className='what-we-are-about'>What We Are About</h3>
+            <p className='home-about-para'>At Mosaic Digital Creations, we craft
+              tailored digital experiences that bring your brand’s story to life. 
+              We blend design, technology, and strategy to create meaningful 
+              connections that drive impact and inspire growth.</p>
+            {/* Tagline placed here for visual emphasis */}
+            <p className="tagline">
+              Design. Strategy. Results — Pixel by Pixel.
+            </p>
             <Link to="/about" className="about-link">Learn More<span className="arrow">&rarr;</span></Link>
         </div>
       <img src={Puzzles} autoPlay loop muted className="puzzle-picture"></img>
       </div>
-      <div className='what-we-do-container'>
-        <h3 className='what-we-do'>What We Do</h3>
+      <div className='our-capabilities'>
+        <h3 className='capabilities'>Our Capabilities</h3>
         <p className={showSlogan ? 'slide-in' : ''}>
-          We build and manage technology that helps businesses succeed and develop intuitive
-          and user-friendly products to simplify everyday tasks.
+          We combine data, creativity, and technology to help brands grow in a connected world.
         </p>      
         <div className="service-container">
           <div className="service-box web">

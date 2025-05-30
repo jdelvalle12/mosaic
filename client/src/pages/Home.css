@@ -211,12 +211,12 @@
     margin-right: 1rem;
   }
 
-  .who-we-are {
+  .what-we-are-about {
     width: 100%;
     color: aliceblue;
   }
 
-  .motion-video {
+  .puzzle-picture {
     margin-top: 6rem;
     margin-right: 1rem;
     width: 90%;
@@ -244,10 +244,17 @@
   margin-top: 12rem;
 }
 
-.who-we-are {
+.our-capabilities {
   font-size: 2.5rem;
   margin-top: 0;
   text-align: center; /* Center text in the glass box */
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #555;
 }
 
 .about-link {
@@ -261,7 +268,7 @@
   text-decoration: underline;
 }
 
-.what-we-do-container{
+.our-capabilities-container {
   background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228));
   /* margin-top: 5rem; */
   justify-content: center;
@@ -269,7 +276,7 @@
   /* height: 50%; */
 }
 
-.what-we-do  {
+.capabilities  {
   display: flex;
   /* width: 80%; */
   font-size: 2.5rem;
@@ -296,17 +303,17 @@
 }
 
 @media (max-width: 768px) {
-  .what-we-do-container {
+  .our-capabilities-container {
     align-items: center;
     text-align: center;    
   }
 
-  .what-we-do-container h3 {
+  .our-capabilities-container h3 {
     text-align: center;
     margin-right: 2.5rem;
   }
 
-  .what-we-do-container p {
+  .our-capabilities-container p {
     margin-left: 5.5rem;
     width: 50%;
   }
