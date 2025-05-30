@@ -63,6 +63,23 @@
   /* margin-left: 4rem; */
 }
 
+#typing-text {
+  font-family: 'Courier New', Courier, monospace; /* classic typewriter font */
+  font-size: 1.5rem;
+  color: #333;
+  border-right: 2px solid #333; /* cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}
+
 .mission {
   display: flex;
   font-size: 1.5rem;
