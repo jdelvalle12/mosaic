@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom for the Insider link
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom for the news link
 import '../index.css';
 // import '../App.css';
 import './News.css';
@@ -28,7 +28,7 @@ const News = () => {
                     </div>
                 ))}
             </div>
-            <Link to='/insider' className='insider-link'>Insider<span className='arrow'>&rarr;</span></Link>
+            <Link to='/news' className='news-link'>News<span className='arrow'>&rarr;</span></Link>
         </div>
     );
 };

@@ -8,26 +8,26 @@
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* color: black; */
+  color: aliceblue;
   width: 100%;
   /* height: 100%; */
 }
 
 .home-container .background-video {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin-top: -7.3rem;
+  margin-top: -1.8rem;
   /* height: 13%; */
 }
 
 /* Apply the animation to the slogan */
 .home-container h1 {
-  position: relative;
+  /* position: absolute; */
   font-size: 2.5rem;
   font-family: 'Source Code Pro', 'Space Grotesk', sans-serif; /* Change the font family to your preferred italic font */
   font-style: italic; /* Apply italic to the font */
   color: aliceblue;
-  margin-top: 7rem;
+  margin-top: 1rem;
   /* margin-left: 3rem; */
   /* width: 80%; */
   height: auto;
@@ -55,7 +55,7 @@
   display: flex;
   /* width: 93%; */
   font-size: 2.9rem;
-  color: teal;
+  color: black;
   margin-top: 7.5rem; 
   justify-content: center;
   align-content: center;
@@ -65,13 +65,16 @@
 
 #typing-text {
   font-family: 'Courier New', Courier, monospace; /* classic typewriter font */
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: aliceblue;
+  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
   border-right: 2px solid #333; /* cursor effect */
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   animation: blink-caret 0.75s step-end infinite;
+  z-index: 1;
 }
 
 /* blinking cursor animation */
@@ -80,14 +83,14 @@
   50% { border-color: #333; }
 }
 
-.mission {
+.mission p.fade-in {
   display: flex;
   font-size: 1.5rem;
   line-height: 2.5rem;
   justify-content: center;
   align-content: center;
   text-align: center; 
-  color: aliceblue;
+  color: teal;
   /* padding-top: 2.5rem; */
   max-width: 80%; 
   margin: 0 auto;
@@ -154,10 +157,10 @@
 }
 
 /* Style the button to match the design */
-.contact-button {
+.service-button {
   display: flex;
   font-size: 2rem;
-  margin-top: 1rem;
+  margin-top: 15rem;
   background-color:coral;
   color: black; /* Set the text color to contrast with the background */
   border: none;
@@ -186,7 +189,7 @@
   justify-content: center;
   align-content: center;
   text-align: center; 
-  color: #007bff;
+  color: black;
   padding-top: 1.5rem;
   max-width: 70%; 
   margin: 0 auto
@@ -258,7 +261,7 @@
 
 .puzzle-picture {
   padding: 2rem;
-  margin-top: 12rem;
+  margin-top: 30rem;
 }
 
 .our-capabilities {
@@ -277,7 +280,7 @@
 .about-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #007bff;
+  color: aqua;
   text-decoration: none;
 }
 
@@ -378,8 +381,12 @@
   padding: 1.3rem;
 }
 
+.service-box p {
+    color: black;
+}
+
 .service-box:hover {
-  background-color: black; /* Darkened on hover for a clearer frosted effect */
+  background-color: coral; /* Darkened on hover for a clearer frosted effect */
   color: aqua;
   transform: translateY(-10px); /* Slight lift on hover */
 }
@@ -398,7 +405,7 @@
 .in-depth {
   font-size: 18px;
   font-weight: bold;
-  color: #007bff; /* Blue color for the text */
+  color: aliceblue; /* Blue color for the text */
   display: inline-flex; /* Display as a flex container */
   align-items: center; /* Vertically center items */
   gap: 10px; /* Space between text and arrow */
@@ -415,7 +422,7 @@
 
 /* Add hover effect */
 .in-depth:hover {
-  background-color: black; /* Darkened on hover for a clearer frosted effect */
+  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
   color: aqua;
 }
 
@@ -453,6 +460,7 @@
   justify-content: center;
   /* Remove margin here */
   max-width: 350px;
+  color: aliceblue;
 }
 
 /* Style for the card image container */
@@ -512,7 +520,7 @@
   justify-content: center;
   text-align: center;
   /* padding: 1rem; */
-  background-color: aqua;
+  background-color: coral;
   box-sizing: border-box;
   transform-style: preserve-3d; /* Preserve 3D space for correct flips */
   width: 100%;
@@ -548,7 +556,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -558,6 +566,10 @@
   z-index: 1; /* Add z-index to place it below the front */
   opacity: 0; /* Initially, hide the back side */
   pointer-events: none; /* Disable interaction with the back side */
+}
+
+.industry-back p {
+    color: aliceblue;
 }
 
 /* When hovering over the card, show the back side */
@@ -577,7 +589,7 @@
   backdrop-filter: blur(10px); /* Apply a blur effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: #007bff; /* Set your desired text color */
+  color: aliceblue; /* Set your desired text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -588,7 +600,7 @@
 }
 
 .portfolio-link:hover {
-  background-color: black; /* Set a different color on hover if desired */
+  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
   color: aqua;
 }
 
@@ -751,6 +763,7 @@
 /*News Section*/
 
 .news-section {
+  position: relative;  
   text-align: center;
   padding: 20px;
   /* background-color: #fff; 
@@ -760,7 +773,7 @@
 
 .news-section h2 {
   font-size: 2.5rem;
-  color: black;
+  color: aliceblue;
   margin-top: 1.5rem;
 }
 
@@ -773,7 +786,7 @@
 .news-section .news-card {
   padding: 20px;
   text-align: left;
-  background: rgba(0, 255, 255, 0.2); /* Set your desired background color */
+  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
   backdrop-filter: blur(10px); /* Apply a blur effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -791,16 +804,17 @@
   margin-bottom: 10px;
 }
 
-.news-section p{
+.news-section p {
   font-weight: bold;
   font-size: 18px;
-  color: #007bff; /* Date text color */
+  color: aliceblue; /* Date text color */
 }
 
 .news-section h3{
   font-size: 26px; 
   margin-top: 10px;
   margin-bottom: 10px;
+  color: aqua;
 }
 
 .news-content {
@@ -808,14 +822,14 @@
   margin-bottom: 20px;
 }
 
-.insider-link {
+.news-link {
   display: inline-flex;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
   backdrop-filter: blur(10px); /* Apply a blur effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: #007bff; /* Set your desired text color */
+  color: aliceblue; /* Set your desired text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -825,8 +839,8 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.insider-link:hover {
-  background-color: black; /* Change the background color on hover */
+.news-link:hover {
+  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
   color: aqua;
 }
 
@@ -852,7 +866,7 @@
     font-size: 16px; /* Decrease font size for the content */
   }
 
-  .insider-link {
+  .news-link {
     margin-right: 2rem;
   }
 }
@@ -860,18 +874,20 @@
 /*Subscribe Section*/
 
 .subscribe-section {
-  background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228), aqua); /* Add aqua color to the gradient */
+   background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
   /* margin-top: 5rem; */
   padding: 2rem; /* Add padding to increase the width */
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 60%;
+  position: relative;
 }
 
 .subscribe-section p {
   font-size: 1.5rem;
-  color: black;
+  color: aliceblue;
 }
 
 .subscribe-form {
@@ -899,7 +915,7 @@
 
 .subscribe-button {
   background-color: #007bff; /* Set the background color of the button */
-  color: white; /* Set the text color to white */
+  color: aliceblue; /* Set the text color to white */
   border: none; /* Remove the border */
   border-radius: 5px; /* Add rounded corners */
   padding: 10px 20px; /* Add padding to the button */
@@ -911,7 +927,7 @@
 }
 
 .subscribe-button:hover {
-  background-color: black; /* Change the background color on hover */
+  background-color: coral; /* Change the background color on hover */
 }
 
 @media (max-width: 768px) {
@@ -939,11 +955,12 @@
 
 .careers-section {
   margin-bottom: 5rem;
+  position: relative;
 }
 
 .career-section h2 {
-  color: #007bff;
-  font-size: 2rem;
+  color: aliceblue;
+  font-size: 3rem;
   margin-top: 1.5rem;
 }
 
@@ -951,7 +968,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  color: black;
+  color: aqua;
   margin-top: 2rem;
 }
 
@@ -959,6 +976,7 @@
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 5rem;
+  color: aliceblue;
 }
 
 .careers-link {
@@ -976,11 +994,12 @@
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+  color: aliceblue;
 }
 
 .careers-link:hover {
-  background-color: black;
-  color: aqua;
+  background: linear-gradient(to right, coral, #FF8C66, #00B3B3, #3D5AFE);
+  color: aliceblue;
 }
 
 @media (max-width: 768px) {
@@ -992,4 +1011,18 @@
   .careers-link {
     margin-right: 2rem;
   }
+}
+
+.contact-button {
+  display: flex;
+  font-size: 2rem;
+  margin-top: 15rem;
+  margin-bottom: 20rem;
+  background-color:coral;
+  color: aliceblue; /* Set the text color to contrast with the background */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
 }

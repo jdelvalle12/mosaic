@@ -1,25 +1,28 @@
 /*Header*/
 
 .header-container {
+  /* position: fixed; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: auto;
   line-height: 30px;
   margin-top: -0.5rem;
-  padding: 1rem 2rem;
+  padding: 1rem ;
+  /* z-index: 1; */
 
   color: #ffffff;
-  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
+  background: linear-gradient(to right, coral, #FF7F50, #20B2AA, #3D5AFE);
 
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   font-size: 2rem;
   font-weight: 600;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  /* width: 105rem; */
 }
 
 .header-container a {
-  position: relative;
+  /* position: relative; */
   transition: color 0.3s ease;
 }
 

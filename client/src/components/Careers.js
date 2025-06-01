@@ -10,7 +10,7 @@ const Careers = () => {
             <h3>Come Join Our Team</h3>
                 <p>We're on an ambitious journey, and we want you to
                    be a part of it. Your skills can help shape the 
-                   future at Aurizon. Explore exciting career opportunities 
+                   future at Mosaic. Explore exciting career opportunities 
                    with us today!
                 </p>
                 <Link to='/careers' className='careers-link'>Join the team</Link>

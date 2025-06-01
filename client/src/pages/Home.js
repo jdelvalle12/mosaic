@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import MarketTeam from '../images/digital-marketing-team.mp4';
+// import MarketTeam from '../images/digital-marketing-team.mp4';
+import HomePage from '../images/background-image-homepage.jpg';
 import Puzzles from '../images/tech-process-3.jpg';
 import WebDev from '../images/web-development-icon.png';
 import BizSol from '../images/business-solution-icon.png';
@@ -119,22 +120,12 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <video src={MarketTeam} autoPlay loop muted className="background-video" />
+      <video src={HomePage} autoPlay loop muted className="background-video" />
       <h1 className={showSlogan ? 'fade-in' : ''}>
         Engineering Digital Experiences. Creating Real Impact.
       </h1>
-      <h2>
-        <span id="typing-text" ref={typingRef}></span>
-      </h2>
-        <p className={`mission ${showSlogan ? 'fade-in' : ''}`}>
-          We blend innovation, marketing, and technology to empower brands 
-          in the digital age. Our mission is to craft data-driven strategies 
-          and impactful digital experiences that connect, convert, and grow. 
-          We lead with creativity, guided by insight — turning bold ideas into 
-          measurable success.
-        </p>
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
-        <Link to="/contact" className={`contact-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
+        <Link to="/services" className={`service-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
       </div>
       <div className="home-about-container">
         <div className="glass-box">
@@ -149,13 +140,19 @@ const Home = () => {
             </p>
             <Link to="/about" className="about-link">Learn More<span className="arrow">&rarr;</span></Link>
         </div>
-      <img src={Puzzles} autoPlay loop muted className="puzzle-picture"></img>
+      <img src={Puzzles} alt="Puzzles" className="puzzle-picture"></img>
       </div>
       <div className='our-capabilities'>
         <h3 className='capabilities'>Our Capabilities</h3>
-        <p className={showSlogan ? 'slide-in' : ''}>
+        {/* <p className={showSlogan ? 'slide-in' : ''}>
           We combine data, creativity, and technology to help brands grow in a connected world.
-        </p>      
+          </p>       */}
+        <p className={`mission ${showSlogan ? 'fade-in' : ''}`}>
+         We combine data, creativity, and technology to help brands grow in a connected world. 
+        At Mosaic Digital Creations, we blend innovation and insight to craft data-driven strategies 
+        and impactful digital experiences that connect, convert, and grow. We lead with bold ideas, 
+        guided by clarity and purpose — turning vision into measurable success.
+        </p>
         <div className="service-container">
           <div className="service-box web">
           <img src={WebDev} alt="Web Development" className="service-icon" />
@@ -170,7 +167,7 @@ const Home = () => {
             <p>Building powerful APIs that connect applications and services,
             enabling smooth data exchange and enhancing software interoperability.
             </p>
-          </div> */}
+            </div> */}
           <div className="service-box business">
           <img src={BizSol} alt="Business Solution" className="service-icon" />
             <h4>Business Solution</h4>
@@ -199,7 +196,7 @@ const Home = () => {
             <p>Coming soon: Expertly crafting mobile applications that bring your ideas 
             to life on smartphones and tablets, delivering unique user experiences.
             </p>
-          </div> */}
+            </div> */}
           <Link to="/services" className="in-depth">
             In Depth Look<span className='arrow'>&rarr;</span>
           </Link>
@@ -227,11 +224,11 @@ const Home = () => {
           <Link to="/portfolio" className="portfolio-link">
             Explore Portfolio<span className='arrow'>&rarr;</span>
           </Link>
-          <div className="testimonials-section">
+          {/* <div className="testimonials-section">
             <h2>Testimonials</h2>
-              <p>See what our customers have to say...</p>
+            <p>See what our customers have to say...</p>
             <Testimonials />
-          </div>
+            </div> */}
           <div className="news-section">
           <h2>Latest News</h2>
             <News />
@@ -245,6 +242,12 @@ const Home = () => {
           <div className='careers-section'>
             <Careers />
           </div>
+            <h2>
+              <span id="typing-text" ref={typingRef}></span>
+            </h2>
+              <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
+                <Link to="/contact" className={`contact-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
+              </div>
             {/* Your existing content */}
             {/* ... */}
         </div>

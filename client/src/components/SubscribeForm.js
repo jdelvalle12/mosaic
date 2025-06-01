@@ -6,6 +6,13 @@ import './SubscribeForm.css';
 
 const SubscribeForm = () => {
     const [email, setEmail] = useState('');
+
+    // const [message, setMessage] = useState('');
+    // setMessage('Thanks for subscribing!');
+
+    // const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
+
+    
   
     const handleEmailChange = (e) => {
       setEmail(e.target.value);
