@@ -1,4 +1,6 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {createRoot} from 'react-dom/client';
 import './index.css';
 // import 'boostrap/dist/css/bootsrap.min.css';

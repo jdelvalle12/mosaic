@@ -8,26 +8,26 @@
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: aliceblue;
+  color: teal;
   width: 100%;
   /* height: 100%; */
 }
 
 .home-container .background-video {
-  position: relative;
+  position: absolute;
   width: 100%;
-  margin-top: -1.8rem;
+  margin-top: -7.3rem;
   /* height: 13%; */
 }
 
 /* Apply the animation to the slogan */
 .home-container h1 {
-  /* position: absolute; */
+  position: relative;
   font-size: 2.5rem;
   font-family: 'Source Code Pro', 'Space Grotesk', sans-serif; /* Change the font family to your preferred italic font */
   font-style: italic; /* Apply italic to the font */
   color: aliceblue;
-  margin-top: 1rem;
+  margin-top: 7rem;
   /* margin-left: 3rem; */
   /* width: 80%; */
   height: auto;
@@ -55,7 +55,7 @@
   display: flex;
   /* width: 93%; */
   font-size: 2.9rem;
-  color: black;
+  color: teal;
   margin-top: 7.5rem; 
   justify-content: center;
   align-content: center;
@@ -66,9 +66,7 @@
 #typing-text {
   font-family: 'Courier New', Courier, monospace; /* classic typewriter font */
   font-size: 2.5rem;
-  color: aliceblue;
-  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
-  backdrop-filter: blur(10px); /* Apply a blur effect */
+  color: teal;
   border-right: 2px solid #333; /* cursor effect */
   white-space: nowrap;
   overflow: hidden;
@@ -82,6 +80,24 @@
   from, to { border-color: transparent; }
   50% { border-color: #333; }
 }
+
+.home-container .sub-text {
+  color: aliceblue;    
+}
+
+/* .slide-in-bottom {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInBottom 1.5s ease-out forwards;
+  animation-delay: 0.5s; 
+} */
+
+/* @keyframes slideInBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
 
 .mission p.fade-in {
   display: flex;
@@ -160,7 +176,7 @@
 .service-button {
   display: flex;
   font-size: 2rem;
-  margin-top: 15rem;
+  margin-top: 23rem;
   background-color:coral;
   color: black; /* Set the text color to contrast with the background */
   border: none;
@@ -189,7 +205,7 @@
   justify-content: center;
   align-content: center;
   text-align: center; 
-  color: black;
+  color: #007bff;
   padding-top: 1.5rem;
   max-width: 70%; 
   margin: 0 auto
@@ -280,7 +296,7 @@
 .about-link {
   display: inline-block;
   margin-top: 1rem;
-  color: aqua;
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -405,7 +421,7 @@
 .in-depth {
   font-size: 18px;
   font-weight: bold;
-  color: aliceblue; /* Blue color for the text */
+  color: #007bff; /* Blue color for the text */
   display: inline-flex; /* Display as a flex container */
   align-items: center; /* Vertically center items */
   gap: 10px; /* Space between text and arrow */
@@ -589,7 +605,7 @@
   backdrop-filter: blur(10px); /* Apply a blur effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: aliceblue; /* Set your desired text color */
+  color: #007bff; /* Set your desired text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -773,7 +789,7 @@
 
 .news-section h2 {
   font-size: 2.5rem;
-  color: aliceblue;
+  color: #007bff;
   margin-top: 1.5rem;
 }
 
@@ -829,7 +845,7 @@
   backdrop-filter: blur(10px); /* Apply a blur effect */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: aliceblue; /* Set your desired text color */
+  color: #007bff; /* Set your desired text color */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -874,8 +890,7 @@
 /*Subscribe Section*/
 
 .subscribe-section {
-   background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
-  backdrop-filter: blur(10px); /* Apply a blur effect */
+  background: linear-gradient(to right, coral, #FF7F50, #20B2AA, #3D5AFE);
   /* margin-top: 5rem; */
   padding: 2rem; /* Add padding to increase the width */
   justify-content: center;
@@ -959,7 +974,7 @@
 }
 
 .career-section h2 {
-  color: aliceblue;
+  color: #007bff;
   font-size: 3rem;
   margin-top: 1.5rem;
 }
@@ -968,7 +983,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  color: aqua;
+  color: teal;
   margin-top: 2rem;
 }
 
@@ -976,7 +991,7 @@
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 5rem;
-  color: aliceblue;
+  color: #007bff;
 }
 
 .careers-link {
@@ -994,7 +1009,7 @@
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  color: aliceblue;
+  color: #007bff;
 }
 
 .careers-link:hover {

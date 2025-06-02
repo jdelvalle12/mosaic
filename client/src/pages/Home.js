@@ -122,10 +122,13 @@ const Home = () => {
     <div className="home-container">
       <video src={HomePage} autoPlay loop muted className="background-video" />
       <h1 className={showSlogan ? 'fade-in' : ''}>
-        Engineering Digital Experiences. Creating Real Impact.
+        The Full Spectrum of Digital Growth
       </h1>
+        <p className="sub-text" data-aos="fade-up">
+          From code to customers — sleek websites, smart marketing, and strategies that scale.
+        </p>  
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
-        <Link to="/services" className={`service-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
+        <Link to="/services" className={`service-button ${showSlogan ? 'slide-in' : ''}`}>Explore Services</Link>
       </div>
       <div className="home-about-container">
         <div className="glass-box">
