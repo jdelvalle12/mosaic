@@ -120,44 +120,44 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <video src={HomePage} autoPlay loop muted className="background-video" />
+      <video src={HomePage} autoPlay loop muted className="background-video" data-aos='zoom-in' />
       <h1 className={showSlogan ? 'fade-in' : ''}>
         The Full Spectrum of Digital Growth
       </h1>
         <p className="sub-text" data-aos="fade-up">
-          From code to customers — sleek websites, smart marketing, and strategies that scale.
+          We build the pieces that shape your business — development, design, and digital strategy in perfect harmony.
         </p>  
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
         <Link to="/services" className={`service-button ${showSlogan ? 'slide-in' : ''}`}>Explore Services</Link>
       </div>
       <div className="home-about-container">
-        <div className="glass-box">
+        <div className="glass-box" data-aos="fade-in">
           <h3 className='what-we-are-about'>What We Are About</h3>
             <p className='home-about-para'>At Mosaic Digital Creations, we craft
               tailored digital experiences that bring your brand’s story to life. 
               We blend design, technology, and strategy to create meaningful 
               connections that drive impact and inspire growth.</p>
             {/* Tagline placed here for visual emphasis */}
-            <p className="tagline">
-              Design. Strategy. Results — Pixel by Pixel.
-            </p>
             <Link to="/about" className="about-link">Learn More<span className="arrow">&rarr;</span></Link>
         </div>
-      <img src={Puzzles} alt="Puzzles" className="puzzle-picture"></img>
+      <img src={Puzzles} alt="Puzzles" className="puzzle-picture" data-aos='slide-left'></img>
       </div>
-      <div className='our-capabilities'>
-        <h3 className='capabilities'>Our Capabilities</h3>
+      <div className='our-capabilities-container'>
+        <h3 className='capabilities' data-aos='fade-down'>Our Capabilities</h3>
         {/* <p className={showSlogan ? 'slide-in' : ''}>
           We combine data, creativity, and technology to help brands grow in a connected world.
           </p>       */}
-        <p className={`mission ${showSlogan ? 'fade-in' : ''}`}>
+        <p className={`mission ${showSlogan ? 'fade-in' : ''}`} data-aos='slide-right'>
          We combine data, creativity, and technology to help brands grow in a connected world. 
         At Mosaic Digital Creations, we blend innovation and insight to craft data-driven strategies 
         and impactful digital experiences that connect, convert, and grow. We lead with bold ideas, 
         guided by clarity and purpose — turning vision into measurable success.
         </p>
-        <div className="service-container">
-          <div className="service-box web">
+          <p className="tagline" data-aos='slide-left'>
+            Design. Strategy. Results — Pixel by Pixel.
+          </p>
+        <div className="service-container" >
+          <div className="service-box web" data-aos='zoom-in' data-aos-delay='100'>
           <img src={WebDev} alt="Web Development" className="service-icon" />
             <h4>Web Development</h4>
               <p>Crafting user-focused websites with stunning designs and 
@@ -171,14 +171,14 @@ const Home = () => {
             enabling smooth data exchange and enhancing software interoperability.
             </p>
             </div> */}
-          <div className="service-box business">
+          <div className="service-box business" data-aos='zoom-in' data-aos-delay='200'>
           <img src={BizSol} alt="Business Solution" className="service-icon" />
             <h4>Business Solution</h4>
               <p>Creating tailored software solutions that streamline business processes,
                 drive efficiency, and empower organizations to thrive.
               </p>
           </div>
-          <div className="service-box manage">
+          <div className="service-box manage" data-aos='zoom-in' data-aos-delay='300'> 
           <img src={WebMan} alt="Web Management" className="service-icon" />
             <h4>Web Management</h4>
               <p>
@@ -186,7 +186,7 @@ const Home = () => {
                 to ensure seamless performance, security, and a flawless user experience.
               </p>
           </div>
-          <div className="service-box consult">
+          <div className="service-box consult" data-aos='zoom-in' data-aos-delay='400'>
           <img src={Strategy} alt="Consult & Strategy" className="service-icon" />
             <h4>Consult & Strategy</h4>
               <p>
