@@ -326,6 +326,21 @@
   /* margin-left: 2rem; */
 }
 
+.team-collab-picture {
+  display: block;
+  margin: 2rem auto; /* centers the image horizontally with spacing above & below */
+  max-width: 60%;     /* adjust width as needed */
+  height: auto;       /* maintain aspect ratio */
+  border-radius: 12px; /* soft rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.team-collab-picture:hover {
+  transform: scale(1.03); /* slight zoom effect on hover */
+  opacity: 0.95;
+}
+
 .service-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -379,6 +394,12 @@
 
   .service-box {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+  .team-collab-picture {
+    max-width: 90%;
+  }
   }
 }
 
@@ -457,157 +478,115 @@
 .explore-our-work {
   font-size: 2.5rem;
   padding-top: 0.5rem;
+  text-align: center;
 }
 
-/* Define a grid with 3 columns for all screen sizes */
+/* Optional supporting text below the title */
+.portfolio-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* Grid layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem; /* Adjust the gap size as needed */
-  padding: 1rem;
-  width: 100%;
-  /* height: 80%; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
 }
 
+/* --- MODERN TILE STYLES --- */
 
-/* Style for each industry card */
-.industry-card {
-  perspective: 1000px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden; /* Hide overflow for child elements */
-  cursor: pointer; /* Add a pointer cursor on hover */
+/* Card container */
+.modern-industry-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 400px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.modern-industry-tile:hover {
+  transform: scale(1.02);
+}
+
+/* Background image */
+.industry-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.modern-industry-tile:hover .industry-bg {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.modern-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  width: 100%; 
-  height: 90%;
-  margin-top: 5rem;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  align-items: center;
   justify-content: center;
-  /* Remove margin here */
-  max-width: 350px;
-  color: aliceblue;
+  text-align: center;
+  transition: opacity 0.3s ease;
 }
 
-/* Style for the card image container */
-.industry-image-container {
-  width: 100%;
-  height: 50%; /* Set the height to cover the top half of the card */
-  overflow: hidden; /* Hide any overflowing image content */
+.modern-industry-tile:hover .modern-overlay {
+  opacity: 1;
 }
 
-.industry-image {
-  position: relative;
-  object-fit: cover; /* Maintain aspect ratio */
-  width: 100%;
-  height: 100%; /* Set the height to cover the top half of the card */
+.modern-overlay h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-/* Media query for mobile devices */
+.modern-overlay p {
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* --- RESPONSIVE STYLES --- */
 @media (max-width: 767px) {
   .explore-our-work {
-    width: 73%;
-    margin-left: 2rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
-  .home-portfolio-container p {
-    width: 60%;
-    margin-left: 4rem;
+  .portfolio-intro {
+    width: 90%;
+    margin: 0 auto 2rem auto;
   }
 
   .grid {
-    grid-template-columns: repeat(1, 1fr); /* Switch to a single column layout on smaller screens */
-  }
-  
-  .industry-card {
-    max-width: 70%; /* Allow cards to occupy full width on mobile */
-    height: auto; /* Allow cards to expand based on content */
-    margin-left: 2.5rem;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
   }
 
-  .industry-image {
-    width: 100%;
-    height: 60%; /* Adjust the image height as needed for mobile view */
+  .modern-industry-tile {
+    height: 300px;
   }
 
-  .portfolio-link {
-    margin-right: 2rem;
+  .modern-overlay h3 {
+    font-size: 1.4rem;
   }
-}
 
-.industry-content {
-  flex: 1; /* Take up remaining space */
-  position: relative;
-  backface-visibility: hidden;
-  transition: transform 0.5s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  /* padding: 1rem; */
-  background-color: coral;
-  box-sizing: border-box;
-  transform-style: preserve-3d; /* Preserve 3D space for correct flips */
-  width: 100%;
-  height: 100%;
-  /* z-index: 1; Add z-index */
-}
-
-.industry-icon {
-  /* position: relative; */
-  margin: 2rem;
-}
-
-.industry-name {
-  margin: 2rem;
-}
-
-.industry-front {
-  /* width: 100%;
-  height: 100%; */
-  position: relative;
-  background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: rotateY(0deg);
-  z-index: 2; /* Add z-index */
-}
-
-/* Style for the back side of the card */
-.industry-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: rotateY(180deg);
-  z-index: 1; /* Add z-index to place it below the front */
-  opacity: 0; /* Initially, hide the back side */
-  pointer-events: none; /* Disable interaction with the back side */
-}
-
-.industry-back p {
-    color: aliceblue;
-}
-
-/* When hovering over the card, show the back side */
-.industry-card:hover .industry-back {
-  opacity: 1; /* Show the back side on hover */
-  pointer-events: auto; /* Enable interaction with the back side on hover */
-}
-
-.industry-card:hover .industry-content {
-  transform: rotateY(180deg);
+  .modern-overlay p {
+    font-size: 0.9rem;
+  }
 }
 
 .portfolio-link {

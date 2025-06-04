@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import MarketTeam from '../images/digital-marketing-team.mp4';
 import HomePage from '../images/background-image-homepage.jpg';
 import Puzzles from '../images/tech-process-3.jpg';
+import TeamCollab from '../images/team-collab.jpg';
 import WebDev from '../images/web-development-icon.png';
 import BizSol from '../images/business-solution-icon.png';
 import WebMan from '../images/web-management-icon.png';
@@ -44,6 +45,16 @@ const ServiceBox = ({ title, description, icon }) => {
 };
 
 const industries = [
+  {
+    name: "Healthcare",
+    image: "/images/healthcare.jpg",
+    description: "Tech-driven solutions for modern healthcare systems.",
+  },
+  {
+    name: "Finance",
+    image: "/images/finance.jpg",
+    description: "Secure and scalable financial platforms.",
+  },
   {
     name: 'Entertainment',
     image: Entertainment,
@@ -156,6 +167,7 @@ const Home = () => {
           <p className="tagline" data-aos='slide-left'>
             Design. Strategy. Results — Pixel by Pixel.
           </p>
+          <img src={TeamCollab} alt="TeamCollab" className="team-collab-picture" data-aos='zoom-in'></img>
         <div className="service-container" >
           <div className="service-box web" data-aos='zoom-in' data-aos-delay='100'>
           <img src={WebDev} alt="Web Development" className="service-icon" />
@@ -200,30 +212,28 @@ const Home = () => {
             to life on smartphones and tablets, delivering unique user experiences.
             </p>
             </div> */}
-          <Link to="/services" className="in-depth">
+          <Link to="/services" className="in-depth" data-aos='fade-in'>
             In Depth Look<span className='arrow'>&rarr;</span>
           </Link>
         </div>
       </div>   
-      <div className='home-portfolio-container'>
-        <h3 className='explore-our-work'>Explore Our Work</h3>
-          <p className={showSlogan ? 'fade-in' : ''}>We specialize in delivering innovative solutions across a wide spectrum of industries.
-            Explore our portfolio to see how we can help you achieve success and with more to come...</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {industries.map((industry, index) => (
-                <div className="industry-card" key={index}>
-                <div className="industry-content">
-                  <img className="industry-image" src={industry.image} alt={`${industry.name} Image`} />
-                  <img className='industry-icon'src={industry.icon} alt={`${industry.name} Icon`} />
-                  <h4 className="industry-name">{industry.name} <span className='arrow'>&rarr;</span></h4>
-                  <div className="industry-back">
-                    <h4 className='industry-name'>{industry.name}</h4>
-                      <p>{industry.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+      <div className="explore-our-work">
+        <h2 className="explore-our-work">Explore Our Work</h2>
+          <p className="portfolio-intro">
+            We specialize in delivering innovative solutions across various industries.
+          </p>
+        <div className="grid">
+          {industries.map((industry, index) => (
+          <div className="modern-industry-tile" key={index} data-aos="fade-up">
+            <img src={industry.image} alt={industry.name} className="industry-bg" />
+            <div className="modern-overlay">
+              <h3>{industry.name}</h3>
+                <p>{industry.description}</p>
+            </div>
           </div>
+        ))}
+      </div>
+    </div>
           <Link to="/portfolio" className="portfolio-link">
             Explore Portfolio<span className='arrow'>&rarr;</span>
           </Link>
@@ -253,9 +263,7 @@ const Home = () => {
               </div>
             {/* Your existing content */}
             {/* ... */}
-        </div>
-      </div>
-            
+        </div>            
     );
   };
 
