@@ -8,6 +8,8 @@ import WebDev from '../images/web-development-icon.png';
 import BizSol from '../images/business-solution-icon.png';
 import WebMan from '../images/web-management-icon.png';
 import Strategy from '../images/strategy-icon.png';
+import Health from '../images/health.jpg';
+import Finance from '../images/finance.jpg';
 import Entertainment from "../images/entertainment.jpg";
 import Sports from "../images/sports.jpg";
 import Journeez from '../images/Journeez.jpg';
@@ -47,12 +49,12 @@ const ServiceBox = ({ title, description, icon }) => {
 const industries = [
   {
     name: "Healthcare",
-    image: "/images/healthcare.jpg",
+    image: Health,
     description: "Tech-driven solutions for modern healthcare systems.",
   },
   {
     name: "Finance",
-    image: "/images/finance.jpg",
+    image: Finance,
     description: "Secure and scalable financial platforms.",
   },
   {
@@ -234,7 +236,7 @@ const Home = () => {
         ))}
       </div>
     </div>
-          <Link to="/portfolio" className="portfolio-link">
+          <Link to="/portfolio" className="portfolio-link" data-aos='slide-right'>
             Explore Portfolio<span className='arrow'>&rarr;</span>
           </Link>
           {/* <div className="testimonials-section">

@@ -786,69 +786,106 @@
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-  gap: 20px; /* Gap between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
 }
 
 .news-section .news-card {
-  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
-  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
-  backdrop-filter: blur(10px); /* Apply a blur effect */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
-  margin-top: 1rem;
-  justify-content: center;  
-  align-items: center;
-  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.news-section .news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
 .news-photo {
-  max-width: 100%; /* Ensure images don't exceed their container width */
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .news-section p {
   font-weight: bold;
   font-size: 18px;
-  color: aliceblue; /* Date text color */
+  color: black; /* Date text color */
 }
 
 .news-section h3{
   font-size: 26px; 
   margin-top: 10px;
   margin-bottom: 10px;
-  color: aqua;
+  color: #007bff;
+}
+
+.news-date {
+  font-size: 0.875rem;
+  color: #888;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
 }
 
 .news-content {
-  font-size: 16px; /* Content font size */
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #444;
+  padding: 0 1rem 1.5rem;
 }
 
 .news-link {
-  display: inline-flex;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
-  backdrop-filter: blur(10px); /* Apply a blur effect */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: #007bff; /* Set your desired text color */
+  display: inline-block;
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
 }
 
 .news-link:hover {
-  background: linear-gradient(to right, #008080, #3D5AFE); /* Teal to Blue gradient */
-  color: aqua;
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  background: transparent;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #ffffff;
+  color: #008080;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -858,23 +895,25 @@
 }
 
 @media (max-width: 768px) {
-  .news-card {
-    width: 100%; /* Make each news card wider on mobile */
-    height: 100%;
-    margin: 10px auto; /* Center the news card */
-    padding: 10px; /* Reduce padding */
-  }
-  
-  .news-title {
-    font-size: 18px; /* Decrease font size for the title */
-  }
-  
-  .news-content {
-    font-size: 16px; /* Decrease font size for the content */
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
-  .news-link {
-    margin-right: 2rem;
+  .news-section h2 {
+    font-size: 2rem;
+  }
+
+  .news-card {
+    margin: 0 auto;
+  }
+
+  .news-title {
+    font-size: 1.1rem;
+  }
+
+  .news-content {
+    font-size: 0.95rem;
   }
 }
 

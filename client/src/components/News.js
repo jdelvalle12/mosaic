@@ -7,14 +7,28 @@ import './News.css';
 const News = () => {
     // News settings here
     const newsData = [
-        {
-            date: 'September 10, 2023',
-            title: 'Exciting Product Launch',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum...',
-            photo: 'image-url-here.jpg', // Replace with actual image URL
-        },
-        // Add more news articles as needed
-    ];
+  {
+    date: 'July 4, 2025',
+    title: 'Exciting Product Launch',
+    content: 'After two years of planning, Aurizon launched and the newly formed service Mosaic Digital Creations',
+    photo: 'image-url-here.jpg',
+    readMoreLink: '/news/product-launch',
+  },
+  {
+    date: 'July 7, 2025',
+    title: 'New Feature Announcement',
+    content: 'Mosaic will now take crypto payments',
+    photo: 'image-url-here.jpg',
+    readMoreLink: '/news/product-launch',
+  },
+  {
+    date: 'July 8, 2025',
+    title: 'Client Spotlight',
+    content: 'The first client to have their work done with us',
+    photo: 'image-url-here.jpg',
+    readMoreLink: '/news/product-launch',
+  },
+];
 
     return (
         <div className='news-section'>
@@ -25,6 +39,11 @@ const News = () => {
                         <p className="news-date">{news.date}</p>
                         <h3 className='news-title'>{news.title}</h3>
                         <p className="news-content">{news.content}</p>
+                            {news.readMoreLink && (
+                                <Link to={news.readMoreLink} className="read-more">
+                                    Read More →
+                                </Link>
+                            )}
                     </div>
                 ))}
             </div>
