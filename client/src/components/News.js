@@ -34,7 +34,7 @@ const News = () => {
         <div className='news-section'>
             <div className="news-grid">
                 {newsData.map((news, index) => (
-                    <div className='news-card' key={index}>
+                    <div className='news-card' key={index} data-aos='zoom-in'>
                         <img src={news.photo} className="news-photo" alt={news.title} />
                         <p className="news-date">{news.date}</p>
                         <h3 className='news-title'>{news.title}</h3>
