@@ -26,6 +26,7 @@ import TechIcon from "../images/microchip-icon.png";
 import FBIcon from "../images/food-beverage-icon.png";
 import RealEstateIcon from "../images/real-estate-icon.png";
 import LogisticsIcon from "../images/logistics-icon.png";
+import Portal from '../images/portal.mp4';
 
 import Testimonials from '../components/Testimonials';
 import SubscribeForm from '../components/SubscribeForm.js';
@@ -130,6 +131,8 @@ const Home = () => {
     if (typingRef.current) typingRef.current.textContent = '';
     typeText();
   }, []);
+
+  
 
   return (
     <div className="home-container">
@@ -248,21 +251,33 @@ const Home = () => {
           <h2>Latest News</h2>
             <News />
           </div>
-          <div className="subscribe-section">
-            <p>Stay ahead of the tech curve! Subscribe to our newsletter and be the first to access new insights,
-               tech updates, and exclusive offers for your business.
+          <div className="subscribe-section" data-aos='zoom-in'>
+            <p>Power Your Business with Premium Web Solutions.
+              Subscribe to get exclusive updates, smart web development insights, 
+              and first access to our newest services and offers.
             </p>
             <SubscribeForm />
           </div>
-          <div className='careers-section'>
+          <div className='careers-container' data-aos='slide-right'>
             <Careers />
           </div>
-            <h2>
-              <span id="typing-text" ref={typingRef}></span>
-            </h2>
-              <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
-                <Link to="/contact" className={`contact-button ${showSlogan ? 'slide-in' : ''}`}>Let's Get Started</Link>
-              </div>
+            <div className="typing-banner" data-aos='zoom-in'>
+              <div className="typing-text-container">
+                <h2><span id="typing-text" ref={typingRef}></span></h2>
+            </div>
+            <div className="typing-image">
+              <video className="typing-video" src={Portal} autoPlay muted loop playsInline 
+                aria-label="Background video showing Milky Way galaxy">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div className="cta-wrapper">
+            <p className="cta-tagline">Ready to take your digital presence to the next level?</p>
+            <div className={`cta-button-container ${showSlogan ? 'slide-in' : ''}`}>
+              <Link to="/contact" className="cta-contact-button">Let's Get Started</Link>
+            </div>
+          </div>
             {/* Your existing content */}
             {/* ... */}
         </div>            

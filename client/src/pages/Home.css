@@ -63,17 +63,6 @@
   /* margin-left: 4rem; */
 }
 
-#typing-text {
-  font-family: 'Courier New', Courier, monospace; /* classic typewriter font */
-  font-size: 2.5rem;
-  color: teal;
-  border-right: 2px solid #333; /* cursor effect */
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  animation: blink-caret 0.75s step-end infinite;
-  z-index: 1;
-}
 
 /* blinking cursor animation */
 @keyframes blink-caret {
@@ -145,30 +134,50 @@
     text-align: center;
     /* justify-content: center; */
   }
-
+  
   .home-container h1 {
     align-items: center;
     text-align: center;
     width: 80%;
-    margin-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
   .home-container h2 {
     align-items: center;
     text-align: center;
     width: 70%;
-    margin-left: 3rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
   .mission {
     align-items: center;
     text-align: center;
     width: 65%;
-    margin-left: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-button {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container h1,
+  .home-container h2 {
+    font-size: 2rem;
+  }
+
+  .mission p {
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
 
   .contact-button {
-    margin-right: 2rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -241,17 +250,17 @@
     align-items: flex-start; /* Adjust alignment for vertical stacking */
     padding: 1rem; /* Add padding for spacing on small screens */
   }
-
+  
   .glass-box {
     width: 65%;
     margin-right: 1rem;
   }
-
+  
   .what-we-are-about {
     width: 100%;
     color: aliceblue;
   }
-
+  
   .puzzle-picture {
     margin-top: 6rem;
     margin-right: 1rem;
@@ -358,48 +367,48 @@
     align-items: center;
     text-align: center;    
   }
-
+  
   .our-capabilities-container h3 {
     text-align: center;
     margin-right: 2.5rem;
   }
-
+  
   .our-capabilities-container p {
     margin-left: 5.5rem;
     width: 50%;
   }
-
+  
   .service-container {
     grid-template-columns: 1fr; /* Change to single column layout */
     width: 40%; /* Full width on smaller screens */
     /* padding: 1rem; */
     margin-right: 12rem;
   }
-
+  
   .service-containter h4 {
     width: 80%;
   }
-
+  
   .service-container p {
     width: 100%;
     margin-left: 2rem;
   }
-
+  
   .service-container .service-icon {
     align-items: center;
     justify-content: center;
     width: 50%;
     margin-left: 3rem;
   }
-
+  
   .service-box {
     width: 50%;
   }
-
+  
   @media (max-width: 768px) {
-  .team-collab-picture {
-    max-width: 90%;
-  }
+    .team-collab-picture {
+      max-width: 90%;
+    }
   }
 }
 
@@ -420,7 +429,7 @@
 }
 
 .service-box p {
-    color: black;
+  color: black;
 }
 
 .service-box:hover {
@@ -565,25 +574,25 @@
     width: 90%;
     margin: 0 auto;
   }
-
+  
   .portfolio-intro {
     width: 90%;
     margin: 0 auto 2rem auto;
   }
-
+  
   .grid {
     grid-template-columns: 1fr;
     padding: 1.5rem;
   }
-
+  
   .modern-industry-tile {
     height: 300px;
   }
-
+  
   .modern-overlay h3 {
     font-size: 1.4rem;
   }
-
+  
   .modern-overlay p {
     font-size: 0.9rem;
   }
@@ -630,7 +639,7 @@
   width: 50%;
   justify-content: center;
   align-items: center;
-
+  
 } */
 
 .testimonial-grid {
@@ -731,26 +740,26 @@
 
 @media (max-width: 768px) {
   .testimonial-content {
-      width: 90%; /* Reduce the width for smaller screens */
-      padding: 10px; /* Adjust padding for spacing */
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
+    width: 90%; /* Reduce the width for smaller screens */
+    padding: 10px; /* Adjust padding for spacing */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
-
+  
   .testimonial-card {
     width: 70%;
     margin-left: 2rem;
   }
-
+  
   .testimonial-grid {
     grid-template-columns: 1fr; /* Single column for mobile */
   }
-
+  
   .testimonial-company {
     font-size: 1.5rem; /* Decrease font size for company name */
   }
-
+  
   .testimonial-right .testimonial-text {
     font-size: 1.1rem; /* Decrease font size for testimonial text */
     width: 90%;
@@ -899,19 +908,19 @@
     grid-template-columns: 1fr;
     padding: 1rem;
   }
-
+  
   .news-section h2 {
     font-size: 2rem;
   }
-
+  
   .news-card {
     margin: 0 auto;
   }
-
+  
   .news-title {
     font-size: 1.1rem;
   }
-
+  
   .news-content {
     font-size: 0.95rem;
   }
@@ -920,154 +929,277 @@
 /*Subscribe Section*/
 
 .subscribe-section {
-  background: linear-gradient(to right, coral, #FF7F50, #20B2AA, #3D5AFE);
-  /* margin-top: 5rem; */
-  padding: 2rem; /* Add padding to increase the width */
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-  position: relative;
+  background: linear-gradient(135deg, #3D5AFE, #20B2AA);
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .subscribe-section p {
-  font-size: 1.5rem;
-  color: aliceblue;
+  font-size: 1.6rem;
+  color: #f5f5f5;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .subscribe-form {
-  font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.2); /* Set your desired background color */
-  backdrop-filter: blur(10px); /* Apply a blur effect */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  width: 100%; /* Use a percentage to take full width within the padding */
-  max-width: 500px; /* Set a maximum width to control the width of the form */
-  margin: 0 auto; /* Center the form horizontally */
-  margin-top: 5rem;
-  padding: 2rem; /* Add padding for spacing inside the form */
-  text-decoration: underline;
-  margin-bottom: 5rem;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 3rem auto 4rem;
+  padding: 2rem;
 }
 
 .subscribe-form input {
-  width: 100%;
-  max-width: 500px;
+  padding: 0.8rem 1rem;
   font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe-form input:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(61, 90, 254, 0.3);
 }
 
 .subscribe-button {
-  background-color: #007bff; /* Set the background color of the button */
-  color: aliceblue; /* Set the text color to white */
-  border: none; /* Remove the border */
-  border-radius: 5px; /* Add rounded corners */
-  padding: 10px 20px; /* Add padding to the button */
-  margin-top: 1rem;
-  cursor: pointer; /* Change the cursor to a pointer on hover */
-  font-size: 1rem; /* Set the font size */
-  font-weight: bold;
-  transition: background-color 0.3s ease; /* Add a smooth background color transition */
+  background: linear-gradient(90deg, #3D5AFE, #20B2AA);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .subscribe-button:hover {
-  background-color: coral; /* Change the background color on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #20B2AA, #3D5AFE);
 }
 
 @media (max-width: 768px) {
   .subscribe-form {
-    width: 80%; /* Make the form wider on mobile */
-    margin: 10px 15px auto; /* Center the form */
-    padding: 10px; /* Reduce padding */
+    padding: 1.5rem;
+    width: 90%;
   }
   
-  input[type="email"],
-  button {
-    width: 100%; /* Expand input and button to full width */
+  .subscribe-section p {
+    font-size: 1.2rem;
   }
   
-  input[type="email"] {
-    font-size: 16px; /* Decrease font size for the input */
-  }
-
-  button {
-    font-size: 18px; /* Decrease font size for the button */
+  .subscribe-button,
+  .subscribe-form input {
+    font-size: 1rem;
   }
 }
 
 /* Careers Section */
 
-.careers-section {
-  margin-bottom: 5rem;
-  position: relative;
-}
-
-.career-section h2 {
-  color: #007bff;
-  font-size: 3rem;
-  margin-top: 1.5rem;
-}
-
-.careers-section h3 {
-  justify-content: center;
+.career-container {
+  display: flex;
   align-items: center;
-  font-size: 2.5rem;
-  color: teal;
-  margin-top: 2rem;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
 }
 
-.careers-section p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
+.career-text {
+  flex: 1 1 400px;
+}
+
+.career-container h2 {
   color: #007bff;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.career-container h3 {
+  font-size: 2rem;
+  color: teal;
+  margin-bottom: 1rem;
+}
+
+.career-container p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .careers-link {
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(50px);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: 5rem;
+  gap: 0.5rem;
+  background: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #007bff;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .careers-link:hover {
-  background: linear-gradient(to right, coral, #FF8C66, #00B3B3, #3D5AFE);
-  color: aliceblue;
+  background: #0056b3;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.arrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.careers-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+.career-image img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-  .career-section h3 {
-    width: 85%;
-    margin-left: 1rem;
+  .career-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
   }
-
-  .careers-link {
-    margin-right: 2rem;
+  
+  .career-image img {
+    margin-top: 2rem;
   }
 }
 
-.contact-button {
+.typing-banner {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: black;
+  margin-top: -5rem;
+}
+
+#typing-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  color: teal;
+  border-right: 2px solid #333;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+  margin-bottom: 2rem;
+}
+
+.typing-video {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}
+
+@media (max-width: 768px) {
+  #typing-text {
+    font-size: 1.75rem;
+  }
+
+  .typing-video {
+    max-width: 90%;
+  }
+}
+
+.cta-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #3D5AFE, #00B3B3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 4rem auto;
+  max-width: 100%;
+}
+
+.cta-contact-button {
   font-size: 2rem;
-  margin-top: 15rem;
-  margin-bottom: 20rem;
-  background-color:coral;
-  color: aliceblue; /* Set the text color to contrast with the background */
+  background-color: coral;
+  color: aliceblue;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-contact-button:hover {
+  background-color: #ff8c66;
+  transform: scale(1.05);
+}
+
+/* Optional slide-in animation */
+.slide-in {
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.cta-tagline {
+  text-align: center;
+  font-size: 1.5rem;
+  color: aliceblue;
+  margin-bottom: 2rem;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-button {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+
+  .button-container {
+    padding: 4rem 1rem;
+  }
 }
