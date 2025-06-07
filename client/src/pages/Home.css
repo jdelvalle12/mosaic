@@ -1,23 +1,29 @@
 /*Home*/
 
 .home-container {
-  /* position: relative; */
-  display: block;
+  display: flex; /* block → flex column for better layout control */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: teal;
-  width: 100%;
-  /* height: 100%; */
+  width: 100vw;
+  overflow-x: hidden; /* stop any child from overflowing */
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .home-container .background-video {
   position: absolute;
-  width: 100%;
-  margin-top: -7.3rem;
-  /* height: 13%; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* Apply the animation to the slogan */
@@ -123,61 +129,91 @@
   width: 100%;
 }
 
-/* Center-align the content on larger screens */
+/* === Tablets and small screens (≤768px) === */
 @media (max-width: 768px) {
   .background-video {
     width: 100%;
     object-fit: cover;
+    position: relative;
+    margin-top: 0;
   }
+
   .content-container {
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    /* justify-content: center; */
   }
-  
-  .home-container h1 {
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+
+  .home-container {
+    padding: 1rem;
+    overflow-x: hidden;
   }
-  
-  .home-container h2 {
-    align-items: center;
-    text-align: center;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .mission {
-    align-items: center;
-    text-align: center;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .contact-button {
-    margin-right: 2rem;
-  }
+
+ .home-container h1, 
+.home-container h2 {
+  font-size: 1.8rem;
+  width: 90%;
+  margin: 2rem auto;
 }
 
-@media (max-width: 480px) {
-  .home-container h1,
-  .home-container h2 {
-    font-size: 2rem;
-  }
-
-  .mission p {
+  .mission,
+  .home-container p {
+    width: 90%;
     font-size: 1.2rem;
+    margin: 1.5rem auto;
     line-height: 2rem;
   }
 
-  .contact-button {
+  .contact-button,
+  .service-button {
     font-size: 1.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.2rem;
+    margin: 2rem auto;
+    width: 80%;
+    justify-content: center;
+  }
+
+  .button-container {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .home-about-container {
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+}
+
+/* === Phones (≤480px) === */
+@media (max-width: 480px) {
+  .home-container h1,
+  .home-container h2 {
+    font-size: 1.7rem;
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .mission p,
+  .home-container p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    width: 95%;
+  }
+
+  .contact-button,
+  .service-button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width: 90%;
+  }
+
+  .button-container {
+    margin-top: 1.5rem;
+  }
+
+  .home-about-container {
+    margin-top: 8rem;
+    padding: 0 1rem;
   }
 }
 

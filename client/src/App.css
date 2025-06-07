@@ -15,25 +15,16 @@ body {
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
   body {
-    display: flex;
-    font-size: 1.6rem;
-    font-family: "Source Code", "Space Grotesk", sans-serif;
-    color: aliceblue;
-    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-family: "Space Grotesk", "Inter", sans-serif;
     background-color: black;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    text-align: center;
-    width: 100%;
-    /* height: 100vh; */
+    overflow-x: hidden;
   }
 
   .navbar .nav-tabs {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #333;
