@@ -13,7 +13,7 @@
   overflow-x: hidden; /* stop any child from overflowing */
   position: relative;
   padding: 0;
-  margin: 0;
+  margin-top: -1.8rem;
 }
 
 .home-container .background-video {
@@ -24,6 +24,7 @@
   height: auto;
   object-fit: cover;
   z-index: -1;
+  /* margin-top: -7rem; */
 }
 
 /* Apply the animation to the slogan */
@@ -138,6 +139,11 @@
     margin-top: 0;
   }
 
+  .home-container .sub-text {
+  color: gray;
+  margin-top: 12rem;    
+}
+
   .content-container {
     flex-direction: column;
     align-items: center;
@@ -153,7 +159,8 @@
 .home-container h2 {
   font-size: 1.8rem;
   width: 90%;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  color: gray;
 }
 
   .mission,
@@ -180,7 +187,7 @@
 
   .home-about-container {
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 1rem;
   }
 }
 
@@ -244,16 +251,13 @@
 }
 
 .home-container p {
-  display: flex;
-  font-size: 1.5rem;
+ font-size: 1.3rem;
   line-height: 2rem;
-  justify-content: center;
-  align-content: center;
   text-align: center; 
   color: #007bff;
   padding-top: 1.5rem;
-  max-width: 70%; 
-  margin: 0 auto
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* CSS for sliding animation */
@@ -282,26 +286,40 @@
 
 @media (max-width: 768px) {
   .home-about-container {
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: flex-start; /* Adjust alignment for vertical stacking */
-    padding: 1rem; /* Add padding for spacing on small screens */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem; /* Less vertical space */
   }
-  
-  .glass-box {
-    width: 65%;
-    margin-right: 1rem;
-  }
-  
+
   .what-we-are-about {
     width: 100%;
-    color: aliceblue;
+    color: gray;
+    text-align: center;
   }
-  
-  .puzzle-picture {
-    margin-top: 6rem;
-    margin-right: 1rem;
-    width: 90%;
+
+ .glass-box {
+  max-width: 100%; /* Instead of 90% to allow full width on small screens */
+  margin: 0 auto; /* Center it horizontally */
+  margin-top: 8rem; /* Less space than 12rem */
+}
+
+.puzzle-picture {
+ margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+  .our-capabilities {
+    font-size: 2rem;
   }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
 }
 
 .glass-box {
@@ -347,6 +365,51 @@
 
 .about-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0.5rem;
+  }
+
+  .home-container h1,
+  .home-container h2 {
+    font-size: 1.4rem;
+    margin: 1rem auto;
+    width: 95%;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    width: 95%;
+  }
+
+  .service-button {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    margin-top: 1.5rem;
+    width: 90%;
+  }
+
+  .glass-box {
+    padding: 0.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .puzzle-picture {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .our-capabilities {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
 }
 
 .our-capabilities-container {
@@ -416,18 +479,19 @@
   
   .service-container {
     grid-template-columns: 1fr; /* Change to single column layout */
-    width: 40%; /* Full width on smaller screens */
+    width: 90%; /* Full width on smaller screens */
     /* padding: 1rem; */
-    margin-right: 12rem;
+    margin-left: 1rem;
   }
   
-  .service-containter h4 {
+  .service-container h4 {
     width: 80%;
+    margin-left: 1rem;
   }
   
   .service-container p {
     width: 100%;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   
   .service-container .service-icon {
@@ -445,6 +509,42 @@
     .team-collab-picture {
       max-width: 90%;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .capabilities {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+
+  .our-capabilities-container p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .team-collab-picture {
+    max-width: 95%;
+    margin: 1.5rem auto;
+  }
+
+  .service-container {
+    width: 95%;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-box {
+    width: 100%;
+  }
+
+  .service-container .service-icon {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -539,10 +639,11 @@
 /* Grid layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 2rem;
-  justify-content: center;
 }
 
 /* --- MODERN TILE STYLES --- */
@@ -634,6 +735,27 @@
   }
 }
 
+@media (max-width: 480px) {
+  .modern-industry-tile {
+    height: 250px; /* Smaller height for small screens */
+  }
+
+  .modern-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .modern-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .portfolio-link {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .portfolio-link {
   display: inline-flex;
   padding: 10px 20px;
@@ -643,7 +765,6 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   color: #007bff; /* Set your desired text color */
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
   font-size: 20px;
   margin-top: 5rem;
@@ -962,12 +1083,62 @@
   }
 }
 
+@media (max-width: 480px) {
+  .news-section {
+    padding: 1rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .news-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .news-title {
+    font-size: 1rem;
+  }
+
+  .news-content {
+    font-size: 0.9rem;
+  }
+
+  .news-photo {
+    height: 150px;
+  }
+
+  .news-link {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 /*Subscribe Section*/
 
 .subscribe-section {
   background: linear-gradient(135deg, #3D5AFE, #20B2AA);
   padding: 4rem 2rem;
   text-align: center;
+  width: 100vw;       /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Override any centered container */
+  position: relative;
+  left: 0;
 }
 
 .subscribe-section p {
@@ -1038,6 +1209,29 @@
   .subscribe-button,
   .subscribe-form input {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribe-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .subscribe-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .subscribe-form {
+    padding: 1rem;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .subscribe-form input,
+  .subscribe-button {
+    font-size: 0.95rem;
+    padding: 10px;
   }
 }
 
@@ -1128,6 +1322,35 @@
   }
 }
 
+@media (max-width: 480px) {
+  .career-container {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .career-container h2 {
+    font-size: 2rem;
+  }
+
+  .career-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .career-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .careers-link {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .career-image img {
+    max-width: 100%;
+  }
+}
+
 .typing-banner {
   display: flex;
   flex-direction: column;
@@ -1136,6 +1359,8 @@
   padding: 4rem 2rem;
   background-color: black;
   margin-top: -5rem;
+  width: 100vw; /* Make it span full screen width */
+  overflow: hidden; /* Prevent any overflow */
 }
 
 #typing-text {
@@ -1163,13 +1388,38 @@
   50% { border-color: #333; }
 }
 
+/* Tablet / medium viewports */
 @media (max-width: 768px) {
+  .typing-banner {
+    padding: 2rem 1rem;
+  }
+
   #typing-text {
     font-size: 1.75rem;
+    white-space: normal; /* Allow wrapping on tablets and smaller */
+    overflow-wrap: break-word;
+    text-align: center;
   }
 
   .typing-video {
     max-width: 90%;
+  }
+}
+
+/* Mobile view (480px and smaller) */
+@media (max-width: 480px) {
+  .typing-banner {
+    padding: 2rem 1rem;
+  }
+
+  #typing-text {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    white-space: normal; /* Allow wrapping on mobile */
+  }
+
+  .typing-video {
+    max-width: 100%;
   }
 }
 
@@ -1237,5 +1487,22 @@
 
   .button-container {
     padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button-container {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .cta-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-contact-button {
+    font-size: 1.3rem;
+    padding: 0.75rem 2rem;
   }
 }

@@ -4,7 +4,7 @@ import Passion from '../images/passion.jpg';
 import Vision from '../images/vision.jpg';
 import History from '../images/history-2.jpg';
 
-import Culture from '../images/our-culture-video.mp4';
+import DigitalMarketingTeam from '../images/digital-marketing-team.mp4';
 
 import BalanceIcon from '../images/work-life-balance.png';
 import TransparencyIcon from '../images/transparency.png';
@@ -35,39 +35,35 @@ const About = () => {
 
   return (
     <div className="about-container" > 
-        <video src={Culture} play loop muted className='about-background-video'></video>
-            <div className="content-container">
-                <h1>Who We Are</h1>
-                    <h2>Our Culture</h2>
-                        <p>Discover the core values, mission, and vision that drive us 
-                           at Aurizon. Explore the vibrant tapestry of our 
-                           team, where innovation meets inclusivity, and endless possibilities 
-                           are nurtured.
+        <video src={DigitalMarketingTeam} play loop muted className='about-background-video' data-aos='slide-up'></video>
+            <div className="content-container" data-aos='slide-left'>
+                <h1>More Than Code</h1>
+                    <h2>Our Culture at Mosaic</h2>
+                        <p>At Mosaic, we believe in creating meaningful digital experiences that go beyond lines of code. 
+                           Our team blends creativity, technology, and purpose to build solutions that inspire, connect, 
+                           and deliver results. Every project starts with people — our clients, our team, and the 
+                           communities we serve.
                         </p>
             </div>
      <div className='about-our-story'> 
         <div className='story-description'>
-            <h2>What's our story?</h2>  
-            <p>
-              At Aurizon, we're on a mission to pioneer 
-              a brighter future through innovative technology solutions. 
-              Our passionate team pushes boundaries and explores new horizons
-              in the tech industry, delivering cutting-edge solutions that empower
-              businesses and individuals. We're committed to nurturing incredible 
-              software development talent and providing them with a platform to 
-              showcase their work. Our expertise spans web development, software 
-              solutions, mobile apps, and more, addressing critical areas like 
-              cybersecurity and infrastructure.
-            </p>
-            <p>
-              Our vision is to make technology accessible to everyone by creating intuitive, 
-              user-friendly products and services that simplify daily tasks. We're your partner 
-              for success, leveraging the latest advancements to elevate your business. Our solutions 
-              exceed expectations and drive meaningful impact in the digital landscape. With Aurizon, 
-              you step into a world of boundless possibilities. Contact us today to 
-              discuss your project, and let Aurizon Technologies turn your vision into reality. 
-            </p>
-            </div>       
+            <h2>What’s Our Story?</h2>  
+              <p>
+                Mosaic was founded on a simple idea: that technology should empower, not overwhelm.
+                What started as a small vision to help local businesses build a stronger online presence 
+                quickly grew into a broader mission — to create smart, elegant digital solutions that make life easier.
+              </p>
+              <p>
+                From building websites that tell your story, to developing tools that solve everyday problems, 
+                our focus is always the same: clarity, creativity, and results. We're passionate about design, 
+                driven by code, and inspired by the people we serve.
+              </p>
+              <p>
+                Whether you're a growing brand, a nonprofit, or an entrepreneur with big ideas — 
+                we're here to help you bring it to life. At Aurizon Technologies, we don’t just build software, 
+                we build possibilities.
+              </p>
+          </div>            
             <img src={Innovation} alt='innovation' className='innovation'></img>
         </div>        
         <div className='about-our-mission'>
