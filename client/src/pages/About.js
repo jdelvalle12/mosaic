@@ -71,52 +71,57 @@ const About = () => {
             <div className='mission-description'>
           <h2>Our Mission</h2>
           <p>
-          We're on a mission to lead technological advancements by providing innovative solutions 
-          that empower businesses and individuals. We're driven by our passion for innovation, 
-          creativity, and user-centric design, making technology accessible to all and illuminating 
-          a brighter future.
+            At Mosaic, our mission is to create innovative, impactful solutions that help businesses grow,
+            connect, and thrive in a digital world. We blend forward-thinking design, intuitive technology,
+            and a deep understanding of user needs to build experiences that make a difference.
           </p>
           <p>
-          We believe in the power of collaboration and talent. That's why we've assembled a team 
-          of industry-leading experts who leverage cutting-edge tools to exceed client expectations 
-          and drive growth. Join us on this journey, where your talents will shape tomorrow's technology landscape.
+            Powered by a passionate, diverse team, we bring creativity and precision to every project. Whether it's 
+            launching a new website, strengthening your brand, or developing custom software, we partner with you 
+            to turn bold ideas into real-world results.
           </p>
-            </div>
+          </div>
         </div>
         <div className='about-our-value'>
             
-          <h2>Our Value</h2>
+          <h2>Our Values</h2>
             <p>
-              At Aurizon, our culture is guided by core values:
+              At Mosaic, our company culture is built on principles that shape how we work, connect, and grow—together.
             </p>
-            <ul>              
-              <li><img className='value-icon' src={BalanceIcon} alt='Icon Description' />
-              <strong>Work-Life Balance</strong> Promoting harmony between professional 
-                  and personal life for a fulfilling journey.
-              </li>              
-              <li><img className='value-icon' src={TransparencyIcon} alt='Icon Description' />
-              <strong>Transparency</strong> Open and honest communication builds trust.</li>              
-              <li><img className='value-icon' src={DiversityIcon} alt='Icon Description' />
-              <strong>Diversity</strong> We embrace diverse backgrounds and perspectives.</li>              
-              <li><img className='value-icon' src={PositivityIcon} alt='Icon Description' />
-              <strong>Positivity</strong> We approach challenges with optimism and creativity.</li>              
-              <li><img className='value-icon' src={TeamworkIcon} alt='Icon Description' />
-              <strong>Teamwork</strong> Collaboration drives our success. We foster an environment 
-                    where every team member's voice is heard, ideas are valued, and 
-                    innovation flourishes.
-              </li>
-              <li><img className='value-icon' src={GrowthIcon} alt='Icon Description' />
-              <strong>Personal Growth</strong> We believe in fostering an environment where each 
-                  team member has the opportunity to learn, grow, and reach their 
-                  full potential.
-              </li>              
-              <li><img className='value-icon' src={InnovationIcon} alt='Icon Description' />
-              <strong>Innovation</strong> Cultivating creative brilliance to pioneer innovative 
-                  solutions and drive industry progress
-              </li>              
-              <li><img className='value-icon' src={AutonomyIcon} alt='Icon Description' />
-              <strong>Autonomy</strong> We empower our team to innovate and take ownership.</li>
-            </ul>
+            <ul>
+    <li>
+      <img className='value-icon' src={BalanceIcon} alt='Work-Life Balance Icon' />
+      <strong>Work-Life Balance:</strong> We encourage a healthy blend of work and personal time, so our team stays refreshed and inspired.
+    </li>
+    <li>
+      <img className='value-icon' src={TransparencyIcon} alt='Transparency Icon' />
+      <strong>Transparency:</strong> We believe honesty and open communication build lasting trust—with clients and each other.
+    </li>
+    <li>
+      <img className='value-icon' src={DiversityIcon} alt='Diversity Icon' />
+      <strong>Diversity:</strong> We celebrate different backgrounds and perspectives as the foundation for innovation.
+    </li>
+    <li>
+      <img className='value-icon' src={PositivityIcon} alt='Positivity Icon' />
+      <strong>Positivity:</strong> We approach every challenge with optimism, creativity, and a solutions-first mindset.
+    </li>
+    <li>
+      <img className='value-icon' src={TeamworkIcon} alt='Teamwork Icon' />
+      <strong>Teamwork:</strong> Collaboration fuels our success. We create space where every voice is valued and great ideas thrive.
+    </li>
+    <li>
+      <img className='value-icon' src={GrowthIcon} alt='Growth Icon' />
+      <strong>Personal Growth:</strong> We support continuous learning, helping every team member reach their fullest potential.
+    </li>
+    <li>
+      <img className='value-icon' src={InnovationIcon} alt='Innovation Icon' />
+      <strong>Innovation:</strong> We’re driven by curiosity, always exploring new ideas to push boundaries and lead change.
+    </li>
+    <li>
+      <img className='value-icon' src={AutonomyIcon} alt='Autonomy Icon' />
+      <strong>Autonomy:</strong> We trust our team to lead, create, and take ownership of their impact.
+    </li>
+  </ul>
         </div>
         <div className='about-our-history'>
             <img src={History} alt='history' className='history-pic'></img>
