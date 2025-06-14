@@ -122,31 +122,29 @@ const About = () => {
       <strong>Autonomy:</strong> We trust our team to lead, create, and take ownership of their impact.
     </li>
   </ul>
-        </div>
-        <div className='about-our-history'>
-            <img src={History} alt='history' className='history-pic'></img>
-            <div className='history-description'>
-             <h2>The rest is history...</h2>
-              <p>
-                ...the Founder and CEO Jose Del Valle originally did not think about starting a business, 
-                much less get into the tech industry. He attended the University of Central Florida to pursue 
-                a degree in Criminal Justice and work in Law enforcement, but things didn’t go as planned and 
-                it wasn’t meant to be, however he knew he liked to take on projects and build something from the ground up. 
-                He eventually realized he had an interest in Software Engineering, but going back to school to 
-                pursue another degree was pricey, so instead, he learned how code on his own for only 
-                a fraction of the price. Months later, he decided to enter a 6 month bootcamp to streamline the 
-                process of learning to code and met incredible people, worked alongside with them on different 
-                projects and also did one on his own. After a grueling 6 month bootcamp, he applied for several jobs 
-                to enter the industry, however, after more than 50 jobs applied, with many rejecting him the opportunity 
-                for even an interview, he was motivated and decided to start a company with little money and founded Aurizon, 
-                which is a name he found by accident, but realized it made sense, a new beginning with endless possibilities, 
-                to provide other developers with opportunities to hone their skills, achieve personal growth and a make a 
-                meaningful impact. Today, he is determined more than ever as a new entrepreneur, to grow the company and make 
-                his vision become a reality, just like he would do for his customers and others, make their vision a reality.
-              </p>
-            </div>
-        </div>
-        <Team/>
+</div>
+<div className='about-our-history'>
+  <img src={History} alt='history' className='history-pic' />
+  <div className='history-description'>
+    <h2>The Rest Is History...</h2>
+    <p>
+      Mosaic began with a vision that started years earlier. Founder and CEO Jose Del Valle didn’t set out to become a tech entrepreneur. With a background in Criminal Justice from the University of Central Florida, he originally pursued a career in law enforcement. But as life unfolded, a different passion emerged—one rooted in creativity, problem-solving, and building something meaningful from the ground up.
+    </p>
+    <p>
+      Jose discovered a deep interest in software engineering and took the initiative to teach himself how to code. After months of self-study, he enrolled in a rigorous 6-month coding bootcamp, where he collaborated with others and led solo projects that pushed his skills to the next level. Yet after graduation, he faced the harsh realities of breaking into the industry—over 50 job applications and countless rejections.
+    </p>
+    <p>
+      Refusing to be discouraged, he decided to create his own path. With little capital but a clear purpose, he founded <strong>Aurizon Technologies</strong>—a company focused on innovation, opportunity, and building tools that empower others.
+    </p>
+    <p>
+      Two years later, as Aurizon began expanding, Jose launched <strong>Mosaic</strong>, a dedicated division with a focus on web development and digital marketing. Mosaic was created to bring businesses a bold online presence—blending sleek design, smart code, and strategic storytelling into one seamless experience.
+    </p>
+    <p>
+      What started as a personal journey has now become a platform for others to grow, create, and thrive. Today, Mosaic continues to evolve—helping clients turn their vision into reality through thoughtful design, powerful technology, and a commitment to excellence.
+    </p>
+  </div>
+</div>
+<Team/>
         <div className='about-facts-figures'>
           <h2>Facts & Figures</h2>
           <p>
