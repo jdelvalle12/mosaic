@@ -1,4 +1,6 @@
 import React, {useEffect}from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import Innovation from '../images/innovation.jpg';
 import Passion from '../images/passion.jpg';
 import Vision from '../images/vision.jpg';
@@ -145,39 +147,67 @@ const About = () => {
   </div>
 </div>
 <Team/>
-        <div className='about-facts-figures'>
-          <h2>Facts & Figures</h2>
-          <p>
-            As a young and dynamic company, we're committed to growth and excellence. 
-            While our journey has just begun, we're excited about the path ahead. 
-            Here are some key facts and figures about us:
-          </p>
-          <ul>
-            <li><img className='facts-icon' src={CalenderIcon} alt='Fact' />
-              <strong>Company Founded in</strong> 2023
-            </li>
-            <li><img className='facts-icon' src={TeamIcon} alt='Fact' />
-              <strong>The number of team members</strong> 1
-            </li>
-            <li><img className='facts-icon' src={HandshakeIcon} alt='Fact' />
-              <strong>Number of Clients Served</strong> 1
-            </li>
-            <li><img className='facts-icon' src={ConstructionIcon} alt='Fact' />
-              <strong>Projects in Progress</strong> 3
-            </li>
-          </ul>
-        </div>
-        <div className='about-partners'>
-          <h2>Our Partners</h2>
-            <p>We recognize that achieving success in the ever-evolving tech landscape 
-               requires collaboration; we cannot do it alone. That's why we are committed 
-               to forming strategic partnerships that amplify our strengths and open doors 
-               to new opportunities.
-            </p>
-        </div>
-        {/* <div className='about-awards'>
-          <h2>Achievements & Awards</h2>
-        </div> */}
+<div className='about-facts-figures'>
+  <h2>Facts & Figures</h2>
+  <p>
+    As a young and ambitious company, we're proud of what we've built so far and excited about what lies ahead. 
+    Here’s a snapshot of our journey and momentum:
+  </p>
+  <ul>
+    <li>
+      <img className='facts-icon' src={CalenderIcon} alt='Founded' />
+      <strong> Founded:</strong> 2025
+    </li>
+    <li>
+      <img className='facts-icon' src={TeamIcon} alt='Team' />
+      <strong> Core Team Members:</strong> 2 (and growing)
+    </li>
+    <li>
+      <img className='facts-icon' src={HandshakeIcon} alt='Clients' />
+      <strong> Clients Served:</strong> 1+ (with new partnerships developing)
+    </li>
+    <li>
+      <img className='facts-icon' src={ConstructionIcon} alt='Projects' />
+      <strong> Projects in Progress:</strong> 1 (more in the pipeline)
+    </li>
+  </ul>
+</div>
+<div className='about-partners'>
+  <h2>Our Partners</h2>
+  <p>
+    We recognize that achieving success in the ever-evolving tech landscape 
+    requires collaboration—we cannot do it alone. That’s why we are committed 
+    to forming strategic partnerships that amplify our strengths and open 
+    doors to new opportunities.
+  </p>
+
+  {/* Placeholder message while no partners exist */}
+  {/* <div className="partner-carousel-placeholder">
+    <p><em>Partner logos will appear here as we grow our collaborations.</em></p>
+  </div> */}
+
+  {/* Future carousel (example using Swiper.js or any other lib) */}
+  {/*
+  <Swiper
+    spaceBetween={50}
+    slidesPerView={3}
+    autoplay={{ delay: 3000 }}
+    loop={true}
+  >
+    {partners.map((partner, index) => (
+      <SwiperSlide key={index}>
+        <img src={partner.logo} alt={partner.name} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+  */}
+</div>
+
+{/* Optional: Future Achievements & Awards Section */}
+{/* <div className='about-awards'>
+  <h2>Achievements & Awards</h2>
+  <p><em>Stay tuned as we continue to build our reputation and grow our accomplishments.</em></p>
+</div> */}
         <div className='about-goals-vision'>
           <div className='vision'>
             <h2>Our Goals & Vision</h2>
