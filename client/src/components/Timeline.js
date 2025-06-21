@@ -6,19 +6,21 @@ import '../App.css';
 const Timeline = () => {
   const timelineData = [
     {
-      year: 'July 2023',
-      content: 'Jose founded Aurizon and is officially registered as a business name.',
+       year: 'June 2025',
+       content: 'Mosaic was created through Aurizon and became its own entity to focus web development and marketing.',
+       highlight: true,
     },
     {
-      year: 'November 2023',
-      content: 'Aurizon is fully launched and operations begin.',
+      year: 'July 2025',
+      content: 'Mosaic Digital Creations is fully launched and operations begin.',
+      highlight: true,
     },
   ];
 
   return (
-    <div className="timeline">
+    <div className="timeline" role="list" aria-label="Company timeline">
       {timelineData.map((event, index) => (
-        <div key={index} className='timeline-item'>
+        <div key={index} className='timeline-item' role="listitem" data-aos="fade-up">
           <div className='timeline-branch'></div>
           <div className='timeline-content'>
             <h3>{event.year}</h3>

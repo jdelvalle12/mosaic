@@ -208,44 +208,46 @@ const About = () => {
   <h2>Achievements & Awards</h2>
   <p><em>Stay tuned as we continue to build our reputation and grow our accomplishments.</em></p>
 </div> */}
-        <div className='about-goals-vision'>
-          <div className='vision'>
-            <h2>Our Goals & Vision</h2>
-            <p>
-              Our Vision is to be a leading tech company as we embark on a journey of 
-              innovation and transformation, illuminating the path to a better tomorrow. 
-              Our dedicated team of brilliant technologists harnesses creative brilliance 
-              and cutting-edge advancements, empowering businesses and individuals with 
-              limitless possibilities.
-            </p>
-            <p>
-              We believe in the power of personal growth, continuous learning, and 
-              collaboration. At Aurizon, we foster an environment where developers thrive, 
-              learn from one another, and have a place to gather and collaborate on 
-              groundbreaking projects. We envision a bright future not only for our clients 
-              but also for our team members.
-            </p>
-            <p>
-              We strive to shape this bright future by offering high-end solutions that 
-              exceed expectations and drive meaningful impact in the digital landscape. 
-              As your gateway to extraordinary solutions, we are committed to creating 
-              a brighter, tech-driven world, where endless innovations illuminate the path ahead.
-            </p>
-            <p>
-              Join us on this exciting journey, and together, let's shape a future that goes beyond the horizon.
-            </p>
-          </div>
-          <img src={Vision} alt='vision' className='horizon-vision'></img>
-        </div>
-        {/* <div className='about-community'>
-          <h2>Community Involvement</h2>
-        </div> */}
-        <div className='about-timeline'>
-          <h2>Travel In time...</h2>
-            <Timeline/>
-        </div>
-        <FAQ/>
-    </div>
+<div className='about-goals-vision'>
+  <div className='vision'>
+    <h2>Our Goals & Vision</h2>
+    <p>
+      At Mosaic, our vision is to become a premier digital marketing and MarTech company — 
+      where creativity meets technology to deliver impactful, measurable results. 
+      We aim to help businesses grow by blending innovative strategy, compelling storytelling, 
+      and data-driven solutions.
+    </p>
+    <p>
+      We believe marketing is more than just promotion — it's about creating meaningful connections, 
+      building trust, and inspiring action. Our team is committed to staying at the forefront 
+      of emerging trends, constantly refining our approach through research, experimentation, 
+      and collaboration.
+    </p>
+    <p>
+      Our goal is to empower brands of all sizes to reach their audiences with clarity, consistency, 
+      and purpose — whether through modern web development, digital campaigns, content creation, 
+      or marketing automation.
+    </p>
+    <p>
+      As a company born from the success of Aurizon, Mosaic carries forward the same spirit of innovation 
+      and adaptability — now focused on delivering cutting-edge marketing solutions that drive real-world impact.
+    </p>
+    <p>
+      Join us as we build bold campaigns, elevate digital presence, and shape the future of marketing — 
+      one pixel, one message, one Mosaic at a time.
+    </p>
+  </div>
+  <img src={Vision} alt='vision' className='horizon-vision'></img>
+  </div>
+    {/* <div className='about-community'>
+      <h2>Community Involvement</h2>
+  </div> */}
+  <div className='about-timeline'>
+    <h2>Our Journey</h2>
+      <Timeline/>
+  </div>
+  <FAQ/>
+  </div>
   );
 };
 
