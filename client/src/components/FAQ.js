@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 
 import '../index.css';
-import '../App.css';
+// import '../App.css';
+import './FAQ.css';
 
 const FAQ = () => {
     //Define an array of FAQ items, each containing a question and an answer

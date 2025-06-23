@@ -6,6 +6,7 @@ import { FaLinkedin, FaFacebook, FaEnvelope } from 'react-icons/fa';
 
 import '../index.css';
 import '../App.css';
+import './Team.css';
 
 function AboutTheTeam() {
   const [modalVisible, setModalVisible] = useState(false);

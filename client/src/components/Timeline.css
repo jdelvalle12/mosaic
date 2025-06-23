@@ -1,0 +1,101 @@
+/*Timeline Section*/
+
+.about-timeline {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228));
+}
+
+.about-timeline h2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row;
+  /* white-space: nowrap;  */
+  height: 300px; 
+  margin-top: 2rem;
+  overflow-y: auto; 
+}
+
+
+.timeline-item {
+  position: relative;
+  margin-right: 50px;
+  padding: 4rem;
+  /* border: 2px solid #333; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  transition: box-shadow 0.3s ease, background-color 0.3s;
+  /* height: 100%; */
+}
+
+.timeline-branch {
+  position: absolute;
+  width: 10px; /* Adjust this for the desired line thickness */
+  background-color: #007bff; /* Line color */
+  left: 50%; /* Position the line in the center */
+  /* top: 0;
+  bottom: 0; */
+  /* transform: translateX(-50%); */
+}
+
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  text-align: left;
+  width: 250px;
+}
+
+.timeline-content p {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .about-timeline {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .about-timeline h2 {
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+
+  .timeline {
+    width: 60%;
+    height: 50%;
+    flex-direction: column;
+    margin-left: 3.5rem;
+  }
+
+  .timeline-item {
+    width: 90%;
+    height: auto;
+    margin-top: 1rem;
+    margin-left: 4.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    margin-right: 3.5rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.5rem;
+    /* padding: 1rem; */
+    width: 100%;
+  }
+
+}

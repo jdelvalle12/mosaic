@@ -26,7 +26,8 @@ import Timeline from '../components/Timeline.js';
 import FAQ from '../components/FAQ.js';
 
 import '../index.css';
-import '../App.css';
+// import '../App.css';
+import './About.css';
 
 const About = () => {
 
@@ -37,18 +38,18 @@ const About = () => {
 
   return (
     <div className="about-container" > 
-        <video src={DigitalMarketingTeam} play loop muted className='about-background-video' data-aos='slide-up'></video>
-            <div className="content-container" data-aos='slide-left'>
-                <h1>More Than Code</h1>
-                    <h2>Our Culture at Mosaic</h2>
-                        <p>At Mosaic, we believe in creating meaningful digital experiences that go beyond lines of code. 
-                           Our team blends creativity, technology, and purpose to build solutions that inspire, connect, 
-                           and deliver results. Every project starts with people — our clients, our team, and the 
-                           communities we serve.
-                        </p>
-            </div>
-     <div className='about-our-story'> 
-        <div className='story-description'>
+      <video src={DigitalMarketingTeam} play loop muted className='about-background-video' data-aos='slide-up'></video>
+        <div className="content-container" data-aos='slide-left'>
+          <h1>More Than Code</h1>
+            <h2>Our Culture at Mosaic</h2>
+              <p>At Mosaic, we believe in creating meaningful digital experiences that go beyond lines of code. 
+                Our team blends creativity, technology, and purpose to build solutions that inspire, connect, 
+                and deliver results. Every project starts with people — our clients, our team, and the 
+                communities we serve.
+              </p>
+        </div>
+     <div className='about-our-story' data-aos='fade-up'> 
+        <div className='story-description' data-aos='fade-right' data-aos-delay='100'>
             <h2>What’s Our Story?</h2>  
               <p>
                 Mosaic was founded on a simple idea: that technology should empower, not overwhelm.
@@ -66,7 +67,7 @@ const About = () => {
                 we build possibilities.
               </p>
           </div>            
-            <img src={Innovation} alt='innovation' className='innovation'></img>
+            <img src={Innovation} alt='innovation' className='innovation' data-aos='fade-left' data-aos-delay='200'></img>
         </div>        
         <div className='about-our-mission'>
           <img src={Passion} alt='passion' className='passion'></img>

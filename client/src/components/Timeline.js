@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../index.css';
 import '../App.css';
+import './Timeline.css';
 
 const Timeline = () => {
   const timelineData = [
