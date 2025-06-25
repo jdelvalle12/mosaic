@@ -241,289 +241,302 @@
 
 .about-our-mission {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   color: #007bff;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(to top, #e9f7ff, #ffffff);
 }
 
 .passion {
-  /* float: left; */
-  /* display: flex; */
   width: 40%;
+  max-width: 500px;
   height: auto;
-  margin-top: 3rem;
-  /* margin-left: 2rem; */
-  padding: 2.5rem;
+  padding: 1rem;
 }
 
 .about-our-mission h2 {
-  color: black;
+  color: #000;
   font-size: 2rem;
   width: 100%;
-  height: 100%;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mission-description {
   font-size: 1.1rem;
   width: 50%;
-  height: 50%;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
-  text-align: left;
+  min-width: 300px;
+  display: flex;
   flex-direction: column;
-  /* float: right; */
-  margin-top: 2rem;
-  margin-left: 2rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.2); 
+  justify-content: center;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.25); 
   backdrop-filter: blur(10px); 
   border-radius: 10px; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
 }
 
 @media (max-width: 768px) {
   .about-our-mission {
-    align-items: flex-start; /* Align items to the left on mobile */
     flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
   }
 
   .passion {
-    width: 60%; /* Adjust image width for mobile */
-    margin-top: 2rem;
-    margin-left: 6rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem;
   }
 
   .mission-description {
-    width: 40%;
-    margin-left: 9.5rem;
+    width: 90%;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .about-our-mission h2 {
+    font-size: 1.6rem;
+  }
+
+  .mission-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-description {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .passion {
+    width: 90%;
+  }
+
+  .about-our-mission h2 {
+    font-size: 1.4rem;
+  }
+
+  .mission-description p {
+    font-size: 0.95rem;
+    width: 90%;
   }
 }
 
 .about-our-value {
   font-size: 1rem;
   margin-top: 3rem;
+  padding: 2rem 1rem;
   color: #007bff;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228));
-  justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.about-our-value h2 {
-  color: black;
   text-align: center;
 }
 
-.about-our-value p {
-  text-align: center; /* Center the text */
+.about-our-value h2 {
+  font-size: 2rem;
   color: black;
+  margin-bottom: 0.5rem;
 }
 
-.value-icon {
-  width: 30%;
-  margin-left: 4rem;
-  justify-content: center;
-  align-items: center;
+.about-our-value p {
+  max-width: 800px;
+  color: #222;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
 .about-our-value ul {
-  list-style: none; /* Remove the default list styles */
-  padding: 0; /* Remove default padding */
+  list-style: none;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   width: 100%;
-  margin-left: 9rem;
+  max-width: 1000px;
 }
 
 .about-our-value ul li {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2); /* Glass effect background */
-  backdrop-filter: blur(10px); /* Apply the blur effect */
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px; /* Add padding to separate the cards */
-  margin: 10px 0; /* Add margin to separate the cards vertically */
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-  
-  /* Define different background colors and box shadow colors */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease all;
 }
 
-.about-our-value ul li:nth-child(1),
-.about-our-value ul li:nth-child(2),
-.about-our-value ul li:nth-child(3),
-.about-our-value ul li:nth-child(4),
-.about-our-value ul li:nth-child(5),
-.about-our-value ul li:nth-child(6),
-.about-our-value ul li:nth-child(7),
-.about-our-value ul li:nth-child(8) {
-  width: 50%; /* Make all list items full width on mobile */
+.about-our-value ul li:hover {
+  background-color: #000;
+  color: aqua;
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
-/* Define different colors for each list item */
-.about-our-value ul li:nth-child(1):hover {
-  box-shadow: 0px 0px 15px #ffa216; 
+.value-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
-.about-our-value ul li:nth-child(2):hover {
-  box-shadow: 0px 0px 15px #17ff8b;
-}
+.about-our-value ul li:nth-child(1):hover { box-shadow: 0px 0px 15px #ffa216; }
+.about-our-value ul li:nth-child(2):hover { box-shadow: 0px 0px 15px #17ff8b; }
+.about-our-value ul li:nth-child(3):hover { box-shadow: 0px 0px 15px #1fffff; }
+.about-our-value ul li:nth-child(4):hover { box-shadow: 0px 0px 15px magenta; }
+.about-our-value ul li:nth-child(5):hover { box-shadow: 0px 0px 15px #6600cc; }
+.about-our-value ul li:nth-child(6):hover { box-shadow: 0px 0px 15px #11c3ff; }
+.about-our-value ul li:nth-child(7):hover { box-shadow: 0px 0px 15px #ffcc00; }
+.about-our-value ul li:nth-child(8):hover { box-shadow: 0px 0px 15px #ff33cc; } 
 
-.about-our-value ul li:nth-child(3):hover {
-  box-shadow: 0px 0px 15px rgb(31, 255, 255);
-}
-
-.about-our-value ul li:nth-child(4):hover {
-  box-shadow: 0px 0px 15px magenta;
-}
-
-.about-our-value ul li:nth-child(5):hover {
-  box-shadow: 0px 0px 15px#6600cc; /* Purple */
-}
-
-.about-our-value ul li:nth-child(6):hover {
-  box-shadow: 0px 0px 15px #11c3ff; /* Blue */
-}
-
-.about-our-value ul li:nth-child(7):hover {
-  box-shadow: 0px 0px 15px#ffcc00; /* Yellow */
-}
-
-.about-our-value ul li:nth-child(8):hover {
-  box-shadow: 0px 0px 15px #ff33cc; /* Pink */
-}
 
 /* Add more colors for additional list items as needed */
 
-/* Change the box shadow color on hover */
-.about-our-value ul li:hover {
-  color: aqua; 
-  background-color: black;  
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
 
 @media (max-width: 768px) {
-  .about-our-value {
-    align-items: center; /* Center the container vertically */
-    text-align: center; /* Center the text within each card */
+  .about-our-value ul {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1.5rem;
   }
 
   .about-our-value h2 {
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
+    font-size: 1.75rem;
   }
 
   .about-our-value p {
-    width: 40%;
-    margin-right: 3rem;
-  }
-
-  .about-our-value ul {
-    grid-template-columns: repeat(1, 1fr); /* Change to a single column on mobile */
-    margin-left: 3rem; /* Remove left margin */
-    padding-left: 5rem;
-    width: 70%;
-    /* height: 50%; */
-    /* max-width: 1000px; */
-  }
-
-  .about-our-value ul li {
-    margin-left: 0; /* Remove any additional margin on mobile */
-    /* width: 100%; */
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .value-icon {
-    width: 30%;
-    margin-left: 3rem;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-our-value ul li {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .about-our-value h2 {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-right: 2.5rem;
+  }
+
+  .about-our-value p {
+    font-size: 0.95rem;
+    width: 90%;
+    margin-right: 2.5rem;
+  }
+
+  .value-icon {
+    width: 40px;
   }
 }
 
 .about-our-history {
-  font-size: 1rem;
-  margin-top: 1rem;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(to top, #e0f7ff, #ffffff);
 }
 
 .about-our-history h2 {
-  color: black;
   font-size: 2rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #000;
   text-align: center;
-  padding-top: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .history-description {
-  /* color: #007bff; */
   font-size: 1.1rem;
-  width: 50%;
-  height: 50%;
-  /* display: flex;
-  flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  text-align: left;
-  margin-top: 3rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
-  padding: 1rem;
+  flex: 1 1 500px;
+  max-width: 700px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 174, 249, 0.696);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 174, 249, 0.5);
+  padding: 2rem;
+  color: #333;
+}
+
+.history-description p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.history-description strong {
+  color: #007bff;
 }
 
 .history-pic {
-  width: 40%;
+  flex: 1 1 35%;
+  max-width: 850px;
+  width: 100%;
   height: auto;
-  /* margin-top: 3rem; */
-  margin-right: 3rem;
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: row;
-  float: right;
+  border-radius: 12px;
+  padding: 1rem;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .about-our-history {
-    margin: 0;
-    display: flex;
     flex-direction: column;
-  }
-
-  .history-description {
-    margin-right: 5rem;
-    width: 35%;
+    align-items: center;
+    padding: 2rem 1rem;
   }
 
   .history-pic {
-    width: 60%; /* Adjust image width for mobile */
-    margin-top: 2rem;
-    margin-right: 3.5rem;
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .history-description {
+    width: 90%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about-our-history h2 {
+    font-size: 1.5rem;
   }
 }
 
+@media (max-width: 480px) {
+  .history-description {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .about-our-history h2 {
+    font-size: 1.5rem;
+  }
+
+  .history-pic {
+    width: 100%;
+  }
+}
 
 .about-facts-figures {
   color: #007bff;
