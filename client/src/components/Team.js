@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaLinkedin, FaFacebook, FaEnvelope } from 'react-icons/fa';
 
 import '../index.css';
-import '../App.css';
+// import '../App.css';
 import './Team.css';
 
 function AboutTheTeam() {
@@ -32,9 +32,9 @@ Outside the office, Jose enjoys spending time with friends, traveling the world,
   };
 
   const closeModal = () => {
-    setSelectedTeamMember(null);
-    setModalVisible(false);
-  };
+  setSelectedTeamMember(null);
+  setModalVisible(false);
+};
 
   return (
     <div className="about-the-team">
@@ -59,32 +59,47 @@ Outside the office, Jose enjoys spending time with friends, traveling the world,
       ))}
 
       {/* Modal */}
-      <Modal show={modalVisible} onHide={closeModal}>
-        {selectedTeamMember && ( // Check if selectedTeamMember is not null
-      <>
+<Modal
+  show={modalVisible}
+  onHide={closeModal}
+  scrollable
+  centered
+  backdrop="static"
+  keyboard={true}
+>
+  {selectedTeamMember && (
+    <>
       <Modal.Header closeButton>
+        <Modal.Title>{selectedTeamMember.name}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-  <img src={selectedTeamMember.photoSrc} alt={selectedTeamMember.name} />
-  <Modal.Title><h2>{selectedTeamMember.name}</h2></Modal.Title>
-  <div className="social-icons-team-member">
-    <a href="https://linkedin.com/in/jose-del-valle-94993a124/" target="_blank" rel="noopener noreferrer">
-      <FaLinkedin className="icon" />
-    </a>
-    <a href="https://www.facebook.com/jose.j.delvalle.58" target="_blank" rel="noopener noreferrer">
-      <FaFacebook className="icon" />
-    </a>
-    <a href="mailto:jdelvalle88@live.com" target="_blank" rel="noopener noreferrer">
-      <FaEnvelope className="icon" />
-    </a>
-  </div>
 
-  {/* ✅ This is correct placement */}
-  <p style={{ whiteSpace: 'pre-line' }}>{selectedTeamMember.description}</p>
-</Modal.Body>
+      <Modal.Body>
+        <img
+          src={selectedTeamMember.photoSrc}
+          alt={selectedTeamMember.name}
+          style={{ width: "100%", marginBottom: "1rem" }}
+        />
+
+        <div className="social-icons-team-member">
+          <a href="https://linkedin.com/in/jose-del-valle-94993a124/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="icon" />
+          </a>
+          <a href="https://www.facebook.com/jose.j.delvalle.58" target="_blank" rel="noopener noreferrer">
+            <FaFacebook className="icon" />
+          </a>
+          <a href="mailto:jdelvalle88@live.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope className="icon" />
+          </a>
+        </div>
+
+        <p style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>
+          {selectedTeamMember.description}
+        </p>
+      </Modal.Body>
     </>
   )}
 </Modal>
+
     </div>
   );
 }
