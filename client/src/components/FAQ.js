@@ -87,7 +87,7 @@ const FAQ = () => {
     };
     
     return (
-        <div className='faq-section'>
+        <div className='faq-section' data-aos='zoom-in' data-aos-delay='400'>
             <h3>FAQs</h3>
             {faqs.map((faq, index) => (
                 <div key={index} className='question' onClick={() => toggleAnswer(index)}>

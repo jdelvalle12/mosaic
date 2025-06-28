@@ -70,8 +70,8 @@ const About = () => {
             <img src={Innovation} alt='innovation' className='innovation' data-aos='fade-left' data-aos-delay='200'></img>
         </div>        
         <div className='about-our-mission'>
-          <img src={Passion} alt='passion' className='passion'></img>
-            <div className='mission-description'>
+          <img src={Passion} alt='passion' className='passion' data-aos='slide-left'></img>
+            <div className='mission-description' data-aos='slide-right'>
           <h2>Our Mission</h2>
           <p>
             At Mosaic, our mission is to create innovative, impactful solutions that help businesses grow,
@@ -85,50 +85,49 @@ const About = () => {
           </p>
           </div>
         </div>
-        <div className='about-our-value'>
-            
-          <h2>Our Values</h2>
-            <p>
-              At Mosaic, our company culture is built on principles that shape how we work, connect, and grow—together.
-            </p>
-            <ul>
+<div className='about-our-value' data-aos='fade-in'>            
+  <h2>Our Values</h2>
+    <p>
+      At Mosaic, our company culture is built on principles that shape how we work, connect, and grow—together.
+    </p>
+  <ul>
     <li>
-      <img className='value-icon' src={BalanceIcon} alt='Work-Life Balance Icon' />
+      <img className='value-icon' src={BalanceIcon} alt='Work-Life Balance Icon' data-aos='zoom-in' data-aos-delay='200' />
       <strong>Work-Life Balance:</strong> We encourage a healthy blend of work and personal time, so our team stays refreshed and inspired.
     </li>
     <li>
-      <img className='value-icon' src={TransparencyIcon} alt='Transparency Icon' />
+      <img className='value-icon' src={TransparencyIcon} alt='Transparency Icon' data-aos='zoom-in' data-aos-delay='300'/>
       <strong>Transparency:</strong> We believe honesty and open communication build lasting trust—with clients and each other.
     </li>
     <li>
-      <img className='value-icon' src={DiversityIcon} alt='Diversity Icon' />
+      <img className='value-icon' src={DiversityIcon} alt='Diversity Icon' data-aos='zoom-in' data-aos-delay='400'/>
       <strong>Diversity:</strong> We celebrate different backgrounds and perspectives as the foundation for innovation.
     </li>
     <li>
-      <img className='value-icon' src={PositivityIcon} alt='Positivity Icon' />
+      <img className='value-icon' src={PositivityIcon} alt='Positivity Icon' data-aos='zoom-in' data-aos-delay='500'/>
       <strong>Positivity:</strong> We approach every challenge with optimism, creativity, and a solutions-first mindset.
     </li>
     <li>
-      <img className='value-icon' src={TeamworkIcon} alt='Teamwork Icon' />
+      <img className='value-icon' src={TeamworkIcon} alt='Teamwork Icon' data-aos='zoom-in' data-aos-delay='600'/>
       <strong>Teamwork:</strong> Collaboration fuels our success. We create space where every voice is valued and great ideas thrive.
     </li>
     <li>
-      <img className='value-icon' src={GrowthIcon} alt='Growth Icon' />
+      <img className='value-icon' src={GrowthIcon} alt='Growth Icon' data-aos='zoom-in' data-aos-delay='700'/>
       <strong>Personal Growth:</strong> We support continuous learning, helping every team member reach their fullest potential.
     </li>
     <li>
-      <img className='value-icon' src={InnovationIcon} alt='Innovation Icon' />
+      <img className='value-icon' src={InnovationIcon} alt='Innovation Icon' data-aos='zoom-in' data-aos-delay='800'/>
       <strong>Innovation:</strong> We’re driven by curiosity, always exploring new ideas to push boundaries and lead change.
     </li>
     <li>
-      <img className='value-icon' src={AutonomyIcon} alt='Autonomy Icon' />
+      <img className='value-icon' src={AutonomyIcon} alt='Autonomy Icon' data-aos='zoom-in' data-aos-delay='900'/>
       <strong>Autonomy:</strong> We trust our team to lead, create, and take ownership of their impact.
     </li>
   </ul>
 </div>
 <div className='about-our-history'>
-  <img src={History} alt='history' className='history-pic' />
-  <div className='history-description'>
+  <img src={History} alt='history' className='history-pic' data-aos='slide-right'/>
+  <div className='history-description' data-aos='slide-left'>
     <h2>The Rest Is History...</h2>
     <p>
       Mosaic began with a vision that started years earlier. Founder and CEO Jose Del Valle didn’t set out to become a tech entrepreneur. With a background in Criminal Justice from the University of Central Florida, he originally pursued a career in law enforcement. But as life unfolded, a different passion emerged—one rooted in creativity, problem-solving, and building something meaningful from the ground up.
@@ -148,32 +147,32 @@ const About = () => {
   </div>
 </div>
 <Team/>
-<div className='about-facts-figures'>
+<div className='about-facts-figures' data-aos='zoom-in'>
   <h2>Facts & Figures</h2>
   <p>
     As a young and ambitious company, we're proud of what we've built so far and excited about what lies ahead. 
     Here’s a snapshot of our journey and momentum:
   </p>
-  <ul>
+  <ul data-aos='zoom-in'>
     <li>
-      <img className='facts-icon' src={CalenderIcon} alt='Founded' />
+      <img className='facts-icon' src={CalenderIcon} alt='Founded' data-aos='zoom-in' data-aos-delay='200'/>
       <strong> Founded:</strong> 2025
     </li>
     <li>
-      <img className='facts-icon' src={TeamIcon} alt='Team' />
+      <img className='facts-icon' src={TeamIcon} alt='Team' data-aos='zoom-in' data-aos-delay='300'/>
       <strong> Core Team Members:</strong> 2 (and growing)
     </li>
     <li>
-      <img className='facts-icon' src={HandshakeIcon} alt='Clients' />
+      <img className='facts-icon' src={HandshakeIcon} alt='Clients' data-aos='zoom-in' data-aos-delay='400'/>
       <strong> Clients Served:</strong> 1+ (with new partnerships developing)
     </li>
     <li>
-      <img className='facts-icon' src={ConstructionIcon} alt='Projects' />
+      <img className='facts-icon' src={ConstructionIcon} alt='Projects' data-aos='zoom-in' data-aos-delay='500'/>
       <strong> Projects in Progress:</strong> 1 (more in the pipeline)
     </li>
   </ul>
 </div>
-<div className='about-partners'>
+<div className='about-partners' data-aos='slide-left'>
   <h2>Our Partners</h2>
   <p>
     We recognize that achieving success in the ever-evolving tech landscape 
@@ -182,26 +181,30 @@ const About = () => {
     doors to new opportunities.
   </p>
 
-  {/* Placeholder message while no partners exist */}
+  {/* Visible placeholder until carousel is added */}
   {/* <div className="partner-carousel-placeholder">
     <p><em>Partner logos will appear here as we grow our collaborations.</em></p>
-  </div> */}
+  </div>
+</div> */}
 
   {/* Future carousel (example using Swiper.js or any other lib) */}
-  {/*
-  <Swiper
-    spaceBetween={50}
-    slidesPerView={3}
-    autoplay={{ delay: 3000 }}
-    loop={true}
-  >
-    {partners.map((partner, index) => (
-      <SwiperSlide key={index}>
-        <img src={partner.logo} alt={partner.name} />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-  */}
+  {/* <Swiper
+  spaceBetween={50}
+  slidesPerView={3}
+  loop={true}
+  autoplay={{ delay: 3000 }}
+  breakpoints={{
+    480: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+>
+  {partners.map((partner, index) => (
+    <SwiperSlide key={index}>
+      <img src={partner.logo} alt={partner.name} />
+    </SwiperSlide>
+  ))}
+</Swiper> */}
 </div>
 
 {/* Optional: Future Achievements & Awards Section */}
@@ -210,7 +213,7 @@ const About = () => {
   <p><em>Stay tuned as we continue to build our reputation and grow our accomplishments.</em></p>
 </div> */}
 <div className='about-goals-vision'>
-  <div className='vision'>
+  <div className='vision' data-aos='slide-right'>
     <h2>Our Goals & Vision</h2>
     <p>
       At Mosaic, our vision is to become a premier digital marketing and MarTech company — 
@@ -238,7 +241,7 @@ const About = () => {
       one pixel, one message, one Mosaic at a time.
     </p>
   </div>
-  <img src={Vision} alt='vision' className='horizon-vision'></img>
+  <img src={Vision} alt='vision' className='horizon-vision' data-aos='slide-left'></img>
   </div>
     {/* <div className='about-community'>
       <h2>Community Involvement</h2>

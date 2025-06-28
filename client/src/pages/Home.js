@@ -28,7 +28,7 @@ import RealEstateIcon from "../images/real-estate-icon.png";
 import LogisticsIcon from "../images/logistics-icon.png";
 import Portal from '../images/portal.mp4';
 
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
 import SubscribeForm from '../components/SubscribeForm.js';
 import News from '../components/News.js';
 import Careers from '../components/Careers.js';

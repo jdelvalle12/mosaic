@@ -13,6 +13,7 @@
   background-size: cover;
   /* background-repeat: no-repeat; */
   padding-top: 6rem;
+  overflow-x: hidden; /* stop any child from overflowing */
 }
 
 
@@ -411,15 +412,18 @@
     grid-template-columns: 1fr;
     padding: 0 1rem;
     gap: 1.5rem;
+    margin-left: 2rem;
   }
 
   .about-our-value h2 {
     font-size: 1.75rem;
+    margin-left: 2rem;
   }
 
   .about-our-value p {
     font-size: 1rem;
     padding: 0 1rem;
+    margin-left: 2rem;
   }
 
   .value-icon {
@@ -605,12 +609,12 @@
   }
 
   .facts-icon {
-    margin-left: 1rem;
+    margin-left: 6rem;
   }
 
   .about-facts-figures h2 {
     font-size: 2rem;
-    margin-right: 3rem;
+    /* margin-right: 1rem; */
   }
   
   .about-facts-figures p {
@@ -620,7 +624,7 @@
 
   .about-facts-figures ul {
     grid-template-columns: repeat(1, 1fr);
-    margin-left: 8rem;
+    margin-left: 3rem;
     /* padding-left: 1rem; */
     width: 50%;
   }
@@ -654,107 +658,147 @@
 }
 
 .about-partners {
-  font-size: 2rem;  
-  color: aliceblue;
+  font-size: 1rem;
   background-color: #007bff;
-  justify-content: center;
-  align-items: center;
+  color: aliceblue;
   text-align: center;
+  padding: 3rem 1rem;
   width: 100%;
-  height: 100%;
 }
 
 .about-partners h2 {
   color: aqua;
-  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-partners p {
   font-size: 1.2rem;
-  width: 75%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: 13rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Placeholder styling (optional) */
+.partner-carousel-placeholder {
+  font-style: italic;
+  color: #d3f9ff;
+  margin-top: 2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .about-partners {
-    align-items: center;
-    text-align: center;
+    padding: 2rem 1rem;
   }
 
   .about-partners h2 {
-    align-items: center;
-    text-align: center;
-    margin-right: 2.5rem;
+    font-size: 1.8rem;
   }
-  
+
   .about-partners p {
-    align-items: center;
-    text-align: center;
-    margin-left: 10rem;
-    width: 40%;
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-partners {
+    padding: 2rem 1rem;
+  }
+
+  .about-partners h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-partners p {
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .partner-carousel-placeholder {
+    font-size: 0.95rem;
   }
 }
 
 .about-goals-vision {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   background: linear-gradient(to bottom, aliceblue, rgb(148, 208, 228), aqua);
+  padding: 3rem 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .about-goals-vision h2 {
   font-size: 2rem;
   text-align: center;
-  color: #000000;
+  color: #000;
+  margin-bottom: 1rem;
 }
 
 .vision {
   color: #007bff;
   font-size: 1.1rem;
-  width: 50%;
-  height: 50%;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  margin: 3rem;
-  /* margin-bottom: 2rem; */
-  padding: 1rem;
+  flex: 1 1 500px;
+  max-width: 700px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  line-height: 1.6;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .horizon-vision {
-  width: 25%;
-  height: 30%;
-  margin-top: 1rem;
-  margin-left: 5rem;
-  padding: 1.5rem;
+  flex: 0 1 300px;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  padding: 1rem;
+  align-self: center;
 }
 
+/* Tablet & below */
 @media (max-width: 768px) {
   .about-goals-vision {
-    align-items: center;
-    text-align: center;
     flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
   }
-  
-  /* .about-goals-vision h2 {
-    text-align: center;
-    margin-left: 1rem;
-  } */
-  
+
   .vision {
-    width: 35%;
-    margin-left: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
   }
+
   .horizon-vision {
-    width: 40%;
-    margin-top: 1rem;
-    margin-right: 7.5rem;
+    width: 60%;
+    margin: 1rem auto 0 auto;
+  }
+}
+
+/* Mobile (480px & below) */
+@media (max-width: 480px) {
+  .about-goals-vision h2 {
+    font-size: 1.5rem;
+  }
+
+  .vision {
+    width: 95%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .horizon-vision {
+    width: 80%;
+    padding: 1rem 0;
   }
 }
 

@@ -37,14 +37,14 @@ Outside the office, Jose enjoys spending time with friends, traveling the world,
 };
 
   return (
-    <div className="about-the-team">
+    <div className="about-the-team" data-aos='zoom-in'>
       <h2>The Team</h2>
       <p>Meet the team that makes it all happen...</p>
 
       {/* Render team members */}
       {teamMembers.map((member, index) => (
         <div key={index} className="team-member">
-          <button
+          <button 
             className='team-member-button'
             aria-label={`More about ${member.name}`}
             onClick={() => openModal(member)}
