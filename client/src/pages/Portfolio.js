@@ -9,14 +9,15 @@ import Weather from '../images/weather-forecast.jpg';
 import Planner from '../images/day-planner.jpg';
 import Notepad from '../images/notepad.jpg';
 import Winery from '../images/Winery.jpg';
-import Background from '../images/digital background.jpg';
+// import Background from '../images/digital background.jpg';
 
-// import Codes from '../images/coding.mp4';
+import Coding from '../images/coding-background.mp4';
 // import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/Portfolio.css';
 import '../App.css';
+import './Portfolio.css';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
 import { DiMongodb, DiBootstrap } from 'react-icons/di';
 
@@ -44,7 +45,7 @@ const projects = [
     technologies: [<FaReact />, <FaNodeJs />, <FaHtml5 />, <FaCss3 />, <FaJs />, <DiBootstrap />, "GraphQL"] , 
     category: "Full Stack", 
     link: "https://www.journeeztrip.com/",
-    tags: ["Development Type", "Full Stack Development", "Industry", "Travel", "Our Products"] 
+    tags: ["Development Type", "Full Stack Development", "Industry", "Travel"] 
   },
   { image: Weather, 
     name: "Weather Forecast", 
@@ -82,37 +83,47 @@ const projects = [
 
 const ProjectCard = ({project, onClick}) => {
   const handleCardClick = () => {
-    onclick(project.tags); // Pass the tags to the parent component
+    onClick(project.tags); // Pass the tags to the parent component
   };
 
   return (
-  <div className='project-card' onclick={handleCardClick}>
-    <Image src={project.image} alt={project.name} width={600} height={400} />
-    <div className='project-card-overlay'>
-      <Link to={project.link} className='project-card-image-link'>
-        <h3>{project.name}</h3>
-      </Link>
-    </div>
-    <div className='project-card-details'>
-      <h3>{project.category}</h3>
-      <h4>{project.name}</h4>
-      <p>{project.description}</p>
-        <h5>Technologies</h5>
-      <div className='project-card-icons'>
-        {project.technologies.map((technology, i) => (
-          <span key={i} className='technology-icon'>
-            {technology}
-          </span>
-        ))}
-        <span className='additional-text'></span>
-      </div>
-    </div>
-  </div> 
+  <div className='project-card' onClick={handleCardClick}>
+  <Image src={project.image} alt={project.name} width={600} height={400} />
+  <div className='project-card-overlay'>
+    <a
+      href={project.link}
+      className='project-card-image-link'
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()} // prevents card click firing
+    >
+      <h3>{project.name}</h3>
+    </a>
+  </div>
+  <div className='project-card-details'>
+    <h3>{project.category}</h3>
+    <h4>{project.name}</h4>
+    <p>{project.description}</p>
+    {/* Optional Tech section */}
+    {/* 
+    <h5>Technologies</h5>
+    <div className='project-card-icons'>
+      {project.technologies.map((technology, i) => (
+        <span key={i} className='technology-icon'>
+          {technology}
+        </span>
+      ))}
+    </div> 
+    */}
+    <span className='additional-text'></span>
+  </div>
+</div>
+  // </div> 
   ); 
 };
 
 const ProjectsGrid = ({ projects, onButtonClick }) => (
-  <div className='projects-grid'>
+  <div className='projects-grid' data-aos='fade-up'>
     {projects.map((project, index) => (
       <ProjectCard key={index} project={project} onClick={onButtonClick} />
     ))}
@@ -139,198 +150,101 @@ const SubNavbar = ({onSelectedCategory, setSelectedCategory}) => {
     }
   };
 
+  const handleCategoryClick = (category) => {
+  onSelectedCategory(category);  // your original handler
+  setIsDevelopmentDropdownOpen(false);
+  setIsIndustryDropdownOpen(false);
+};
+
   return (
-    <nav className={`sub-navbar ${isDevelopmentDropdownOpen || isIndustryDropdownOpen ? 'active' : ''}`}>
-      <ul>
-        <li>
-          <button 
-            onClick={() => setSelectedCategory('All')} 
-            style={{ 
-            textDecoration: 'none', 
-            transition: 'color 0.3s, background 0.3s', 
-            border: 'none',  // Remove default button styling
-             // Remove default button styling
-            cursor: 'pointer'  // Show pointer cursor on hover
-          }} 
-          className="hover-effect"
-          >
-            All
-          </button>
-        </li>
-        <li>
-          <span onClick={toggleDevelopmentDropdown} 
-                style={{cursor: 'pointer', textDecoration: 'none', transition: 'color 0.3s, background 0.3s' }} 
-                className="hover-effect">
-            Development Type
-          <span className={`portolio-dropdown-arrow ${isDevelopmentDropdownOpen ? 'open' : ''}`}>&#9662;</span></span></li>
-          {/*Nested unordered list for the dropdown */}
-          {isDevelopmentDropdownOpen && (
-            <ul className='development-dropdown'>
-              <li>
-                <button 
-                  onClick={() => onSelectedCategory('Front-End Development')} 
-                  style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-                  className="hover-effect"
-                >
-                  Front-End Development
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onSelectedCategory('Full Stack Development')} 
-                  style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-                  className="hover-effect"
-                >
-                  Full Stack Development
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onSelectedCategory('Software Development')} 
-                  style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-                  className="hover-effect"
-                >
-                  Software Development
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onSelectedCategory('Mobile App Development')} 
-                  style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-                  className="hover-effect"
-                >
-                  Mobile App Development
-                </button>
-              </li>
-            </ul>
-          )}
-        <li>
-          <span 
-            onClick={toggleIndustryDropdown} 
-            style={{cursor: 'pointer', textDecoration: 'none', transition: 'color 0.3s, background 0.3s' }} 
-            className="hover-effect">
-            Industry
-          <span className={`portolio-dropdown-arrow ${isIndustryDropdownOpen ? 'open' : ''}`}>&#9662;</span></span></li>
-          {/*Nested unordered list for the dropdown */}
-          {isIndustryDropdownOpen && (
-            <ul className='industry-dropdown'>
-               <li>
-          <button 
-            onClick={() => onSelectedCategory('Entertainment')} 
-            style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-            className="hover-effect"
-          >
-            Entertainment
-          </button>
-        </li>
-        <li>
-        <button 
-          onClick={() => onSelectedCategory('Sports')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Sports
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Travel')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Travel
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Technology')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Technology
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Food & Beverage')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Food & Beverage
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Real-Estate')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Real-Estate
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Logistics')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Logistics
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('E-Commerce')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          E-Commerce
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Finance')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Finance
-        </button>
-      </li>
-      <li>
-        <button 
-          onClick={() => onSelectedCategory('Health')} 
-          style={{ textDecoration: 'none',  transition: 'color 0.3s, background 0.3s' }} 
-          className="hover-effect"
-        >
-          Health
-        </button>
-      </li>
-            </ul>
-          )}
+<nav className={`sub-navbar ${isDevelopmentDropdownOpen || isIndustryDropdownOpen ? 'active' : ''}`}>
+  <ul data-aos='zoom-in'>
+    <li>
+      <button 
+        onClick={() => setSelectedCategory('All')} 
+        style={{ 
+          textDecoration: 'none', 
+          transition: 'color 0.3s, background 0.3s', 
+          border: 'none',
+          cursor: 'pointer'
+        }} 
+        className="hover-effect"
+      >
+        All
+      </button>
+    </li>
+
+    {/* DEVELOPMENT TYPE DROPDOWN */}
+    <li onMouseLeave={() => setIsDevelopmentDropdownOpen(false)}>
+      <span onClick={toggleDevelopmentDropdown} className="hover-effect" style={{ cursor: 'pointer' }}>
+        Development Type
+        <span className={`portolio-dropdown-arrow ${isDevelopmentDropdownOpen ? 'open' : ''}`}>&#9662;</span>
+      </span>
+      {isDevelopmentDropdownOpen && (
+        <ul className='development-dropdown'>
           <li>
-  <button 
-    onClick={() => setSelectedCategory('Our Products')} 
-    style={{ 
-      textDecoration: 'none', 
-      transition: 'color 0.3s, background 0.3s', 
-      border: 'none',  // Remove default button styling
-      cursor: 'pointer'  // Show pointer cursor on hover
-    }} 
-    className="hover-effect"
-  >
-    Our Products
-  </button>
-</li>
-          <li>
-            <button 
-              onClick={() => setSelectedCategory('Our Partners')} 
-              style={{ textDecoration: 'none', transition: 'color 0.3s, background 0.3s' }} 
-              className="hover-effect"
-            >
-              Our Partners
+            <button onClick={() => handleCategoryClick('Front-End Development')} className="hover-effect">
+              Front-End Development
             </button>
           </li>
-      </ul>
-    </nav>
+          <li>
+            <button onClick={() => handleCategoryClick('Full Stack Development')} className="hover-effect">
+              Full Stack Development
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleCategoryClick('Software Development')} className="hover-effect">
+              Software Development
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleCategoryClick('Mobile App Development')} className="hover-effect">
+              Mobile App Development (Coming Soon)
+            </button>
+          </li>
+        </ul>
+      )}
+    </li>
+
+    {/* INDUSTRY DROPDOWN */}
+    <li onMouseLeave={() => setIsIndustryDropdownOpen(false)}>
+      <span onClick={toggleIndustryDropdown} className="hover-effect" style={{ cursor: 'pointer' }}>
+        Industry
+        <span className={`portolio-dropdown-arrow ${isIndustryDropdownOpen ? 'open' : ''}`}>&#9662;</span>
+      </span>
+      {isIndustryDropdownOpen && (
+        <ul className='industry-dropdown'>
+          <li><button onClick={() => handleCategoryClick('Entertainment')} className="hover-effect">Entertainment (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('Sports')} className="hover-effect">Sports (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('Travel')} className="hover-effect">Travel</button></li>
+          <li><button onClick={() => handleCategoryClick('Technology')} className="hover-effect">Technology</button></li>
+          <li><button onClick={() => handleCategoryClick('Food & Beverage')} className="hover-effect">Food & Beverage</button></li>
+          <li><button onClick={() => handleCategoryClick('Real-Estate')} className="hover-effect">Real-Estate (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('Logistics')} className="hover-effect">Logistics (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('E-Commerce')} className="hover-effect">E-Commerce (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('Finance')} className="hover-effect">Finance (Coming Soon)</button></li>
+          <li><button onClick={() => handleCategoryClick('Health')} className="hover-effect">Health (Coming Soon)</button></li>
+        </ul>
+      )}
+    </li>
+
+    {/* OTHER BUTTONS */}
+    <li>
+      <Link to="/services" className="hover-effect subnav-link">
+        Services
+      </Link>
+    </li>
+    <li>
+      <button 
+        onClick={() => setSelectedCategory('Our Partners')} 
+        className="hover-effect"
+        style={{ textDecoration: 'none', border: 'none', cursor: 'pointer' }}
+      >
+        Our Partners
+      </button>
+    </li>
+  </ul>
+</nav>
   );
 }
 
@@ -342,24 +256,29 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All'); // Track the selected category
 
     useEffect(() => {
-      setShowTitle(true); //When the component mounts, set showTitle to true.
-      setShowText(true);
+  setShowTitle(true);
+  setShowText(true);
 
-      const typingText = 'Take a look at our work that we have done so far, and we have more to come. We are always developing new projects and updating previous projects with new technologies.';
-      const typingSpeed = 30; // Speed in milliseconds between each character
+  const typingText = 'Where design meets development. Every pixel with purpose. Every line of code with impact.';
+  const typingSpeed = 30;
+  const typingContainer = document.getElementById('typing-text');
 
-      const typingContainer = document.getElementById('typing-text');
-      let charIndex = 0;
+  let charIndex = 0;
 
-      function typeText() {
-        if (charIndex < typingText.length) {
-          typingContainer.textContent += typingText.charAt(charIndex);
-          charIndex++;
-          setTimeout(typeText, typingSpeed);
-        }
-      }
-      typeText();
-    }, []);  
+  if (!typingContainer) return;
+
+  typingContainer.textContent = ''; // clear previous
+
+  const typeText = () => {
+    if (charIndex < typingText.length) {
+      typingContainer.textContent += typingText.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, typingSpeed);
+    }
+  };
+
+  typeText();
+}, []);
 
     // Filter projects based on the selctced category
     const filteredProjects = projects.filter(project => {
@@ -369,20 +288,17 @@ const Projects = () => {
       if (selectedCategory === 'All') {
         return true; // Show all projects
       }
-      return project.tags.includes(selectedCategory);
+      return project.tags.some(tag => tag.toLowerCase() === selectedCategory.toLowerCase());
     });
 
     console.log('Filtered Projects:', filteredProjects);
 
 return (
   <div className='portfolio-container'>
-      <img src={Background} alt='portfolio-background' className='portfolio-background'></img>
-      {/* // <video src={Codes} autoPlay loop muted className="projects-background-video"></video>       */}
+      {/* <img src={Background} alt='portfolio-background' className='portfolio-background'></img> */}
+      <video src={Coding} autoPlay loop muted className="projects-background-video"></video>
         <div className={`title ${showTitle ? 'fade-in' : ''}`} >
           <h2>Our Portfolio</h2>
-        </div>
-        <div className='sub-text'>
-            <p id='typing-text'></p>
         </div>
       <div className='sub-navbar'>
        <SubNavbar
@@ -391,14 +307,17 @@ return (
         setSelectedCategory={setSelectedCategory} // Pass setSelectedCategory as a prop
         />
       </div>
-      <div className={`mid-text ${showText ? 'slide-in' : ''}`}>
+        <div className='sub-text'>
+            <p id='typing-text'></p>
+        </div>
+      {/* <div className={`mid-text ${showText ? 'slide-in' : ''}`}>
         <p>Not only do we display our work or products, but we also display and advertise your website in "Our Partners" tab for customers to view. Take a look, you may find what you are looking for.</p>
-      </div>
+      </div> */}
         {/*Display the filtered projects */}
         <div>
-        <ProjectsGrid projects={filteredProjects} onButtonClick={(category) => setSelectedCategory(category)} />
+          <ProjectsGrid projects={filteredProjects} onButtonClick={(category) => setSelectedCategory(category)}/>
         </div>
-        <div className='post-text'>
+        <div className='post-text'data-aos='fade-up'>
           <p>If you like the designs you see from our work or our software products, go to our marketplace for more.</p> 
             <Link to='/marketplace' className='marketplace-link'>Marketplace<span className='arrow'>&rarr;</span></Link>
         </div>
