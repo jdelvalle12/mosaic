@@ -28,10 +28,10 @@ const Footer = () => {
           <ul>
             <li><Link to='/services/web-development'>Web Development</Link></li>
             <li><Link to='/services/api-development'>API Development</Link></li>
-            <li><Link to='/services/mobile-app-development'>Mobile App Development</Link></li>
+            {/* <li><Link to='/services/mobile-app-development'>Mobile App Development</Link></li> */}
             <li><Link to='/services/business-solutions'>Business Solutions</Link></li>
             {/* <li>Network Services</li> */}
-            <li><Link to='/services/security-solutions'>Security Solutions</Link></li>
+            {/* <li><Link to='/services/security-solutions'>Security Solutions</Link></li> */}
             <li><Link to='/services/marketing-support'>Marketing Support</Link></li>
             <li><Link to='/services/hosting'>Hosting</Link></li>
             <li><Link to='/services/uiux-design'>UI/UX Design</Link></li>
@@ -76,7 +76,7 @@ const Footer = () => {
             <p><Link to="/privacy-policy">Privacy Policy</Link></p>
             <p><Link to="/terms-of-service">Terms of Service</Link></p>
           <div className="social-icons">
-            <a href="https://github.com/jdelvalle12" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://github.com/jdelvalle12" target="_blank" rel="noopener noreferrer">
               <FaGithub className="icon" />
             </a>
             <a href="https://linkedin.com/in/jose-del-valle-94993a124/" target="_blank" rel="noopener noreferrer">
@@ -84,8 +84,8 @@ const Footer = () => {
             </a>
             <a href="https://www.facebook.com/jose.j.delvalle.58" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="icon" />
-            </a>
-            <a href="mailto:jdelvalle88@live.com" target="_blank" rel="noopener noreferrer">
+            </a> */}
+            <a href="mailto:info@mosaicdigitalcreations.com" target="_blank" rel="noopener noreferrer">
               <FaEnvelope className="icon" />
             </a>
           </div>

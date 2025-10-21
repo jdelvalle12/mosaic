@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// import { useForm } from 'react-hook-form';
-// import emailjs from 'emailjs-com'; // Import email.js library
 import ContactUs from '../images/contact-us-two.jpg';
 import Reality from '../images/into-reality.jpg';
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 import '../App.css';
 
@@ -13,15 +12,17 @@ const Contact = () => {
     companyEmail: '',
     phone: '',
     companyName: '',
-    industry: '', 
+    industry: '',
     state: '',
     intent: '',
     message: '',
   });
 
   const [showSlogan, setShowSlogan] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  useEffect (() => {
+  useEffect(() => {
     setShowSlogan(true);
   }, []);
 
@@ -35,62 +36,191 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Handle form submission, e.g., send data to an API or email service
+    setIsSubmitting(true);
+
+    // Send the email using EmailJS
+    emailjs.send(
+      'service_5mp7f14',      // Replace with your EmailJS service ID
+      'template_bvq9qtx',     // Replace with your EmailJS template ID
+      formData,               // The object with all input values
+      'Krx007KfoiPSblA70'       // Replace with your EmailJS public key
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setSubmitted(true);
+      // Clear the form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        companyEmail: '',
+        phone: '',
+        companyName: '',
+        industry: '',
+        state: '',
+        intent: '',
+        message: '',
+      });
+    })
+    .catch((error) => {
+      console.error('FAILED...', error);
+    })
+    .finally(() => setIsSubmitting(false));
   };
 
   return (
-      <div className='contact-container'>
-        <img src={ContactUs} alt='ContactUs' className="contact-us-background" />
-        <h1 className={`contact-title ${showSlogan ? 'fade-in' : ''}`}>Hey Let's Talk About It!</h1>
-      <p className={showSlogan ? 'slide-in' : ''}>Questions? Want to leave feedback? Need further assistance? We are here to help. Fill out the form below with your inquiry.</p>
-        <div className="design-inquiries">
-          {/* <h3 className='contact-header'>Design Inquiries:</h3> */}
-          {/* <ul>
-            <li>Name</li>
-            <li>Email</li>
-            <li>Nature of your inquiry</li>
-            <li>Email to: <button onClick={() => window.location.href = 'mailto:jdelvalle88@live.com'}>jdelvalle88@live.com</button></li>
-          </ul> */}
-          <form onSubmit={handleSubmit}>
-            <label htmlFor='firstName'>First Name:</label>
-            <input type='text' name='firstName' id='firstName' value={formData.firstName} onChange={handleChange} placeholder='This field is required' required />
-            {/* <span>This field is required</span> */}
-            <br />
-            <label htmlFor='lastName'>Last Name:</label>
-            <input type='text' name='lastName' id='lastName' value={formData.lastName} onChange={handleChange} placeholder='This field is required' required />
-            {/* <span>This field is required</span> */}
-            <br />
-            <label htmlFor='companyEmail'>Company Email:</label>
-            <input type='email' name='companyEmail' id='companyEmail' value={formData.companyEmail} onChange={handleChange} placeholder='This field is required' required />
-            {/* <span>This field is required</span> */}
-            <br />
-            <label htmlFor='phone'>Phone:</label>
-            <input type='text' name='phone' id='phone' value={formData.phone} onChange={handleChange} placeholder='This field is required' required />
-            {/* <span>This field is required</span> */}
-            <br />
-            <label htmlFor='companyName'>Company Name:</label>
-            <input type='text' name='companyName' id='companyName' value={formData.companyName} onChange={handleChange} placeholder='Company Name (optional)' />
-            <br />
-            <label htmlFor='industry'>Industry:</label>
-            <input type='text' name='industry' id='industry' value={formData.industry} onChange={handleChange} placeholder='Industry (optional)' />
-            <br />
-            <label htmlFor='state'>State:</label>
-            <input type='text' name='state' id='state' value={formData.state} onChange={handleChange} placeholder='State (optional)' />
-            <br />
-            <label htmlFor='intent'>Intent of Message:</label>
-            <input type='text' name='intent' id='intent' value={formData.intent} onChange={handleChange} placeholder='This field is required' required />
-            <br />
-            <label htmlFor='message'>Message:</label>
-            <textarea name='message' id='message' value={formData.message} onChange={handleChange} placeholder='This field is required' required />
-            <br />
-            <input type='submit' value='Submit' />
-          </form>
-        </div>
-        <h2 className='contact-end-message'>Let's connect, work together, and make the dream become a reality.</h2>
-        <img src={Reality} alt='Reality' className="into-reality" />
+    <div className='contact-container'>
+      {/* --- Background Header Section --- */}
+      <img
+        src={ContactUs}
+        alt='Contact us visual'
+        className='contact-us-background'
+        loading='lazy'
+      />
+      <h1 className={`contact-title ${showSlogan ? 'fade-in' : ''}`}>
+        Hey, Let's Talk About It!
+      </h1>
+      <p className={showSlogan ? 'slide-in' : ''}>
+        Questions? Want to leave feedback? Need further assistance? We are here
+        to help. Fill out the form below with your inquiry.
+      </p>
+
+      {/* --- Contact Form --- */}
+      <div className='design-inquiries'>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='firstName'>First Name:</label>
+          <input
+            type='text'
+            name='firstName'
+            id='firstName'
+            value={formData.firstName}
+            onChange={handleChange}
+            placeholder='Enter your first name'
+            autoComplete='given-name'
+            required
+          />
+
+          <label htmlFor='lastName'>Last Name:</label>
+          <input
+            type='text'
+            name='lastName'
+            id='lastName'
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder='Enter your last name'
+            autoComplete='family-name'
+            required
+          />
+
+          <label htmlFor='companyEmail'>Company Email:</label>
+          <input
+            type='email'
+            name='companyEmail'
+            id='companyEmail'
+            value={formData.companyEmail}
+            onChange={handleChange}
+            placeholder='Enter your company email'
+            autoComplete='email'
+            required
+          />
+
+          <label htmlFor='phone'>Phone:</label>
+          <input
+            type='tel'
+            name='phone'
+            id='phone'
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder='Enter your phone number'
+            autoComplete='tel'
+            required
+          />
+
+          <label htmlFor='companyName'>Company Name:</label>
+          <input
+            type='text'
+            name='companyName'
+            id='companyName'
+            value={formData.companyName}
+            onChange={handleChange}
+            placeholder='Company Name (optional)'
+            autoComplete='organization'
+          />
+
+          <label htmlFor='industry'>Industry:</label>
+          <input
+            type='text'
+            name='industry'
+            id='industry'
+            value={formData.industry}
+            onChange={handleChange}
+            placeholder='Industry (optional)'
+          />
+
+          <label htmlFor='state'>State:</label>
+          <input
+            type='text'
+            name='state'
+            id='state'
+            value={formData.state}
+            onChange={handleChange}
+            placeholder='State (optional)'
+            autoComplete='address-level1'
+          />
+
+          <label htmlFor='intent'>Intent of Message:</label>
+          <input
+            type='text'
+            name='intent'
+            id='intent'
+            value={formData.intent}
+            onChange={handleChange}
+            placeholder='Reason for contacting us'
+            required
+          />
+
+          <label htmlFor='message'>Message:</label>
+          <textarea
+            name='message'
+            id='message'
+            value={formData.message}
+            onChange={handleChange}
+            placeholder='Write your message here...'
+            required
+          />
+
+          {/* --- Submit Button + Feedback Message --- */}
+          <input
+            type='submit'
+            value={isSubmitting ? 'Submitting...' : 'Submit'}
+            disabled={isSubmitting}
+          />
+
+          {submitted && (
+            <p className='thank-you'>
+              Thank you! We’ll be in touch soon.
+            </p>
+          )}
+        </form>
       </div>
+
+      {/* --- End Section --- */}
+      <h2 className='contact-end-message'>
+        Let's connect, work together, and make the dream become a reality.
+      </h2>
+      <img
+        src={Reality}
+        alt='Making ideas into reality'
+        className='into-reality'
+        loading='lazy'
+      />
+      <div>
+        <h3>
+          <span style={{ color: 'red' }}>📧</span> Or contact us at: 
+          <a href='mailto:info@mosaicdigitalcreations.com'> info@mosaicdigitalcreations.com</a>
+        </h3>
+      </div>
+    </div>
   );
-}
+};
 
 export default Contact;

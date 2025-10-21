@@ -1,0 +1,583 @@
+/* Careers */
+
+.careers-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: aliceblue;
+}
+
+.careers-background {
+  position: absolute;
+  margin-top: -6.3rem;
+  width: 100%;
+  height: 12%;
+  object-fit: cover;
+}
+
+.career-title h2{
+  font-size: 3.5rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 6rem;
+  color: aliceblue;
+  width: 100%;
+}
+
+.career-title p {
+  font-size: 2rem;
+  color: aliceblue;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.head-text {
+  font-size: 1.8rem;
+  /* color: aqua; */
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 24rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.careers-button {
+  display: flex;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  background-color: aqua;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.why-work {
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  margin: 4rem auto 2rem;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.career-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  margin-top: 6rem;
+  flex-wrap: wrap; /* stacks on smaller screens */
+}
+
+.career-description {
+  flex: 1;
+  min-width: 300px;
+  color: #000;
+  font-size: 1.25rem;
+  text-align: left;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.learning-too {
+  flex: 1;
+  min-width: 250px;
+  max-width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* First circle */
+.random-design::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #3D5AFE;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-right: 28rem;
+}
+
+.random-design::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -3rem;
+  margin-left: 28rem;
+}
+
+/* Second circle */
+.random-design:nth-child(2)::before {
+  content: "";
+  display: block;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background-color: coral; /* Different color */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Third circle */
+.random-design:nth-child(3)::before {
+  content: "";
+  display: block;
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  background-color: black; /* Different color */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Fourth circle */
+.random-design:nth-child(2)::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Fifth circle */
+.random-design:nth-child(3)::after {
+  content: "";
+  display: block;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background-color: aqua; /* Different color */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Sixth circle */
+.random-design:nth-child(4)::after {
+  content: "";
+  display: block;
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  background-color: black; /* Different color */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.career-description-two {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1.25rem;
+  color: #000;
+  text-align: left;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.learning {
+  flex: 1;
+  min-width: 250px;
+  max-width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.having-fun-description {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1.25rem;
+  color: #000;
+  text-align: left;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.having-fun {
+  flex: 1;
+  min-width: 250px;
+  max-width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.we-offer {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to bottom, aliceblue, rgba(148, 208, 228));
+}
+
+.we-offer p {
+  font-size: 1.1rem;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: 16rem;
+  padding: 1rem;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-icon {
+  width: 25%;
+  margin-left: 7.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.we-offer ul {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  margin-left: 17rem;
+  
+}
+
+.we-offer ul li {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.career-description-three {
+  color: black;
+  font-size: 1.4rem;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end; /* Move the content to the left */
+  /* align-items: flex-end;  */
+  text-align: left;
+  /* float: right; */
+  /* flex-direction: column; */
+  margin-top: 7rem;
+  margin-left: 26rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.working {
+  width: 35%;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: 34rem; /* Adjusted margin to move the image to the left */
+  padding: 1rem;
+}
+
+.hiring-process {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hiring-process h3 {
+  font-size: 3rem;
+  color: aliceblue;
+  border-radius: 50px;
+  background-color: #003468;
+  width: 20%;
+  margin-left: 8rem;
+  padding: 0.3rem;
+}
+
+.hiring-process p {
+  font-size: 1.1rem;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: 16rem;
+  padding: 1rem;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hiring-process ul {
+  /* font-size: 1.1rem; */
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  margin-left: 17rem;  
+}
+
+.hiring-process ul li {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.hiring-process strong {
+  font-size: 1.5rem;
+}
+
+.hiring-arrow {
+  font-size: 5.5rem;
+}
+
+.opportunity h2 {
+  text-decoration: underline;
+  margin-top: 7rem;
+  font-size: 2.5rem;
+}
+
+.opportunity p {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.opportunity hr {
+  margin: 3rem auto;
+  width: 80%;
+}
+
+.dont-see {
+  margin: 5rem auto ; /* Replaces margin-left */
+  width: 70%;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dont-see p {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .careers-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .careers-background {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .career-title h2,
+  .career-title p {
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .head-text {
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .why-work {
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .career-description,
+  .career-description-two,
+  .having-fun-description,
+  .career-description-three,
+  .dont-see {
+    width: 90%;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  .learning-too,
+  .learning,
+  .having-fun,
+  .working {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .we-offer h2,
+  .hiring-process h2,
+  .opportunity h2 {
+    font-size: 1.4rem;
+    margin: 2rem auto 1rem;
+    width: 100%;
+  }
+
+  .we-offer p,
+  .hiring-process p,
+  .opportunity p {
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto 1rem;
+    text-align: left;
+  }
+
+  .we-offer ul,
+  .hiring-process ul {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0;
+  }
+
+  .we-offer ul li,
+  .hiring-process ul li {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .offer-icon {
+    width: 24px;
+    margin-right: 0.5rem;
+  }
+
+  .hiring-process h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .opportunity hr {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .careers-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-title h2,
+  .career-title p {
+    font-size: 1.3rem;
+  }
+
+  .head-text {
+    font-size: 1rem;
+  }
+
+  .why-work {
+    font-size: 1.5rem;
+  }
+
+  .career-description,
+  .career-description-two,
+  .having-fun-description,
+  .career-description-three,
+  .dont-see,
+  .we-offer p,
+  .hiring-process p,
+  .opportunity p {
+    font-size: 0.95rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .learning-too,
+  .learning,
+  .having-fun,
+  .working {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .we-offer h2,
+  .hiring-process h2,
+  .opportunity h2 {
+    font-size: 1.3rem;
+  }
+
+  .hiring-process h3 {
+    font-size: 1.2rem;
+  }
+
+  .offer-icon {
+    width: 20px;
+  }
+
+  .careers-button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

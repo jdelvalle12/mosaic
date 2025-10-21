@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import { Link } from 'react-router-dom';
 // import emailjs from 'emailjs-com'; // Import email.js library
 import CareersBackground from '../images/careers-background.jpg';
@@ -16,29 +16,42 @@ import HealthIcon from '../images/health.png';
 
 import '../index.css';
 import '../App.css';
+import './Careers.css';
 
 const Careers = () => {
-    const [showCareerTitle, setCareerTitle] = useState(false);
+  const [showCareerTitle, setCareerTitle] = useState(false);
+  const typingRef = useRef(null); // ✅ Moved outside of useEffect
 
-    useEffect(() => {
-        setCareerTitle(true);
+  useEffect(() => {
+    setCareerTitle(true);
 
-        const typingText = "Be part of a team that is ambitious, creative, & bold, who wants to be part of the journey on building something from nothing.";
-        const typingSpeed = 30;
+    const typingText =
+      "Be part of a team that is ambitious, creative, & bold, who wants to be part of the journey on building something from nothing.";
+    const typingSpeed = 30;
+    let charIndex = 0;
+    const timeouts = [];
 
-        const typingContainer = document.getElementById('typing-text');
-        let charIndex = 0;
+    // ✅ Clear content before typing starts
+    if (typingRef.current) {
+      typingRef.current.textContent = '';
+    }
 
-        function typeText() {
-            if(charIndex < typingText.length) {
-                typingContainer.textContent += typingText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeText, typingSpeed);
-            }
-        }
-        typeText();
-    }, []);
+    function type() {
+      if (charIndex < typingText.length && typingRef.current) {
+        typingRef.current.textContent += typingText.charAt(charIndex);
+        charIndex++;
+        const timeout = setTimeout(type, typingSpeed);
+        timeouts.push(timeout);
+      }
+    }
 
+    type();
+
+    // ✅ Cleanup on unmount
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  }, []);
     
 return (
     <div className='careers-container'>
@@ -47,49 +60,51 @@ return (
             <h2>Careers</h2>
                 <p>The Future starts with you</p>
         </div>
-        <div className='head-text'>
-            <p id='typing-text'></p>
+        <div className="head-text">
+            <p id="typing-text" ref={typingRef}></p> {/* ✅ Attach the ref here */}
         </div>
         {/* <div className={`button-container ${showCareerTitle ? 'slide-in' : ''}`}>
             <Link to='/job-list' className={`careers-button ${showCareerTitle ? 'slide-in' : ''}`}>Explore Job Opportunities<span className='arrow'>&rarr;</span></Link>
         </div> */}
         <div className='why-work'>
-            <h1>Why Work at Aurizon?</h1>
+            <h1>Why Work at Mosaic?</h1>
         </div>
-        <div className='career-description'>
-           <p>
-           At Aurizon, we're fueled by ambitious goals and innovative ideas,
-           and we recognize that achieving them requires a dedicated and talented
-           team. We invite individuals from diverse backgrounds, whether you're a
-           developer, designer, analyst, marketer, or possess any other skill set, 
-           to join our dynamic workforce.
-           </p>
-        </div>
-           <img src={LearningToo} alt='learning-too' className='learning-too'></img>
-           <span className='random-design'></span>
-        <div className='career-description-two'>
-           <p>
-           By becoming a part of the Aurizon team, you'll have the opportunity to
-           contribute to our growth story and play a crucial role in shaping the 
-           future. Here, you'll find an inclusive and collaborative work environment,
-           ongoing learning and development opportunities, and a chance to work on 
-           exciting projects that make a real impact.
-           </p>
-        {/* <span className='random-design'></span>
-        <span className='random-design'></span>   */}
-        </div> 
-            <img src={Learning} alt='learning' className='learning'></img>
+        <div className='career-section'>
+  <img src={LearningToo} alt='learning-too' className='learning-too' />
+  <div className='career-description'>
+    <p>
+      At Mosaic, we're fueled by ambitious goals and innovative ideas,
+      and we recognize that achieving them requires a dedicated and talented
+      team. We invite individuals from diverse backgrounds — whether you're a
+      developer, designer, analyst, marketer, or possess any other skill set —
+      to join our dynamic workforce.
+    </p>
+  </div>
+</div>
+<span className='random-design'></span>
+<div className='career-section'>
+  <div className='career-description-two'>
+    <p>
+      By becoming a part of the Mosaic team, you'll have the opportunity to
+      contribute to our growth story and play a crucial role in shaping the 
+      future. Here, you'll find an inclusive and collaborative work environment,
+      ongoing learning and development opportunities, and a chance to work on 
+      exciting projects that make a real impact.
+    </p>
+  </div>
+    <img src={Learning} alt='learning' className='learning' />
+</div>
            <span className='random-design'></span> {/* Second circle */}
-        <div className='having-fun-description'>
-            <p>
-             More importantly, at Aurizon, we believe in fostering an environment 
-             where you can have fun and be yourself. We value authenticity and 
-             encourage you to bring your unique personality to the workplace.   
-            </p>
-        {/* <span className='random-design'></span>
-        <span className='random-design'></span> */}
-        </div>
-            <img src={HavingFun} alt='having-fun' className='having-fun'></img>
+    <div className='career-section'>
+  <img src={HavingFun} alt='having-fun' className='having-fun' />
+  <div className='having-fun-description'>
+    <p>
+      More importantly, at Mosaic, we believe in fostering an environment 
+      where you can have fun and be yourself. We value authenticity and 
+      encourage you to bring your unique personality to the workplace.
+    </p>
+  </div>
+</div>
             <span className='random-design'></span>
         <div className='we-offer'>
             <h2>What We Offer</h2>
@@ -156,11 +171,11 @@ return (
                 <li>
                     <h3>1</h3>
                     <strong>Online Application</strong>The online application is your first 
-                    step towards joining our dynamic team at Aurizon. We've designed this 
+                    step towards joining our dynamic team at Mosaic. We've designed this 
                     process to be straightforward, giving you the opportunity to showcase 
                     your skills and experiences. Your application allows us to understand 
                     more about you, your professional journey, and what excites you about 
-                    joining Aurizon. We value authenticity, so be yourself and tell us your 
+                    joining Mosaic. We value authenticity, so be yourself and tell us your 
                     story. 
                 <span className='hiring-arrow'>&rarr;</span>            
                 </li>  
@@ -172,7 +187,7 @@ return (
                     experiences, skills, and what motivates you. It's also a chance for you to 
                     gain insights into our company culture, values, and the exciting projects 
                     we're working on. Prepare to discuss your journey and how it aligns with our 
-                    vision at Aurizon. 
+                    vision at Mosaic. 
                     <span className='hiring-arrow'>&rarr;</span>              
                 </li> 
                 <li>
@@ -180,9 +195,10 @@ return (
                     <strong>Online Testing</strong>As part of our commitment to thorough 
                     assessments, the online testing phase allows us to gauge your technical 
                     and problem-solving skills. This step is crucial, especially in the tech 
-                    industry where innovation and problem-solving are key. We're interested 
+                    positions where innovation and problem-solving are key. We're interested 
                     in understanding how you approach challenges and find solutions. Don't worry; 
-                    we design our tests to be fair and reflective of real-world scenarios. 
+                    we design our tests to be fair and reflective of real-world scenarios. (This Portion 
+                    of the process depends on the position) 
                     <span className='hiring-arrow'>&rarr;</span> 
                 </li>              
                 <li>
@@ -190,12 +206,14 @@ return (
                     <strong>Interviews</strong>Congratulations! You've reached the interview 
                     stage. This is an opportunity for you to meet our team and showcase your 
                     expertise. Expect a mix of technical and behavioral questions to understand 
-                    your skills, experience, and how you'd fit into our collaborative environment. We're interested in your thought process and how you approach problem-solving. This is a two-way conversation, so feel free to ask us questions too. 
+                    your skills, experience, and how you'd fit into our collaborative environment. 
+                    We're interested in your thought process and how you approach problem-solving. 
+                    This is a two-way conversation, so feel free to ask us questions too. 
                     <span className='hiring-arrow'>&rarr;</span> 
                 </li>              
                 <li>
                     <h3>5</h3>
-                    <strong>Offer</strong>If you receive an offer from Aurizon, congratulations! 
+                    <strong>Offer</strong>If you receive an offer from Mosaic, congratulations! 
                     This means we see great potential in you and believe you'll be a valuable 
                     addition to our team. The offer includes details about your role, responsibilities, 
                     benefits, and other important information. Take your time to review and feel 
@@ -205,12 +223,12 @@ return (
                 </li>              
                 <li>
                     <h3>6</h3>
-                    <strong>Joining The Team</strong>Welcome to Aurizon! The "Joining The Team" 
+                    <strong>Joining The Team</strong>Welcome to Mosaic! The "Joining The Team" 
                     phase marks the beginning of an exciting journey. As you integrate into our 
                     work culture, you'll have access to onboarding resources, mentorship, and our 
                     in-house university for continuous learning. This is a time for you to familiarize 
                     yourself with our projects, colleagues, and the collaborative spirit that defines 
-                    Aurizon. We encourage you to bring your unique perspectives, ideas, and enthusiasm 
+                    Mosaic. We encourage you to bring your unique perspectives, ideas, and enthusiasm 
                     to make a meaningful impact. 
                 </li>
             </ul>
@@ -235,7 +253,7 @@ return (
             Join us in our journey to redefine possibilities and create meaningful
             solutions. Together, we can achieve remarkable milestones and advance 
             your career in the process. Explore our current job openings and take 
-            the first step toward a rewarding future with Aurizon.
+            the first step toward a rewarding future with Mosaic.
             </p>
            {/* <span className='random-design'></span>
            <span className='random-design'></span> */}
