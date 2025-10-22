@@ -247,10 +247,10 @@ const Home = () => {
             <p>See what our customers have to say...</p>
             <Testimonials />
             </div> */}
-          <div className="news-section">
+          {/* <div className="news-section">
           <h2>Latest News</h2>
             <News />
-          </div>
+          </div> */}
           <div className="subscribe-section" data-aos='zoom-in'>
             <p>Power Your Business with Premium Web Solutions.
               Subscribe to get exclusive updates, smart web development insights, 

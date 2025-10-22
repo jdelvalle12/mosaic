@@ -64,7 +64,7 @@ const handleMouseLeave = () => {
                 <Link to="/services/api-development" className="flex px-4 py-2 hover:bg-gray-100">API Development</Link>
               </li>
               <li>
-                <Link to="/services/mobile-app-development" className="flex px-4 py-2 hover:bg-gray-100">Mobile App Development</Link>
+                {/* <Link to="/services/mobile-app-development" className="flex px-4 py-2 hover:bg-gray-100">Mobile App Development</Link> */}
               </li>
               <li>
                 <Link to="/services/business-solutions" className="flex px-4 py-2 hover:bg-gray-100">Business Solutions</Link>
@@ -73,7 +73,7 @@ const handleMouseLeave = () => {
                 {/* <Link to="/services#network-services" className="flex px-4 py-2 hover:bg-gray-100">Network Services</Link> */}
               </li> 
               <li>
-                <Link to="/services/security-solutions" className="flex px-4 py-2 hover:bg-gray-100">Security Solutions</Link>
+                {/* <Link to="/services/security-solutions" className="flex px-4 py-2 hover:bg-gray-100">Security Solutions</Link> */}
               </li> 
               <li>
                 <Link to="/services/marketing-support" className="flex px-4 py-2 hover:bg-gray-100">Marketing Support</Link>
