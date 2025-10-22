@@ -12,7 +12,7 @@ const Timeline = () => {
        highlight: true,
     },
     {
-      year: 'July 2025',
+      year: 'October 2025',
       content: 'Mosaic Digital Creations is fully launched and operations begin.',
       highlight: true,
     },

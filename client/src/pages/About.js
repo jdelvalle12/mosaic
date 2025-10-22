@@ -50,22 +50,22 @@ const About = () => {
         </div>
      <div className='about-our-story' data-aos='fade-up'> 
         <div className='story-description' data-aos='fade-right' data-aos-delay='100'>
-            <h2>What’s Our Story?</h2>  
-              <p>
-                Mosaic was founded on a simple idea: that technology should empower, not overwhelm.
-                What started as a small vision to help local businesses build a stronger online presence 
-                quickly grew into a broader mission — to create smart, elegant digital solutions that make life easier.
-              </p>
-              <p>
-                From building websites that tell your story, to developing tools that solve everyday problems, 
-                our focus is always the same: clarity, creativity, and results. We're passionate about design, 
-                driven by code, and inspired by the people we serve.
-              </p>
-              <p>
-                Whether you're a growing brand, a nonprofit, or an entrepreneur with big ideas — 
-                we're here to help you bring it to life. At Aurizon Technologies, we don’t just build software, 
-                we build possibilities.
-              </p>
+          <h2>What’s Our Story?</h2>
+            <p>
+              Mosaic Digital Creations was founded on a simple belief: that digital technology should empower creativity, 
+              not complicate it.What began as a vision to help local businesses build a stronger online presence has evolved 
+              into a mission — to craft beautiful, meaningful digital experiences that connect, engage, and inspire.
+            </p>
+            <p>
+              From designing websites that tell your story to managing the social media strategies that amplify your voice, 
+              our focus remains the same: creativity, clarity, and measurable results. We combine design and technology to bring 
+              brands to life and help businesses thrive in a digital-first world.
+            </p>
+            <p>
+              Whether you're a small business, a nonprofit, or an entrepreneur with big ideas — we're here to make your vision 
+              stand out online. As a division of <strong>Aurizon Technologies</strong>, Mosaic Digital Creations brings innovation 
+              and artistry together to turn ideas into impact.
+            </p>
           </div>            
             <img src={Innovation} alt='innovation' className='innovation' data-aos='fade-left' data-aos-delay='200'></img>
         </div>        
