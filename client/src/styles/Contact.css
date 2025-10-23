@@ -10,7 +10,7 @@
 }
 
 .contact-us-background {
-  position: absolute;
+  position: relative;
   top: 6.6rem;
   /* left: 0; */
   width: 100%;
@@ -35,7 +35,7 @@
   position: relative;
   font-size: 1.7rem;
   margin-top: 15rem;
-  left: 65rem;
+  left: 55rem;
 }
 
 /* Design inquiries section */
@@ -119,12 +119,12 @@
 }
 
 .contact-end-message {
-  font-size: 4rem;
+  font-size: 3rem;
   color: black;
   margin-top: -70rem;
   float: right;
   margin-right: 3rem;
-  width: 50%;
+  width: 30%;
 }
 
 .into-reality {
