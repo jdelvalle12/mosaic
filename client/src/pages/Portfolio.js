@@ -81,45 +81,31 @@ const projects = [
   }
 ];
 
-const ProjectCard = ({project, onClick}) => {
+const ProjectCard = ({ project }) => {
   const handleCardClick = () => {
-    onClick(project.tags); // Pass the tags to the parent component
+    // Open project link in a new tab
+    window.open(project.link, "_blank");
   };
 
   return (
-  <div className='project-card' onClick={handleCardClick}>
-  <Image src={project.image} alt={project.name} width={600} height={400} />
-  <div className='project-card-overlay'>
-    <a
-      href={project.link}
-      className='project-card-image-link'
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => e.stopPropagation()} // prevents card click firing
+    <div
+      className="project-card"
+      onClick={handleCardClick}
+      style={{ cursor: "pointer" }}
     >
-      <h3>{project.name}</h3>
-    </a>
-  </div>
-  <div className='project-card-details'>
-    <h3>{project.category}</h3>
-    <h4>{project.name}</h4>
-    <p>{project.description}</p>
-    {/* Optional Tech section */}
-    {/* 
-    <h5>Technologies</h5>
-    <div className='project-card-icons'>
-      {project.technologies.map((technology, i) => (
-        <span key={i} className='technology-icon'>
-          {technology}
-        </span>
-      ))}
-    </div> 
-    */}
-    <span className='additional-text'></span>
-  </div>
-</div>
-  // </div> 
-  ); 
+      <Image src={project.image} alt={project.name} width={600} height={400} />
+      
+      <div className="project-card-overlay">
+        <h3>{project.name}</h3>
+      </div>
+
+      <div className="project-card-details">
+        <h3>{project.category}</h3>
+        <h4>{project.name}</h4>
+        <p>{project.description}</p>
+      </div>
+    </div>
+  );
 };
 
 const ProjectsGrid = ({ projects, onButtonClick }) => (

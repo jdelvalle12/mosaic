@@ -426,35 +426,76 @@
   font-size: 1.3rem;
 }
 
+/* MOBILE-FIRST CAREERS CSS - TOP HALF ONLY */
 @media (max-width: 768px) {
-  .careers-container {
-    padding: 1rem;
-    text-align: center;
+  body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
   }
 
+  .careers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0.8rem;
+    box-sizing: border-box;
+  }
+
+  /* Background Image */
   .careers-background {
     width: 100%;
+    max-width: 100vw;
     height: auto;
-    margin-top: 0;
+    display: block;
+    margin: 0 auto 1.2rem;
+    object-fit: cover;
+    position: relative;
   }
 
-  .career-title h2,
+  /* Titles */
+  .career-title h2 {
+    font-size: 1.9rem;
+    margin: 0.6rem auto 0.4rem;
+    width: 90%;
+    color: #000;
+    line-height: 1.3;
+  }
+
   .career-title p {
-    font-size: 1.6rem;
-    margin: 1rem auto;
-    width: 100%;
-  }
-
-  .head-text {
     font-size: 1.1rem;
-    margin: 1rem auto;
+    margin: 0.3rem auto 0.8rem;
     width: 90%;
+    color: #333;
+    line-height: 1.5;
   }
 
-  .why-work {
-    font-size: 1.8rem;
+  .head-text p {
+    font-size: 1.1rem;
+    margin: 0.2rem auto 0.5rem; /* reduced large top gap */
     width: 90%;
-    margin: 2rem auto;
+    line-height: 1.6;
+  }
+
+  .why-work h1 {
+    font-size: 1.7rem;
+    margin: 0.8rem auto 0.5rem; /* smaller spacing between sections */
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  /* Career Sections */
+  .career-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.2rem auto;
+    width: 100%;
+    gap: 0.8rem;
   }
 
   .career-description,
@@ -463,82 +504,135 @@
   .career-description-three,
   .dont-see {
     width: 90%;
-    font-size: 1.1rem;
-    margin: 2rem auto;
-    text-align: left;
+    font-size: 1rem;
+    margin: 0.4rem auto;
+    text-align: center;
+    line-height: 1.6;
   }
 
+  /* Images */
   .learning-too,
   .learning,
   .having-fun,
   .working {
-    width: 90%;
-    margin: 2rem auto;
+    width: 95%;
+    max-width: 420px; /* slightly larger for better proportion */
+    height: auto;
+    margin: 0.6rem auto;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* Decorative Circle */
+  .random-design {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    margin: 1rem auto;
+  }
+
+  /* Sections with lists */
+  .we-offer,
+  .hiring-process,
+  .opportunity {
+    width: 95%;
+    margin: 1.5rem auto;
+    text-align: center;
   }
 
   .we-offer h2,
   .hiring-process h2,
   .opportunity h2 {
-    font-size: 1.4rem;
-    margin: 2rem auto 1rem;
-    width: 100%;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
   }
 
   .we-offer p,
   .hiring-process p,
   .opportunity p {
-    font-size: 1rem;
-    width: 90%;
-    margin: 0 auto 1rem;
-    text-align: left;
+    font-size: 0.95rem;
+    margin: 0.5rem auto 1rem;
+    width: 95%;
+    line-height: 1.5;
   }
 
+  /* Lists styled cleanly */
   .we-offer ul,
   .hiring-process ul {
-    width: 90%;
-    margin: 1rem auto;
+    list-style: none;
     padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .we-offer ul li,
   .hiring-process ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
     width: 100%;
-    margin: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
 
   .offer-icon {
-    width: 24px;
-    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .hiring-process h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin: 0.5rem auto;
   }
 
   .opportunity hr {
-    width: 80%;
+    width: 70%;
     margin: 1rem auto;
+    border: 0.5px solid #ccc;
   }
 
   .careers-button {
-    width: 100%;
-    margin-top: 1rem;
+    width: 85%;
+    margin: 1rem auto;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    background: aqua;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .careers-button:hover {
+    background: aqua;
   }
 }
 
+/* Extra small screens (<480px) */
 @media (max-width: 480px) {
   .career-title h2,
   .career-title p {
+    font-size: 1.4rem;
+  }
+
+  .head-text p {
+    font-size: 0.95rem;
+  }
+
+  .why-work h1 {
     font-size: 1.3rem;
-  }
-
-  .head-text {
-    font-size: 1rem;
-  }
-
-  .why-work {
-    font-size: 1.5rem;
   }
 
   .career-description,
@@ -549,35 +643,20 @@
   .we-offer p,
   .hiring-process p,
   .opportunity p {
-    font-size: 0.95rem;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .learning-too,
-  .learning,
-  .having-fun,
-  .working {
-    width: 100%;
-    margin: 1.5rem 0;
-  }
-
-  .we-offer h2,
-  .hiring-process h2,
-  .opportunity h2 {
-    font-size: 1.3rem;
-  }
-
-  .hiring-process h3 {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .offer-icon {
-    width: 20px;
+    width: 30px;
+  }
+
+  .random-design {
+    width: 30px;
+    height: 30px;
   }
 
   .careers-button {
-    font-size: 1rem;
-    padding: 0.8rem;
+    width: 95%;
+    padding: 0.7rem;
   }
 }

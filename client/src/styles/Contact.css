@@ -10,7 +10,7 @@
 }
 
 .contact-us-background {
-  position: relative;
+  position: absolute;
   top: 6.6rem;
   /* left: 0; */
   width: 100%;
@@ -35,7 +35,7 @@
   position: relative;
   font-size: 1.7rem;
   margin-top: 15rem;
-  left: 55rem;
+  left: 65rem;
 }
 
 /* Design inquiries section */
@@ -119,12 +119,12 @@
 }
 
 .contact-end-message {
-  font-size: 3rem;
+  font-size: 4rem;
   color: black;
   margin-top: -70rem;
   float: right;
   margin-right: 3rem;
-  width: 30%;
+  width: 50%;
 }
 
 .into-reality {
@@ -203,22 +203,24 @@
   }
 
   .contact-us-background {
-    margin-top: 4.6rem;
+    margin-top: -7.6rem;
+     position: relative;
+    z-index: 1;
   }
 
-  .contact-container p {
+  .p {
     font-size: 1rem;
     color: #000;
     margin: 3rem 0;
     padding: 0 10px;
     position: relative;
-    /* z-index: 1; Ensure paragraph text doesn't overlap */
+    /* z-index: 1; higher than background images */
   }
 
   /* Form Container */
   .design-inquiries {
     width: 90%; /* Take up most of the screen on mobile */
-    margin: 2rem 0; /* Add some vertical space between form and other elements */
+    margin: -7rem 0; /* Add some vertical space between form and other elements */
     padding: 1rem;
     background-color: black; /* Add a background color to separate the form */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a slight shadow for visual distinction */
@@ -266,7 +268,7 @@
   /* Bottom Message */
   .contact-end-message {
     font-size: 2rem;
-    margin: 2rem 0; /* Add spacing around the final message */
+    margin: 10rem 0; /* Add spacing around the final message */
     width: 100%;
   }
 }

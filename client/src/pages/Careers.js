@@ -279,7 +279,7 @@ return (
                     Send your resume anyway and we will keep you in mind for future openings.
                 </p>
                 <div className={`button-container ${showCareerTitle ? 'slide-in' : ''}`}>
-                    <a href="mailto:jdelvalle88@live.com" className={`careers-button ${showCareerTitle ? 'slide-in' : ''}`}>
+                    <a href="mailto:info@mosaicdigitalcreations.com" className={`careers-button ${showCareerTitle ? 'slide-in' : ''}`}>
                     Send Your Resume<span className='arrow'>&rarr;</span>
                     </a>
                 </div>
