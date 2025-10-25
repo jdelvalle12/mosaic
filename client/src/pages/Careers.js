@@ -15,7 +15,7 @@ import ProfessionalIcon from '../images/education.png';
 import HealthIcon from '../images/health.png';
 
 import '../index.css';
-import '../App.css';
+// import '../App.css';
 import './Careers.css';
 
 const Careers = () => {
@@ -126,7 +126,7 @@ return (
               <li><img className='offer-icon' src={EquityIcon} alt='Icon Description' />
               <strong>Equity</strong> As part of our ongoing efforts to recognize and reward your dedication, 
               we're actively exploring the introduction of equity opportunities for our team. This initiative 
-              is designed to align everyone with the long-term success and prosperity of Aurizon. While 
+              is designed to align everyone with the long-term success and prosperity of Mosaic. While 
               the details are still in progress, we're committed to ensuring that every team member has the 
               chance to share in the success they contribute to.</li>              
               <li><img className='offer-icon' src={AnywhereIcon} alt='Icon Description' />

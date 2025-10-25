@@ -17,10 +17,13 @@ import Careers from './pages/Careers';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import SignIn from './pages/Sign-In';
-import Hosting from './pages/Hosting';
+import ApiIntegrations from './pages/API-Integrations';
+import EcommerceSolutions from './pages/E-Commerce-Solutions';
+import HostingMaintenance from './pages/Hosting-Maintenance';
 import MarketingSupport from './pages/Marketing-Support';
 import MobileAppDevelopment from './pages/Mobile-App-Development';
 import SecuritySolutions from './pages/Security-Solutions';
+import BusinessSolutions from './pages/BusinessSolutions';
 import TechStrategy from './pages/Tech-Strategy';
 import UIUXDesign from './pages/UIUX-Design';
 import WebDevelopment from './pages/Web-Development';
@@ -60,13 +63,16 @@ return (
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/hosting" element={<Hosting />} />
-          <Route path="/marketing-support" element={<MarketingSupport />} />
-          <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/services/hosting-maintenance" element={<HostingMaintenance />} />
+          <Route path="/services/marketing-support" element={<MarketingSupport />} />
+          <Route path="/services/api-integrations" element={<ApiIntegrations />} />
+          <Route path="/services/e-commerce-solutions" element={<EcommerceSolutions />} />
+          <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/security-solutions" element={<SecuritySolutions />} />
-          <Route path="/tech-strategy" element={<TechStrategy />} />
-          <Route path="/uiux-design" element={<UIUXDesign />} />
-          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/services/business-solutions" element={<BusinessSolutions />} />
+          <Route path="/services/tech-strategy" element={<TechStrategy />} />
+          <Route path="/services/uiux-design" element={<UIUXDesign />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
         </Routes>
         <Footer />
       </div>

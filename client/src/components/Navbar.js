@@ -62,12 +62,12 @@ const Navbar = () => {
               <ul>
                 {/* <h3>Solutions</h3> */}
                 <li><Link className='sub-nav-link' to="/services/web-development">Web Development</Link></li>
-                <li><Link className='sub-nav-link' to="/services/api-development">API Development</Link></li>
-                {/* <li><Link className='sub-nav-link' to="/services/mobile-development">Mobile Development</Link></li> */}
+                <li><Link className='sub-nav-link' to="/services/e-commerce-solutions">E-Commerce Solutions</Link></li>
+                <li><Link className='sub-nav-link' to="/services/api-integrations">API & Integrations</Link></li>
+                <li><Link className='sub-nav-link' to="/services/mobile-app-development">Mobile App Development</Link></li>
                 <li><Link className='sub-nav-link' to="/services/business-solutions">Business Solutions</Link></li>
-                {/* <li><Link className='sub-nav-link' to="/services/security-solutions">Security Solutions</Link></li> */}
                 <li><Link className='sub-nav-link' to="/services/marketing-support">Marketing Support</Link></li>
-                <li><Link className='sub-nav-link' to="/services/hosting">Hosting</Link></li>
+                <li><Link className='sub-nav-link' to="/services/hosting-maintenance">Hosting & Maintenance</Link></li>
                 <li><Link className='sub-nav-link' to="/services/uiux-design">UI/UX Design</Link></li>
                 <li><Link className='sub-nav-link' to="/services/tech-strategy">Tech Strategy</Link></li>
                 {/* <h3>Products</h3>

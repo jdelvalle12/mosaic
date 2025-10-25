@@ -58,35 +58,38 @@ const handleMouseLeave = () => {
                   {/* <h2>Solutions</h2> */}
                   
                 <li>
-                  <Link to="/services/web-development" className="flex px-4 py-2 hover:bg-gray-100">Web Development</Link>
-                </li>
-              <li>
-                <Link to="/services/api-development" className="flex px-4 py-2 hover:bg-gray-100">API Development</Link>
-              </li>
-              <li>
-                {/* <Link to="/services/mobile-app-development" className="flex px-4 py-2 hover:bg-gray-100">Mobile App Development</Link> */}
-              </li>
-              <li>
-                <Link to="/services/business-solutions" className="flex px-4 py-2 hover:bg-gray-100">Business Solutions</Link>
-              </li>      
-              <li>
-                {/* <Link to="/services#network-services" className="flex px-4 py-2 hover:bg-gray-100">Network Services</Link> */}
-              </li> 
-              <li>
-                {/* <Link to="/services/security-solutions" className="flex px-4 py-2 hover:bg-gray-100">Security Solutions</Link> */}
-              </li> 
-              <li>
-                <Link to="/services/marketing-support" className="flex px-4 py-2 hover:bg-gray-100">Marketing Support</Link>
-              </li>
-              <li>
-                <Link to="/services/hosting" className="flex px-4 py-2 hover:bg-gray-100">Hosting</Link>
-              </li>
-              <li>
-                <Link to="/services/uiux-design" className="flex px-4 py-2 hover:bg-gray-100">UI/UX Design</Link>
-              </li>
-              <li>
-                <Link to="/services/tech-strategy" className="flex px-4 py-2 hover:bg-gray-100">Tech Strategy</Link>
-              </li>
+  <Link to="/services/web-development" className="flex px-4 py-2 hover:bg-gray-100">Web Development</Link>
+</li>
+<li>
+  <Link to="/services/e-commerce-solutions" className="flex px-4 py-2 hover:bg-gray-100">E-Commerce Solutions</Link>
+</li>
+<li>
+  <Link to="/services/api-integrations" className="flex px-4 py-2 hover:bg-gray-100">API & Integrations</Link>
+</li>
+<li>
+  <Link to="/services/mobile-app-development" className="flex px-4 py-2 hover:bg-gray-100">Mobile App Development</Link>
+</li>
+<li>
+  <Link to="/services/business-solutions" className="flex px-4 py-2 hover:bg-gray-100">Business Solutions</Link>
+</li>
+<li>
+  {/* <Link to="/services#network-services" className="flex px-4 py-2 hover:bg-gray-100">Network Services</Link> */}
+</li>
+<li>
+  {/* <Link to="/services/security-solutions" className="flex px-4 py-2 hover:bg-gray-100">Security Solutions</Link> */}
+</li>
+<li>
+  <Link to="/services/marketing-support" className="flex px-4 py-2 hover:bg-gray-100">Marketing Support</Link>
+</li>
+<li>
+  <Link to="/services/hosting-maintenance" className="flex px-4 py-2 hover:bg-gray-100">Hosting & Maintenance</Link>
+</li>
+<li>
+  <Link to="/services/uiux-design" className="flex px-4 py-2 hover:bg-gray-100">UI/UX Design</Link>
+</li>
+<li>
+  <Link to="/services/tech-strategy" className="flex px-4 py-2 hover:bg-gray-100">Tech Strategy</Link>
+</li>
                 {/* <h2>Products</h2> */}
                 <li>
                   {/* <Link
