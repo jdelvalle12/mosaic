@@ -1136,14 +1136,13 @@
   }
 }
 
-/*Subscribe Section*/
-
+/* Subscribe Section */
 .subscribe-section {
   background: linear-gradient(135deg, #3D5AFE, #20B2AA);
   padding: 4rem 2rem;
   text-align: center;
-  width: 100vw;       /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Override any centered container */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   position: relative;
   left: 0;
 }
@@ -1156,6 +1155,7 @@
   line-height: 1.6;
 }
 
+/* Form Container */
 .subscribe-form {
   display: flex;
   flex-direction: column;
@@ -1167,6 +1167,20 @@
   max-width: 500px;
   margin: 3rem auto 4rem;
   padding: 2rem;
+}
+
+/* Input Group (Label + Input) */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .subscribe-form input {
@@ -1185,6 +1199,7 @@
   box-shadow: 0 0 0 3px rgba(61, 90, 254, 0.3);
 }
 
+/* Button */
 .subscribe-button {
   background: linear-gradient(90deg, #3D5AFE, #20B2AA);
   color: #fff;
@@ -1194,7 +1209,7 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .subscribe-button:hover {
@@ -1203,16 +1218,43 @@
   background: linear-gradient(90deg, #20B2AA, #3D5AFE);
 }
 
+/* Thank You Message */
+.thank-you-message {
+  color: #f5f5f5;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  line-height: 1.5;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .subscribe-form {
     padding: 1.5rem;
     width: 90%;
   }
-  
+
   .subscribe-section p {
     font-size: 1.2rem;
   }
-  
+
   .subscribe-button,
   .subscribe-form input {
     font-size: 1rem;
