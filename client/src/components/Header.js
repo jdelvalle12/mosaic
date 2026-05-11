@@ -70,7 +70,7 @@ const handleMouseLeave = () => {
   <Link to="/services/mobile-app-development" className="flex px-4 py-2 hover:bg-gray-100">Mobile App Development</Link>
 </li>
 <li>
-  <Link to="/services/business-solutions" className="flex px-4 py-2 hover:bg-gray-100">Business Solutions</Link>
+  <Link to="/services/creative-media" className="flex px-4 py-2 hover:bg-gray-100">Creative Media</Link>
 </li>
 <li>
   {/* <Link to="/services#network-services" className="flex px-4 py-2 hover:bg-gray-100">Network Services</Link> */}

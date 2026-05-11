@@ -1,0 +1,240 @@
+/* ===============================
+   CONTAINER
+================================= */
+.tech-wrapper {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a1a1a;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+}
+
+/* ===============================
+   HERO (DARK + STRONG)
+================================= */
+.tech-hero {
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 70px 20px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.tech-image {
+  width: 260px;
+  max-width: 90%;
+  margin: 0 auto 25px auto;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.tech-image:hover {
+  transform: scale(1.05);
+}
+
+.tech-title {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tech-subtitle {
+  font-size: 18px;
+  color: #cbd5f5;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===============================
+   OVERVIEW (CLEAN LIGHT)
+================================= */
+.tech-overview {
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+}
+
+.tech-heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tech-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+
+  text-align: center;      /* center the text */
+  max-width: 700px;        /* control width */
+  margin: 0 auto;          /* center the block */
+}
+
+/* ===============================
+   SERVICES GRID (SHARP CARDS)
+================================= */
+.tech-benefits {
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+  padding: 50px 25px;
+  border-radius: 16px;
+
+   background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  border: 1px solid #e2e8f0;
+}
+
+.tech-grid {
+  max-width: 1000px;
+  margin: 20px auto 70px auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tech-card {
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  transition: all 0.25s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.tech-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.tech-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* ===============================
+   PROCESS (TIMELINE STYLE FEEL)
+================================= */
+.tech-process {
+  width: 80%;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.tech-process-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.tech-step {
+  padding: 25px;
+  border-radius: 12px;
+
+  background: #0f172a;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.tech-step:hover {
+  transform: translateY(-5px);
+  background: #1e293b;
+}
+
+.tech-step h3 {
+  margin-bottom: 10px;
+  color: #93c5fd;
+}
+
+/* ===============================
+   CTA (STRONG CONTRAST)
+================================= */
+.tech-cta {
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+}
+
+.tech-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.tech-cta p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.tech-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tech-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.tech-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: #64748b;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  .tech-title {
+    font-size: 32px;
+  }
+
+  .tech-heading {
+    font-size: 24px;
+  }
+
+  .tech-grid,
+  .tech-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-title {
+    font-size: 26px;
+  }
+
+  .tech-heading {
+    font-size: 20px;
+  }
+}

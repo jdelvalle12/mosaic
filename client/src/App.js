@@ -23,7 +23,7 @@ import HostingMaintenance from './pages/Hosting-Maintenance';
 import MarketingSupport from './pages/Marketing-Support';
 import MobileAppDevelopment from './pages/Mobile-App-Development';
 import SecuritySolutions from './pages/Security-Solutions';
-import BusinessSolutions from './pages/BusinessSolutions';
+import CreativeMedia from './pages/CreativeMedia';
 import TechStrategy from './pages/Tech-Strategy';
 import UIUXDesign from './pages/UIUX-Design';
 import WebDevelopment from './pages/Web-Development';
@@ -69,7 +69,7 @@ return (
           <Route path="/services/e-commerce-solutions" element={<EcommerceSolutions />} />
           <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/security-solutions" element={<SecuritySolutions />} />
-          <Route path="/services/business-solutions" element={<BusinessSolutions />} />
+          <Route path="/services/creative-media" element={<CreativeMedia />} />
           <Route path="/services/tech-strategy" element={<TechStrategy />} />
           <Route path="/services/uiux-design" element={<UIUXDesign />} />
           <Route path="/services/web-development" element={<WebDevelopment />} />

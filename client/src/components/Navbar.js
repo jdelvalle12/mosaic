@@ -65,7 +65,7 @@ const Navbar = () => {
                 <li><Link className='sub-nav-link' to="/services/e-commerce-solutions">E-Commerce Solutions</Link></li>
                 <li><Link className='sub-nav-link' to="/services/api-integrations">API & Integrations</Link></li>
                 <li><Link className='sub-nav-link' to="/services/mobile-app-development">Mobile App Development</Link></li>
-                <li><Link className='sub-nav-link' to="/services/business-solutions">Business Solutions</Link></li>
+                <li><Link className='sub-nav-link' to="/services/creative-media">Creative Media</Link></li>
                 <li><Link className='sub-nav-link' to="/services/marketing-support">Marketing Support</Link></li>
                 <li><Link className='sub-nav-link' to="/services/hosting-maintenance">Hosting & Maintenance</Link></li>
                 <li><Link className='sub-nav-link' to="/services/uiux-design">UI/UX Design</Link></li>

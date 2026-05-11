@@ -38,7 +38,7 @@
 }
 
 .header-container a:hover {
-  color: coral;
+  color: black;
 }
 
 .header-container a:hover::after {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import emailjs from 'emailjs-com'; // Import email.js library
 import CareersBackground from '../images/careers-background.jpg';
 import LearningToo from '../images/learning-2.jpg';
@@ -278,11 +278,11 @@ return (
                 <p>
                     Send your resume anyway and we will keep you in mind for future openings.
                 </p>
-                <div className={`button-container ${showCareerTitle ? 'slide-in' : ''}`}>
-                    <a href="mailto:info@mosaicdigitalcreations.com" className={`careers-button ${showCareerTitle ? 'slide-in' : ''}`}>
-                    Send Your Resume<span className='arrow'>&rarr;</span>
-                    </a>
-                </div>
+                  <div className={`button-container ${showCareerTitle ? 'slide-in' : ''}`}>
+                    <Link to="/contact" className={`careers-button ${showCareerTitle ? 'slide-in' : ''}`}>
+                      Send Your Resume <span className='arrow'>&rarr;</span>
+                    </Link>
+                  </div>
         </div>  
     </div>        
     );

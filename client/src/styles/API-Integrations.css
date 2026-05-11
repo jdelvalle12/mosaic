@@ -1,0 +1,359 @@
+/* ===============================
+   Container
+================================= */
+.api-container {
+  padding: 50px 20px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: aliceblue;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.api-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.api-image {
+  width: 250px;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.api-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.api-subtitle {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #1a1a1a; /* subtitle black */
+  text-align: center;
+}
+
+/* ===============================
+   Simple Content Sections
+================================= */
+.api-section {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.api-heading {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.api-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Lists (no bullets for standard sections)
+================================= */
+.api-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;   /* FIX: makes multi-line list items align properly */
+}
+
+.api-list li {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.api-list li::before {
+  content: none; /* remove checkmarks */
+  position: static;
+}
+
+/* ===============================
+   Feature Sections (Left-Right Layout)
+================================= */
+.api-feature-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto 80px auto;
+  padding: 50px;
+  border-radius: 18px;
+
+  /* Glass effect */
+  background: rgba(200, 230, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* Left column */
+.api-feature-title {
+  flex: 1;
+  text-align: left;
+}
+
+/* Right column (feature list with checkmarks) */
+.api-feature-list {
+  flex: 1.5;
+  max-width: none;
+  padding-left: 6rem;
+  list-style: none;
+  position: relative;
+}
+
+.api-feature-list li {
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.api-feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.api-feature-list li:hover {
+  transform: translateX(4px);
+  transition: 0.2s ease;
+}
+
+/* ===============================
+   Integration Process Section
+================================= */
+.api-process-section {
+  max-width: 1100px;
+  margin: 0 auto 100px auto;
+  text-align: center;
+ background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #bfdbfe
+  );
+  padding: 80px 20px;
+  border-radius: 20px;
+}
+
+.api-process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Glass step boxes */
+.api-process-step {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  padding: 25px 20px;
+
+  width: 180px;
+  min-height: 120px;
+
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+.api-process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* Step number */
+.api-step-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+/* Arrow between steps */
+.api-arrow {
+  font-size: 28px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* ===============================
+   Integration Grid (Optional)
+================================= */
+.api-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.api-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.api-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #3b82f6;
+}
+
+.api-card span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===============================
+   CTA Section
+================================= */
+.api-cta {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  border-radius: 16px;
+  color: white;
+}
+
+.api-cta .api-heading {
+  color: white;
+  font-size: 30px;
+}
+
+.api-btn {
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.api-btn:hover {
+  background-color: #e0f2fe;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+@media (max-width: 768px) {
+  .api-container {
+    padding: 40px 15px;
+  }
+
+  .api-image {
+    width: 200px;
+  }
+
+  .api-title {
+    font-size: 32px;
+  }
+
+  .api-subtitle {
+    font-size: 1rem;
+  }
+
+  .api-feature-layout {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .api-feature-list {
+    padding-left: 1rem;
+  }
+
+  .api-heading {
+    font-size: 24px;
+  }
+
+  .api-text,
+  .api-list {
+    font-size: 0.95rem;
+  }
+
+  .api-btn {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .api-image {
+    width: 150px;
+  }
+
+  .api-title {
+    font-size: 28px;
+  }
+
+  .api-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .api-heading {
+    font-size: 20px;
+  }
+
+  .api-text,
+  .api-list {
+    font-size: 0.9rem;
+  }
+
+  .api-btn {
+    padding: 6px 18px;
+    font-size: 0.85rem;
+  }
+
+  .api-process-flow {
+    flex-direction: column;
+  }
+
+  .api-arrow {
+    transform: rotate(90deg);
+  }
+}

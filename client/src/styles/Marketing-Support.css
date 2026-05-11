@@ -1,0 +1,339 @@
+.ms-wrapper {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #333;
+  padding: 0;
+  background: #f8fafc;
+}
+
+/* HERO SECTION */
+
+.ms-hero {
+  text-align: center;
+  padding: 70px 20px;
+  margin-bottom: 60px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #06b6d4);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ms-image {
+  width: 260px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto 25px auto; /* forces perfect centering */
+  transition: transform .5s ease;
+}
+
+.ms-hero:hover .ms-image {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.ms-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ms-subtitle {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: .95;
+}
+
+/* CONTENT SECTION */
+
+.ms-section {
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ms-heading {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.ms-text {
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* GRID */
+
+.ms-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARDS */
+
+.ms-card {
+  background: white;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-top: 4px solid transparent;
+}
+
+/* Different color accents for marketing feel */
+
+.ms-card:nth-child(1) {
+  border-color: #6366f1;
+}
+
+.ms-card:nth-child(2) {
+  border-color: #06b6d4;
+}
+
+.ms-card:nth-child(3) {
+  border-color: #22c55e;
+}
+
+.ms-card:nth-child(4) {
+  border-color: #f59e0b;
+}
+
+.ms-card:nth-child(5) {
+  border-color: #ec4899;
+}
+
+.ms-card:nth-child(6) {
+  border-color: #8b5cf6;
+}
+
+.ms-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.ms-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+  color: #111827;
+}
+
+.ms-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* PLATFORMS SECTION */
+
+.ms-platforms {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #f1f5f9, #e0f2fe);
+  text-align: center;
+}
+
+.ms-platform-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .ms-platform {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+} */
+
+.ms-platform:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.ms-platform {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.ms-icon {
+  font-size: 2.4rem;
+  transition: transform .3s ease;
+}
+
+/* Brand Colors */
+
+.instagram { color: #E1306C; }
+.facebook { color: #1877F2; }
+.tiktok { color: #000000; }
+.google { color: #4285F4; }
+.youtube { color: #FF0000; }
+.linkedin { color: #0A66C2; }
+
+.ms-platform:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.ms-platform:hover .ms-icon {
+  transform: scale(1.15);
+}
+
+.ms-platform::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(59,130,246,0.15), transparent);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.ms-platform:hover::after {
+  opacity: 1;
+}
+
+/* PROCESS SECTION */
+
+.ms-process {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.ms-process-grid {
+  margin-top: 45px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ms-step {
+  background: #f8fafc;
+  padding: 30px 25px;
+  border-radius: 12px;
+  border-top: 4px solid #3b82f6;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: transform .25s ease;
+}
+
+.ms-step:hover {
+  transform: translateY(-6px);
+}
+
+.ms-step h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.ms-step p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* CTA SECTION */
+
+.ms-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+}
+
+.ms-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.ms-cta p {
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+  font-size: 1.1rem;
+}
+
+.ms-btn {
+  display: inline-block;
+  background: white;
+  color: #3b82f6;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.ms-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CTA FOOTER */
+
+.ms-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  font-style: italic;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .ms-title {
+    font-size: 2.2rem;
+  }
+
+  .ms-subtitle {
+    font-size: 1rem;
+  }
+
+  .ms-heading {
+    font-size: 1.8rem;
+  }
+
+  .ms-text {
+    font-size: 1rem;
+  }
+
+  .ms-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .ms-title {
+    font-size: 1.8rem;
+  }
+
+  .ms-heading {
+    font-size: 1.5rem;
+  }
+
+}

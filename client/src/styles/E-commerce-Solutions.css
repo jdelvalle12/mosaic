@@ -1,0 +1,363 @@
+/* ===============================
+   Container
+================================= */
+.ecom-container {
+  padding: 80px 20px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* ===============================
+   Hero Section
+================================= */
+.ecom-hero {
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 60px 20px;
+  border-radius: 16px;
+
+  /* Background upgrade */
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.ecom-image {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.ecom-image:hover {
+  transform: scale(1.05);
+}
+
+.ecom-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 5rem;
+  margin-bottom: 15px;
+}
+
+.ecom-subtitle {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===============================
+   Sections
+================================= */
+.ecom-section,
+.ecom-revenue,
+.ecom-stack,
+.ecom-process-section {
+  max-width: 1100px;
+  margin: 0 auto 100px auto;
+}
+
+/* Headings */
+.ecom-heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Paragraph text */
+.ecom-text {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Center text when outside layout sections */
+
+.ecom-section > .ecom-text,
+.ecom-stack > .ecom-text,
+.ecom-cta .ecom-text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Center headings when outside layout */
+.ecom-section > .ecom-heading,
+.ecom-revenue > .ecom-heading,
+.ecom-stack > .ecom-heading {
+  text-align: center;
+}
+
+/* ===============================
+   Revenue Section
+================================= */
+.ecom-revenue {
+  background: linear-gradient(135deg, #e3f2fd, #f3e8ff);
+  padding: 60px 40px;
+  border-radius: 16px;
+}
+
+.ecom-feature-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+.ecom-revenue .ecom-feature-layout {
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* ===============================
+   Lists
+================================= */
+.ecom-list {
+  font-size: 16px;
+  line-height: 1.8;
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.ecom-list li {
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.ecom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+.ecom-list li:hover {
+  transform: translateX(4px);
+  transition: 0.2s ease;
+}
+
+/* ===============================
+   Feature Layout (Left / Right)
+================================= */
+.ecom-feature-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 70px;
+
+  padding: 50px;
+  border-radius: 18px;
+
+  background: rgba(243, 232, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* Left column */
+.ecom-feature-title {
+  flex: 1.1;
+  text-align: left;
+}
+
+/* Right column */
+.ecom-feature-layout .ecom-list {
+  flex: 1.6;
+  max-width: none;
+  padding-left: 40px;
+}
+
+/* ===============================
+   Our Process Section
+================================= */
+.ecom-process-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 70px;
+
+  padding: 50px;
+  border-radius: 18px;
+
+  background: rgba(200, 230, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* Left column */
+.ecom-process-title {
+  flex: 1.1;
+}
+
+/* Right column */
+.ecom-process-section .ecom-list {
+  flex: 1.4;
+  max-width: none;
+  list-style: decimal inside;
+  padding-left: 0;
+}
+
+/* Fix spacing between numbers and text */
+.ecom-process-section .ecom-list li {
+  padding-left: 0;
+  margin-left: 8px;
+}
+
+.ecom-process-section .ecom-list li:hover {
+  transform: translateX(3px);
+}
+
+/* ===============================
+   Tech Stack
+================================= */
+.ecom-tech-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.ecom-tech-icons div {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.ecom-tech-icons div:hover {
+  background-color: #f1f3f9;
+  transform: translateY(-5px);
+}
+
+.ecom-tech-icons i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.ecom-tech-icons span {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ===============================
+   CTA Section
+================================= */
+.ecom-cta {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border-radius: 16px;
+  color: white;
+}
+
+.ecom-cta .ecom-heading {
+  color: white;
+}
+
+.ecom-cta .ecom-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Buttons */
+.ecom-btn {
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: white;
+  color: #4f46e5;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ecom-btn:hover {
+  background-color: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+
+@media (max-width: 900px) {
+
+  .ecom-feature-layout,
+  .ecom-process-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ecom-feature-layout .ecom-list,
+  .ecom-process-section .ecom-list {
+    padding-left: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .ecom-title {
+    font-size: 32px;
+  }
+
+  .ecom-heading {
+    font-size: 24px;
+  }
+
+  .ecom-text,
+  .ecom-list {
+    font-size: 14px;
+  }
+
+  .ecom-container {
+    padding: 60px 15px;
+  }
+
+  .ecom-revenue {
+    padding: 40px 20px;
+  }
+
+  .ecom-cta {
+    padding: 40px 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .ecom-title {
+    font-size: 24px;
+  }
+
+  .ecom-heading {
+    font-size: 20px;
+  }
+
+  .ecom-text,
+  .ecom-list {
+    font-size: 13px;
+  }
+
+  .ecom-tech-icons {
+    gap: 20px;
+  }
+
+}

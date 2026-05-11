@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 // import Flick from '../images/Flick-Tracker.jpg';
@@ -93,7 +94,7 @@ const ProjectCard = ({ project }) => {
       onClick={handleCardClick}
       style={{ cursor: "pointer" }}
     >
-      <Image src={project.image} alt={project.name} width={600} height={400} />
+      <Image src={project.image} alt={`${project.name} web development project by Mosaic Digital Creations`} width={600} height={400} />
       
       <div className="project-card-overlay">
         <h3>{project.name}</h3>
@@ -280,11 +281,44 @@ const Projects = () => {
     console.log('Filtered Projects:', filteredProjects);
 
 return (
+
+  <>
+  <Helmet>
+    <title>
+      Portfolio | Web Design, Development & Digital Projects | Mosaic Digital Creations
+    </title>
+
+    <meta
+      name="description"
+      content="Explore the portfolio of Mosaic Digital Creations featuring web development, full stack applications, software projects, UI/UX design, and digital experiences for multiple industries."
+    />
+
+    <meta
+      name="keywords"
+      content="portfolio, web development projects, full stack development, React projects, web design portfolio, software development, UI UX design"
+    />
+
+    <meta
+      property="og:title"
+      content="Portfolio | Mosaic Digital Creations"
+    />
+
+    <meta
+      property="og:description"
+      content="Explore our web development, software, and digital design projects created for modern businesses and industries."
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+  </Helmet>
+
   <div className='portfolio-container'>
       {/* <img src={Background} alt='portfolio-background' className='portfolio-background'></img> */}
       <video src={Coding} autoPlay loop muted className="projects-background-video"></video>
         <div className={`title ${showTitle ? 'fade-in' : ''}`} >
-          <h2>Our Portfolio</h2>
+          <h2>Web Development & Digital Marketing Portfolio</h2>
         </div>
       <div className='sub-navbar'>
        <SubNavbar
@@ -296,6 +330,11 @@ return (
         <div className='sub-text'>
             <p id='typing-text'></p>
         </div>
+        <p className="portfolio-seo-text">
+            Explore our portfolio of web development, UI/UX design,
+            software applications, and digital marketing projects created
+            for businesses across multiple industries.
+        </p>
       {/* <div className={`mid-text ${showText ? 'slide-in' : ''}`}>
         <p>Not only do we display our work or products, but we also display and advertise your website in "Our Partners" tab for customers to view. Take a look, you may find what you are looking for.</p>
       </div> */}
@@ -304,10 +343,11 @@ return (
           <ProjectsGrid projects={filteredProjects} onButtonClick={(category) => setSelectedCategory(category)}/>
         </div>
         <div className='post-text'data-aos='fade-up'>
-          <p>If you like the designs you see from our work or our software products, go to our marketplace for more.</p> 
-            <Link to='/marketplace' className='marketplace-link'>Marketplace<span className='arrow'>&rarr;</span></Link>
+          <p>We are continuously updating our portfolio. Keep checking back to see our work.</p> 
+            {/* <Link to='/marketplace' className='marketplace-link'>Marketplace<span className='arrow'>&rarr;</span></Link> */}
         </div>
     </div>
+   </>
   );
 }
 

@@ -41,7 +41,7 @@ const FAQ = () => {
   },
   {
     question: 'How can I get in touch with Mosaic?',
-    answer: 'You can reach out through the contact form on our website or email us directly at info@mosaiccreations.co. We aim to respond to all inquiries within 48–72 hours.'
+    answer: 'You can reach out through the contact form on our website or email us directly at info@mosaicdigitalcreations.com. We aim to respond to all inquiries within 48–72 hours.'
   },
   {
     question: 'What’s your process for working on a new project?',

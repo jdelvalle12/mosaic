@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 // import MarketTeam from '../images/digital-marketing-team.mp4';
 import HomePage from '../images/background-image-homepage.jpg';
 import Puzzles from '../images/tech-process-3.jpg';
@@ -135,13 +136,51 @@ const Home = () => {
   
 
   return (
+     <>
+    <Helmet>
+      <title>
+        Web Design & Digital Marketing for Small Businesses | Mosaic Digital Creations
+      </title>
+
+      <meta
+        name="description"
+        content="Mosaic Digital Creations provides affordable web design, digital marketing, SEO, branding, and mobile app development solutions for growing businesses."
+      />
+
+      <meta
+        name="keywords"
+        content="web design, digital marketing, SEO, mobile app development, branding, small business websites"
+      />
+
+      <meta
+        property="og:title"
+        content="Mosaic Digital Creations | Web Design & Digital Marketing"
+      />
+
+      <meta
+        property="og:description"
+        content="Helping businesses grow through modern web design, digital marketing, SEO, and technology solutions."
+      />
+
+      <meta
+        property="og:type"
+        content="website"
+      />
+
+      <link
+        rel="canonical"
+        href="https://mosaicdigitalcreations.com/"
+      />
+
+    </Helmet>
+
     <div className="home-container">
       <video src={HomePage} autoPlay loop muted className="background-video" data-aos='zoom-in' />
       <h1 className={showSlogan ? 'fade-in' : ''}>
-        The Full Spectrum of Digital Growth
+        Web Design & Digital Marketing for Growing Businesses
       </h1>
         <p className="sub-text" data-aos="fade-up">
-          We build the pieces that shape your business — development, design, and digital strategy in perfect harmony.
+          The Full Spectrum of Digital Growth
         </p>  
       <div className={`button-container ${showSlogan ? 'slide-in' : ''}`}>
         <Link to="/services" className={`service-button ${showSlogan ? 'slide-in' : ''}`}>Explore Services</Link>
@@ -172,7 +211,7 @@ const Home = () => {
           <p className="tagline" data-aos='slide-left'>
             Design. Strategy. Results — Pixel by Pixel.
           </p>
-          <img src={TeamCollab} alt="TeamCollab" className="team-collab-picture" data-aos='zoom-in'></img>
+          <img src={TeamCollab} alt="Team collaborating on digital marketing and web design" className="team-collab-picture" data-aos='zoom-in'></img>
         <div className="service-container" >
           <div className="service-box web" data-aos='zoom-in' data-aos-delay='100'>
           <img src={WebDev} alt="Web Development" className="service-icon" />
@@ -280,8 +319,9 @@ const Home = () => {
           </div>
             {/* Your existing content */}
             {/* ... */}
-        </div>            
-    );
-  };
+         </div>
+    </>
+  );
+};
 
 export default Home;

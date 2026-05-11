@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-brand">
           <h3>
-            <Link className="back-home" to="/">MOSAIC</Link>
+            <Link className="back-home" to="/">Mosaic Digital Creations</Link>
           </h3>
           <p className="footer-message">Innovating digital solutions for your business.</p>
         </div>
@@ -26,7 +26,7 @@ const Footer = () => {
             <li><Link to='/services/web-development'>Web Development</Link></li>
             <li><Link to='/services/api-integrations'>API & Integrations</Link></li>
             <li><Link to='/services/mobile-app-development'>Mobile App Development</Link></li>
-            <li><Link to='/services/business-solutions'>Business Solutions</Link></li>
+            <li><Link to='/services/creative-media'>Creative Media</Link></li>
             <li><Link to='/services/e-commerce-solutions'>E-Commerce Solutions</Link></li>
             <li><Link to='/services/marketing-support'>Marketing Support</Link></li>
             <li><Link to='/services/hosting-maintenance'>Hosting & Maintenance</Link></li>

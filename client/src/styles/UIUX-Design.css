@@ -1,0 +1,249 @@
+/* ===============================
+   CONTAINER
+================================= */
+.uiux-wrapper {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a1a1a;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+/* ===============================
+   HERO
+================================= */
+.uiux-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 60px 20px;
+  border-radius: 16px;
+
+  /* Soft gradient */
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+}
+
+.uiux-image {
+  width: 280px;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.uiux-image:hover {
+  transform: scale(1.05);
+}
+
+.uiux-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.uiux-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===============================
+   OVERVIEW
+================================= */
+.uiux-overview {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+}
+
+.uiux-heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.uiux-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ===============================
+   BENEFITS (Why UI/UX Matters)
+================================= */
+.uiux-benefits {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+/* ===============================
+   SERVICES GRID
+================================= */
+.uiux-grid {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.uiux-card {
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+
+  /* Glass effect */
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.uiux-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.uiux-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.uiux-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===============================
+   PROCESS SECTION
+================================= */
+.uiux-process {
+  max-width: 1000px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.uiux-process-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.uiux-step {
+  padding: 25px;
+  border-radius: 16px;
+  width: 105%;
+
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.uiux-step:hover {
+  transform: translateY(-5px);
+}
+
+.uiux-step h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+/* ===============================
+   CTA SECTION
+================================= */
+.uiux-cta {
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+}
+
+.uiux-cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.uiux-cta p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.9);
+}
+
+.uiux-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  background: white;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.uiux-btn:hover {
+  background: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.uiux-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: #666;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  .uiux-title {
+    font-size: 32px;
+  }
+
+  .uiux-heading {
+    font-size: 24px;
+  }
+
+  .uiux-text {
+    font-size: 14px;
+  }
+
+  .uiux-grid,
+  .uiux-process-grid {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .uiux-title {
+    font-size: 26px;
+  }
+
+  .uiux-heading {
+    font-size: 20px;
+  }
+
+  .uiux-text {
+    font-size: 13px;
+  }
+}
