@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/API-Integrations.css';
 import API from '../images/api.svg'; // <-- update the file name if needed
 
@@ -92,7 +93,7 @@ const APIIntegrations = () => {
       {/* CTA */}
       <section className="api-cta">
         <h2 className="api-heading">Ready to Expand Your System's Capabilities?</h2>
-        <a href="/contact" className="api-btn">Contact Us</a>
+        <Link to="/contact" className="api-btn">Contact Us</Link>
       </section>
 
     </div>

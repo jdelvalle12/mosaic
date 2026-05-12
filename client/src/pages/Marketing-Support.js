@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Marketing from "../images/marketing.svg";
 import { 
   FaInstagram, 
@@ -155,9 +156,9 @@ const MarketingSupport = () => {
           with the right audience.
         </p>
 
-        <a href="/contact" className="ms-btn">
+        <Link to="/contact" className="ms-btn">
           Get Started
-        </a>
+        </Link>
       </section>
 
       {/* FOOTER */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/CreativeMedia.css';
 import Creative from '../images/creative-media.svg';
 
@@ -130,9 +131,9 @@ const CreativeMedia = () => {
           and strengthens your brand presence.
         </p>
 
-        <a href="/contact" className="btn primary-btn">
+        <Link to="/contact" className="btn primary-btn">
           Get in Touch
-        </a>
+        </Link>
 
       </section>
 

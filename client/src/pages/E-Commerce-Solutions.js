@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/E-commerce-Solutions.css';
 import Ecommerce from '../images/e-commerce.svg';
 
@@ -15,7 +16,7 @@ const EcommerceSolutions = () => {
             Powerful, scalable online stores built to convert visitors into customers 
             and support long-term business growth.
           </p>
-          <a href="/contact" className="ecom-btn primary-btn">Start Your Store</a>
+          <Link to="/contact" className="ecom-btn primary-btn">Start Your Store</Link>
         </div>
       </section>
 
@@ -138,7 +139,7 @@ const EcommerceSolutions = () => {
           Let’s create an e-commerce experience designed to grow your brand 
           and maximize your revenue.
         </p>
-        <a href="/contact" className="ecom-btn secondary-btn">Get Started</a>
+        <Link to="/contact" className="ecom-btn secondary-btn">Get Started</Link>
       </section>
 
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WebDevIllustration from '../images/web-development.svg'; // your image or illustration
 import '../styles/WebDevelopment.css'; // optional external CSS file
 
@@ -16,7 +17,7 @@ const WebDevelopment = () => {
             We build stunning, responsive websites that are fast, modern, and tailored to your brand.
             Whether it’s a portfolio, business site, or e-commerce platform — we bring your ideas to life.
           </p>
-          <a href="/contact" className="btn primary-btn">Start Your Project</a>
+          <Link to="/contact" className="btn primary-btn">Start Your Project</Link>
         </div>
       </section>
 
@@ -122,7 +123,7 @@ const WebDevelopment = () => {
       <section className="webdev-cta">
         <h2>Ready to Build Your Website?</h2>
         <p>Let’s bring your vision to life with a powerful, responsive, and professional web solution.</p>
-        <a href="/contact" className="btn secondary-btn">Get in Touch</a>
+        <Link to="/contact" className="btn secondary-btn">Get in Touch</Link>
       </section>
     </div>
   );

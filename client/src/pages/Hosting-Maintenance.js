@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import HostingMaintenance from '../images/hosting-maintenance.svg'; // your hosting illustration
 import "../styles/Hosting-Maintenance.css";
 
@@ -124,9 +125,9 @@ const Hosting = () => {
     Let us handle your hosting and maintenance so you can focus on growing your business.
   </p>
 
-  <a href="/contact" className="hosting-btn">
+  <Link to="/contact" className="hosting-btn">
     Get Started
-  </a>
+  </Link>
 </section>
 
       {/* FOOTER */}

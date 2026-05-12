@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import TechStrategy from '../images/tech-strategy.svg'; // your illustration
 import "../styles/Tech-Strategy.css";
 
@@ -95,9 +96,9 @@ const Tech = () => {
           Let’s create a strategy that supports your growth and future goals.
         </p>
 
-        <a href="/contact" className="tech-btn">
+        <Link to="/contact" className="tech-btn">
           Get Started
-        </a>
+        </Link>
       </section>
 
       {/* FOOTER */}

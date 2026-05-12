@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import UiUx from '../images/uiux-design.svg'; // your illustration
 import "../styles/UIUX-Design.css";
 
@@ -98,9 +99,9 @@ const UIUXDesign = () => {
     Let’s design interfaces that are not only beautiful but also effective.
   </p>
 
-  <a href="/contact" className="uiux-btn">
+  <Link to="/contact" className="uiux-btn">
     Get Started
-  </a>
+  </Link>
 </section>
 
       {/* FOOTER */}
