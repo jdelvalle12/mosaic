@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@emailjs/browser": "^4.4.1",
