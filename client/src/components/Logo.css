@@ -1,4 +1,7 @@
-/* Logo Container */
+/* =========================
+   Logo Container
+========================= */
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -6,51 +9,76 @@
   padding: 0.5rem;
 }
 
-/* Main Logo Text */
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
-  color: #ffffff;
+/* =========================
+   Logo Link
+========================= */
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-/* Optional SVG/Arc Placeholder */
+.logo-link:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   Logo Image
+========================= */
+
+.mosaic-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.mosaic-logo:hover {
+  filter: drop-shadow(0 0 10px rgba(61, 90, 254, 0.7));
+}
+
+/* =========================
+   Logo Text
+========================= */
+
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #3D5AFE;
+}
+
+/* =========================
+   Optional SVG Arc
+========================= */
+
 .arc {
   width: 50px;
   height: 30px;
   margin-right: 0.5rem;
 }
 
-/* Brand Highlight */
-.logo-span {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 0.9;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  color: white;
-  background: linear-gradient(to right, #008080, #3D5AFE);
-  box-shadow: 0 0 10px rgba(61, 90, 254, 0.6);
-  transition: all 0.4s ease;
-}
+/* =========================
+   Responsive
+========================= */
 
-/* Hover Glow (Optional) */
-.logo-span:hover {
-  box-shadow: 0 0 20px rgba(61, 90, 254, 0.9);
-  transform: scale(1.05);
-}
+@media (max-width: 768px) {
+  .mosaic-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 3.5rem;
+  }
 
-/* Clean Link */
-.no-underline {
-  text-decoration: none;
-  font-size: 2rem;
-  color: #f8f9fa;
-  font-family: 'Inter', sans-serif;
-  margin-right: 4rem;
-  transition: color 0.3s ease;
-}
-
-.no-underline:hover {
-  color: #3D5AFE;
+  .logo-text {
+    font-size: 2.5rem;
+  }
 }
